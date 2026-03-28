@@ -1,0 +1,246 @@
+---
+title: "AAU | Recess Athletics"
+description: "Meta description for the page"
+permalink: "/programs/aau/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/program-pages.css">
+{% endblock %}
+
+{% block body %}
+
+
+<!-- ============================================ -->
+<!--             Single Program Hero              -->
+<!-- ============================================ -->
+
+<!--
+    INSTRUCTIONS:
+    - Replace [SLUG] with the program slug e.g. "aau"
+    - Replace [LABEL] with the program label e.g. "AAU"
+    - Replace [TAGLINE] with the program tagline
+    - Replace the accent colour on .cs-prog-hero via the style attribute
+    - Replace the photo src with the program photo
+-->
+
+<!-- 📸 PHOTO-PROG-[SLUG] | Program hero | Recommended: 1920×600px -->
+<div id="prog-hero" style="--cs-prog-accent: var(--recessBlue);">
+    <img
+        class="cs-hero-img"
+        src="/assets/images/programs/aau.jpg"
+        alt="AAU"
+        width="1920"
+        height="600"
+        loading="eager"
+        decoding="async"
+    />
+    <div class="cs-hero-overlay"></div>
+
+    <div class="cs-container">
+        <a href="/programs" class="cs-back-btn">← All Programs</a>
+        <span class="cs-topper">aau</span>
+        <h1 class="cs-title">AAU</h1>
+        <p class="cs-tagline">Play on the biggest stages. Get seen.</p>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!--           Single Program Content             -->
+<!-- ============================================ -->
+
+<!--
+    INSTRUCTIONS:
+    - Set --cs-prog-accent on #prog-content to match the program accent colour
+    - Replace all placeholder text with real program data
+    - Remove the .cs-tiers block entirely if the program has no tiers (use .cs-detail-pricing instead)
+    - Remove .cs-testimonial if program has no testimony
+-->
+
+<section id="prog-content" style="--cs-prog-accent: var(--recessBlue);">
+    <div class="cs-container">
+        <div class="cs-layout">
+
+            <!-- ══════════════════════════
+                 LEFT COLUMN
+            ══════════════════════════ -->
+            <div class="cs-main">
+
+                <!-- Who It's For -->
+                <div class="cs-block">
+                    <span class="cs-topper">Who It's For</span>
+                    <p class="cs-body-text">
+                        Elite athletes ages 14–18 competing at the highest AAU level. Invitation only.
+                    </p>
+                </div>
+
+                <!-- What Athletes Gain -->
+                <div class="cs-block">
+                    <span class="cs-topper">What Athletes Gain</span>
+                    <div class="cs-outcomes">
+                        <div class="cs-outcome">
+                            <span class="cs-check">✓</span>
+                            <span class="cs-outcome-text">D1/D2/D3 exposure</span>
+                        </div>
+                        <div class="cs-outcome">
+                            <span class="cs-check">✓</span>
+                            <span class="cs-outcome-text">National-level competition</span>
+                        </div>
+                        <div class="cs-outcome">
+                            <span class="cs-check">✓</span>
+                            <span class="cs-outcome-text">Recruiting portfolio</span>
+                        </div>
+                        <div class="cs-outcome">
+                            <span class="cs-check">✓</span>
+                            <span class="cs-outcome-text">Scholarship preparation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What's Included -->
+                <div class="cs-block">
+                    <span class="cs-topper">What's Included</span>
+                    <div class="cs-features">
+                        <div class="cs-feature-row cs-feature-row-alt">
+                            <div class="cs-feature-dot"></div>
+                            <span class="cs-feature-text">AAU sanctioned competition</span>
+                        </div>
+                        <div class="cs-feature-row">
+                            <div class="cs-feature-dot"></div>
+                            <span class="cs-feature-text">Grassroots tournaments</span>
+                        </div>
+                        <div class="cs-feature-row cs-feature-row-alt">
+                            <div class="cs-feature-dot"></div>
+                            <span class="cs-feature-text">NCAA scout events</span>
+                        </div>
+                        <div class="cs-feature-row">
+                            <div class="cs-feature-dot"></div>
+                            <span class="cs-feature-text">Highlight film production</span>
+                        </div>
+                        <div class="cs-feature-row cs-feature-row-alt">
+                            <div class="cs-feature-dot"></div>
+                            <span class="cs-feature-text">College prep counseling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial -->
+                <div class="cs-testimonial">
+                    <div class="cs-testimonial-quote-mark" aria-hidden="true">"</div>
+                    <div class="cs-stars">★★★★★</div>
+                    <blockquote class="cs-testimonial-quote">
+                        "AAU with Recess put me in front of 6 college coaches in one weekend. I'm committed now."
+                    </blockquote>
+                    <span class="cs-testimonial-attr">— Tyrese D., 17</span>
+                </div>
+
+                <!-- FAQ -->
+                <div class="cs-block">
+                    <span class="cs-topper">Frequently Asked</span>
+                    <div class="cs-faq">
+
+                        <div class="cs-faq-item">
+                            <button class="cs-faq-btn" aria-expanded="false">
+                                <span>How do I get invited?</span>
+                                <span class="cs-faq-icon" aria-hidden="true">+</span>
+                            </button>
+                            <div class="cs-faq-answer" hidden>
+                                <p class="cs-faq-text">Excel in Prep Academy or Rep. Our scouts notice.</p>
+                            </div>
+                        </div>
+
+                        <div class="cs-faq-item">
+                            <button class="cs-faq-btn" aria-expanded="false">
+                                <span>Is a recruiting profile included?</span>
+                                <span class="cs-faq-icon" aria-hidden="true">+</span>
+                            </button>
+                            <div class="cs-faq-answer" hidden>
+                                <p class="cs-faq-text">Yes — headshots, highlight reel, stat tracking.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div><!-- /cs-main -->
+
+            <!-- ══════════════════════════
+                 SIDEBAR
+            ══════════════════════════ -->
+            <aside class="cs-sidebar">
+
+                <!-- Program details -->
+                <div class="cs-sidebar-block">
+                    <span class="cs-sidebar-heading">Program Details</span>
+                    <div class="cs-detail-row">
+                        <span class="cs-detail-label">Ages</span>
+                        <span class="cs-detail-value">14–18</span>
+                    </div>
+                    <div class="cs-detail-row">
+                        <span class="cs-detail-label">Season</span>
+                        <span class="cs-detail-value">Spring</span>
+                    </div>
+                    <div class="cs-detail-row">
+                        <span class="cs-detail-label">Commitment</span>
+                        <span class="cs-detail-value">Invitation Only</span>
+                    </div>
+                    <div class="cs-detail-row cs-detail-row-last">
+                        <span class="cs-detail-label">Pricing</span>
+                        <span class="cs-detail-value">By Evaluation</span>
+                    </div>
+                </div>
+
+                <!-- CTA block -->
+                <div class="cs-sidebar-cta">
+                    <div class="cs-cta-title">READY TO START?</div>
+                    <p class="cs-cta-text">
+                        Book your free evaluation. Our coaches will set you up with the perfect program.
+                    </p>
+                    <a href="/book" class="cs-button-solid cs-cta-btn">Book Free Evaluation →</a>
+                </div>
+
+                <!-- Contact block -->
+                <div class="cs-sidebar-contact">
+                    <p class="cs-contact-text">
+                        Questions? Call us at <strong class="cs-contact-strong">(647) 123-4567</strong>
+                        or DM <strong class="cs-contact-gold">@therecess.club</strong>
+                    </p>
+                </div>
+
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+<script>
+(function () {
+    const section = document.querySelector("#prog-content");
+    if (!section) return;
+
+    const faqBtns = section.querySelectorAll(".cs-faq-btn");
+
+    faqBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            const answer    = btn.nextElementSibling;
+            const isOpen    = btn.getAttribute("aria-expanded") === "true";
+
+            // Close all others
+            faqBtns.forEach(function (other) {
+                other.setAttribute("aria-expanded", "false");
+                other.nextElementSibling.setAttribute("hidden", "");
+            });
+
+            // Toggle clicked
+            if (!isOpen) {
+                btn.setAttribute("aria-expanded", "true");
+                answer.removeAttribute("hidden");
+            }
+        });
+    });
+})();
+</script>
+
+{% endblock %}

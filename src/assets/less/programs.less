@@ -1,0 +1,298 @@
+/*-- -------------------------- -->
+<---       Programs Banner      -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #programs-banner {
+        position: relative;
+        background-color: var(--recessGrey);
+        overflow: hidden;
+        min-height: 17.5rem;
+        display: flex;
+        align-items: flex-end;
+        padding-top: 4rem;
+        margin-top: 4rem;
+    }
+
+    #programs-banner .cs-banner-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    #programs-banner .cs-banner-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(13, 13, 13, 0.8);
+        pointer-events: none;
+    }
+
+    #programs-banner .cs-banner-content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 3.5rem 0 2.5rem;
+    }
+
+    #programs-banner .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #programs-banner .cs-topper {
+        color: var(--recessYellow);
+        margin-bottom: 0.75rem;
+    }
+
+    #programs-banner .cs-title {
+        font-size: clamp(4rem, 10vw, 7.5rem);
+        margin-bottom: 0;
+        white-space: normal;
+    }
+
+    #programs-banner .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+    }
+
+} /* end 0rem */
+
+/* Desktop - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #programs-banner .cs-title {
+        white-space: nowrap;
+    }
+
+}
+/*-- -------------------------- -->
+<---       Programs Filter      -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #programs-filter {
+        background-color: #0d0d0d;
+        border-bottom: 1px solid rgba(239, 227, 194, 0.06);
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    #programs-filter::-webkit-scrollbar {
+        display: none;
+    }
+
+    #programs-filter .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #programs-filter .cs-tabs {
+        display: flex;
+        width: max-content;
+        min-width: 100%;
+    }
+
+    #programs-filter .cs-tab {
+        padding: 0.875rem 1.125rem;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid transparent;
+        font-family: var(--bodyFont);
+        font-size:var(--bodyfontsize);
+        font-weight: 700;
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+        color: rgba(239, 227, 194, 0.4);
+        cursor: pointer;
+        white-space: nowrap;
+        transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    }
+
+    #programs-filter .cs-tab.cs-active,
+    #programs-filter .cs-tab:hover {
+        color: var(--headerColor);
+    }
+
+    #programs-filter .cs-tab.cs-active {
+        border-bottom-color: var(--recessRed);
+    }
+
+} /* end 0rem */
+
+/*-- -------------------------- -->
+<---        Programs Grid       -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #programs-grid {
+        background-color: var(--recessGrey);
+        padding: var(--sectionPadding);
+    }
+
+    #programs-grid .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Cards grid — 1 col mobile */
+    #programs-grid .cs-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+
+    /* ── Individual card ── */
+    #programs-grid .cs-card {
+        background-color: #111;
+        border: 1px solid rgba(239, 227, 194, 0.07);
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        overflow: hidden;
+        transition: background-color 0.25s ease, border-color 0.25s ease;
+        cursor: pointer;
+    }
+
+    #programs-grid .cs-card:hover {
+        background-color: #1a1a1a;
+        border-color: var(--cs-card-accent, rgba(239, 227, 194, 0.07));
+    }
+
+    /* Card image */
+    #programs-grid .cs-card-img-wrap {
+        position: relative;
+        overflow: hidden;
+        height: 11.25rem;
+        flex-shrink: 0;
+    }
+
+    #programs-grid .cs-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    #programs-grid .cs-card-img-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%);
+    }
+
+    #programs-grid .cs-card-icon {
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        font-size: 1.5rem;
+    }
+
+    /* Card body */
+    #programs-grid .cs-card-body {
+        padding: 1.25rem 1.5rem 1.75rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    #programs-grid .cs-card-slug {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 0.125rem;
+    }
+
+    #programs-grid .cs-card-title {
+        font-family: var(--headerFont);
+        font-size: 1.8rem;
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+    }
+
+    #programs-grid .cs-card-tagline {
+        font-family: var(--bodyFont);
+        font-size: var(--bodyfontsize);
+        color: rgba(239, 227, 194, 0.55);
+        line-height: 1.7;
+    }
+
+    #programs-grid .cs-card-meta {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-top: auto;
+        padding-top: 0.75rem;
+    }
+
+    #programs-grid .cs-card-tag {
+        background-color: rgba(239, 227, 194, 0.06);
+        border: 1px solid rgba(239, 227, 194, 0.1);
+        font-family: var(--bodyFont);
+        font-size: 0.5rem;
+        letter-spacing: 0.125rem;
+        text-transform: uppercase;
+        padding: 0.25rem 0.625rem;
+        color: rgba(239, 227, 194, 0.4);
+    }
+
+    #programs-grid .cs-card-arrow {
+        color: var(--recessYellow);
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        transition: transform 0.2s ease;
+    }
+
+    #programs-grid .cs-card:hover .cs-card-arrow {
+        transform: translateX(4px);
+    }
+
+    /* Hidden cards (filtered out) */
+    #programs-grid .cs-card[hidden] {
+        display: none;
+    }
+
+} /* end 0rem */
+
+/* Tablet - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #programs-grid .cs-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+} /* end 48rem */
+
+/* Desktop - 64rem */
+@media only screen and (min-width: 64rem) {
+
+    #programs-grid .cs-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+} /* end 64rem */

@@ -1,0 +1,177 @@
+---
+title: "Memberships | Recess Athletics"
+description: "Meta description for the page"
+permalink: "/memberships/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/memberships.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--              Memberships Page                -->
+<!-- ============================================ -->
+
+<section id="memberships">
+    <div class="cs-container">
+
+        <!-- Section header -->
+        <div class="cs-header">
+            <span class="cs-topper">Membership Plans</span>
+            <h1 class="cs-title">PICK YOUR <em class="cs-script">level.</em></h1>
+            <p class="cs-text">
+                Month-to-month. No lock-in. We earn your loyalty through results.
+            </p>
+        </div>
+
+        <!-- ── Tier cards ── -->
+        <div class="cs-tiers">
+
+            <!-- Starter -->
+            <div class="cs-tier cs-tier-starter">
+                <span class="cs-tier-name">Starter</span>
+                <div class="cs-tier-price">
+                    <span class="cs-tier-amount">$49</span>
+                    <span class="cs-tier-period">/month</span>
+                </div>
+                <p class="cs-tier-desc">For athletes exploring the Recess community.</p>
+                <ul class="cs-tier-features">
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Unlimited facility access (Pro+)</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Clinics + open play</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Film review suite</li>
+                </ul>
+                <a href="/book" class="cs-button-outline cs-tier-btn">Get Started</a>
+            </div>
+
+            <!-- Pro (Most Popular) -->
+            <div class="cs-tier cs-tier-pro">
+                <div class="cs-tier-badge">⭐ Most Popular</div>
+                <span class="cs-tier-name">Pro</span>
+                <div class="cs-tier-price">
+                    <span class="cs-tier-amount">$99</span>
+                    <span class="cs-tier-period">/month</span>
+                </div>
+                <p class="cs-tier-desc">For athletes committed to consistent development.</p>
+                <ul class="cs-tier-features">
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Unlimited facility access (Pro+)</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Clinics + open play</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Film review suite</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Priority registration</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Community events</li>
+                </ul>
+                <a href="/book" class="cs-button-solid cs-tier-btn cs-tier-btn-gold">Join Pro →</a>
+            </div>
+
+            <!-- Elite (Best Value) -->
+            <div class="cs-tier cs-tier-elite">
+                <div class="cs-tier-badge cs-tier-badge-alt">Best Value</div>
+                <span class="cs-tier-name">Elite</span>
+                <div class="cs-tier-price">
+                    <span class="cs-tier-amount">$179</span>
+                    <span class="cs-tier-period">/month</span>
+                </div>
+                <p class="cs-tier-desc">Full access for serious competitors and prospects.</p>
+                <ul class="cs-tier-features">
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Unlimited facility access (Pro+)</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Clinics + open play</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Film review suite</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Priority registration</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> Community events</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> 2 private sessions/month</li>
+                    <li class="cs-tier-feature"><span class="cs-check">✓</span> S&amp;C access</li>
+                </ul>
+                <a href="/book" class="cs-button-solid cs-tier-btn">Join Elite →</a>
+            </div>
+
+        </div><!-- /cs-tiers -->
+
+        <!-- ── Comparison table ── -->
+        <div class="cs-comparison">
+            <span class="cs-topper">Full Comparison</span>
+            <div class="cs-table-wrap">
+                <table class="cs-table">
+                    <thead>
+                        <tr>
+                            <th class="cs-th cs-th-feature">Feature</th>
+                            <th class="cs-th">Starter</th>
+                            <th class="cs-th cs-th-highlight">Pro</th>
+                            <th class="cs-th">Elite</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cs-tr">
+                            <td class="cs-td cs-td-feature">Facility Access</td>
+                            <td class="cs-td">Select Hours</td>
+                            <td class="cs-td cs-td-highlight">Unlimited</td>
+                            <td class="cs-td">Unlimited</td>
+                        </tr>
+                        <tr class="cs-tr cs-tr-alt">
+                            <td class="cs-td cs-td-feature">Monthly Clinics</td>
+                            <td class="cs-td">2</td>
+                            <td class="cs-td cs-td-highlight">Unlimited</td>
+                            <td class="cs-td">Unlimited</td>
+                        </tr>
+                        <tr class="cs-tr">
+                            <td class="cs-td cs-td-feature">Private Sessions</td>
+                            <td class="cs-td cs-td-empty">—</td>
+                            <td class="cs-td cs-td-highlight">1/month</td>
+                            <td class="cs-td">2/month</td>
+                        </tr>
+                        <tr class="cs-tr cs-tr-alt">
+                            <td class="cs-td cs-td-feature">Rep Eligibility</td>
+                            <td class="cs-td cs-td-empty">—</td>
+                            <td class="cs-td cs-td-highlight cs-td-check">✓</td>
+                            <td class="cs-td cs-td-check">✓</td>
+                        </tr>
+                        <tr class="cs-tr">
+                            <td class="cs-td cs-td-feature">AAU Eligibility</td>
+                            <td class="cs-td cs-td-empty">—</td>
+                            <td class="cs-td cs-td-highlight cs-td-empty">—</td>
+                            <td class="cs-td cs-td-check">✓</td>
+                        </tr>
+                        <tr class="cs-tr cs-tr-alt">
+                            <td class="cs-td cs-td-feature">Film Review</td>
+                            <td class="cs-td cs-td-empty">—</td>
+                            <td class="cs-td cs-td-highlight cs-td-check">✓</td>
+                            <td class="cs-td cs-td-check">✓</td>
+                        </tr>
+                        <tr class="cs-tr">
+                            <td class="cs-td cs-td-feature">S&amp;C Access</td>
+                            <td class="cs-td cs-td-empty">—</td>
+                            <td class="cs-td cs-td-highlight cs-td-empty">—</td>
+                            <td class="cs-td cs-td-check">✓</td>
+                        </tr>
+                        <tr class="cs-tr cs-tr-alt">
+                            <td class="cs-td cs-td-feature">Recruiting Profile</td>
+                            <td class="cs-td cs-td-empty">—</td>
+                            <td class="cs-td cs-td-highlight cs-td-empty">—</td>
+                            <td class="cs-td cs-td-check">✓</td>
+                        </tr>
+                        <tr class="cs-tr">
+                            <td class="cs-td cs-td-feature">Gear Package</td>
+                            <td class="cs-td cs-td-empty">—</td>
+                            <td class="cs-td cs-td-highlight">Jersey</td>
+                            <td class="cs-td">Full Kit</td>
+                        </tr>
+                        <tr class="cs-tr cs-tr-alt">
+                            <td class="cs-td cs-td-feature">Price</td>
+                            <td class="cs-td">$49/mo</td>
+                            <td class="cs-td cs-td-highlight">$99/mo</td>
+                            <td class="cs-td">$179/mo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="cs-footnote">All prices CAD + tax. Family discounts: 20% off each additional member.</p>
+        </div>
+
+    </div>
+</section>
+
+{% include 'sections/cta.html' %}
+
+{% endblock %}

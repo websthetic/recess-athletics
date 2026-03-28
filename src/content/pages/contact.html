@@ -1,0 +1,164 @@
+---
+title: "Contact | Code Stitch Web Designs"
+description: "Meta description for the page"
+permalink: "/contact/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/contact.css">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | avif %}"/>
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--               Contact Hero                   -->
+<!-- ============================================ -->
+
+<div id="contact-hero">
+    <div class="cs-container">
+        <span class="cs-topper">Reach Out</span>
+        <h1 class="cs-title">GET IN <em class="cs-script">touch.</em></h1>
+        <p class="cs-text">
+            We respond within 24 hours. DM us on Instagram @therecess.club for the fastest response.
+        </p>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!--             Contact Main Section             -->
+<!-- ============================================ -->
+
+<section id="contact-section">
+    <div class="cs-container">
+        <div class="cs-content">
+
+            <!-- ══ LEFT — Contact Details ══ -->
+            <div class="cs-left">
+                <span class="cs-topper">Contact Details</span>
+
+                <div class="cs-detail-item">
+                    <div class="cs-detail-icon">📍</div>
+                    <div class="cs-detail-body">
+                        <span class="cs-detail-label">Address</span>
+                        <address class="cs-detail-value">
+                            201 Warden Avenue<br />Markham, Ontario L3R 0A1
+                        </address>
+                    </div>
+                </div>
+
+                <div class="cs-detail-item">
+                    <div class="cs-detail-icon">📞</div>
+                    <div class="cs-detail-body">
+                        <span class="cs-detail-label">Phone</span>
+                        <a href="tel:6471234567" class="cs-detail-value cs-detail-link">(647) 123-4567</a>
+                    </div>
+                </div>
+
+                <div class="cs-detail-item">
+                    <div class="cs-detail-icon">✉️</div>
+                    <div class="cs-detail-body">
+                        <span class="cs-detail-label">Email</span>
+                        <a href="mailto:hello@therecess.club" class="cs-detail-value cs-detail-link">hello@therecess.club</a>
+                    </div>
+                </div>
+
+                <div class="cs-detail-item">
+                    <div class="cs-detail-icon">📸</div>
+                    <div class="cs-detail-body">
+                        <span class="cs-detail-label">Instagram</span>
+                        <a href="https://instagram.com/therecess.club" class="cs-detail-value cs-detail-link" target="_blank" rel="noopener">@therecess.club</a>
+                    </div>
+                </div>
+
+                <div class="cs-detail-item cs-detail-item-last">
+                    <div class="cs-detail-icon">⏰</div>
+                    <div class="cs-detail-body">
+                        <span class="cs-detail-label">Hours</span>
+                        <span class="cs-detail-value">
+                            Mon–Fri: 6AM–10PM<br />Sat: 7AM–8PM · Sun: 9AM–6PM
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══ RIGHT — Contact Form ══ -->
+            <div class="cs-form-wrap">
+
+                <!-- Form -->
+                <div id="cs-contact-form">
+                    <div class="cs-form-title">SEND A MESSAGE</div>
+                    <input class="cs-input" type="text"  id="cs-name"    placeholder="Your Name *"      autocomplete="name" />
+                    <input class="cs-input" type="email" id="cs-email"   placeholder="Email Address *"  autocomplete="email" />
+                    <select class="cs-select" id="cs-subject">
+                        <option value="">Select Subject</option>
+                        <option>Program Inquiry</option>
+                        <option>Membership Question</option>
+                        <option>Book Evaluation</option>
+                        <option>Partnership</option>
+                        <option>Other</option>
+                    </select>
+                    <textarea class="cs-textarea" id="cs-message" rows="5" placeholder="Your message..."></textarea>
+                    <p class="cs-error" id="cs-contact-error" hidden>Please fill in your name and email before sending.</p>
+                    <button class="cs-button-solid cs-submit-btn" id="cs-contact-submit">Send Message →</button>
+                </div>
+
+                <!-- Success state -->
+                <div id="cs-contact-success" hidden>
+                    <div class="cs-success-icon">✉️</div>
+                    <div class="cs-success-title">MESSAGE SENT!</div>
+                    <p class="cs-success-text">We'll reply within 24 hours. Thank you for reaching out.</p>
+                    <a href="/" class="cs-button-outline cs-success-btn">Back to Home</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>// ============================================
+//            Contact Section
+// ============================================
+
+(function () {
+    const section = document.querySelector("#contact-section");
+    if (!section) return;
+
+    const form    = section.querySelector("#cs-contact-form");
+    const success = section.querySelector("#cs-contact-success");
+    const nameEl  = section.querySelector("#cs-name");
+    const emailEl = section.querySelector("#cs-email");
+    const errorEl = section.querySelector("#cs-contact-error");
+    const submitBtn = section.querySelector("#cs-contact-submit");
+    const selectEl  = section.querySelector("#cs-select");
+
+    // Select colour state
+    section.querySelectorAll(".cs-select").forEach(function (sel) {
+        sel.addEventListener("change", function () {
+            sel.classList.toggle("cs-has-value", sel.value !== "");
+        });
+    });
+
+    // Submit
+    submitBtn.addEventListener("click", function () {
+        const name  = nameEl.value.trim();
+        const email = emailEl.value.trim();
+
+        if (!name || !email) {
+            errorEl.removeAttribute("hidden");
+            return;
+        }
+
+        errorEl.setAttribute("hidden", "");
+
+        // TODO: replace with real form submission (fetch / Netlify / etc.)
+        form.setAttribute("hidden", "");
+        success.removeAttribute("hidden");
+    });
+})();</script>
+
+{% endblock %}

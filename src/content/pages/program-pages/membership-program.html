@@ -1,0 +1,274 @@
+---
+title: "Membership Program | Recess Athletics"
+description: "Meta description for the page"
+permalink: "/programs/membership/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/program-pages.css">
+{% endblock %}
+
+{% block body %}
+
+
+<!-- ============================================ -->
+<!--             Single Program Hero              -->
+<!-- ============================================ -->
+
+<!--
+    INSTRUCTIONS:
+    - Replace [SLUG] with the program slug e.g. "membership"
+    - Replace [LABEL] with the program label e.g. "MEMBERSHIP"
+    - Replace [TAGLINE] with the program tagline
+    - Replace the accent colour on .cs-prog-hero via the style attribute
+    - Replace the photo src with the program photo
+-->
+
+<!-- 📸 PHOTO-PROG-[SLUG] | Program hero | Recommended: 1920×600px -->
+<div id="prog-hero" style="--cs-prog-accent: #144734;">
+    <img
+        class="cs-hero-img"
+        src="/assets/images/programs/membership.jpg"
+        alt="Membership"
+        width="1920"
+        height="600"
+        loading="eager"
+        decoding="async"
+    />
+    <div class="cs-hero-overlay"></div>
+
+    <div class="cs-container">
+        <a href="/programs" class="cs-back-btn">← All Programs</a>
+        <span class="cs-topper">membership</span>
+        <h1 class="cs-title">MEMBERSHIP</h1>
+        <p class="cs-tagline">Your all-access pass to the playground.</p>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!--           Single Program Content             -->
+<!-- ============================================ -->
+
+<!--
+    INSTRUCTIONS:
+    - Set --cs-prog-accent on #prog-content to match the program accent colour
+    - Replace all placeholder text with real program data
+    - Remove the .cs-tiers block entirely if the program has no tiers (use .cs-detail-pricing instead)
+    - Remove .cs-testimonial if program has no testimony
+-->
+
+<section id="prog-content" style="--cs-prog-accent: #144734;">
+    <div class="cs-container">
+        <div class="cs-layout">
+
+            <!-- ══════════════════════════
+                 LEFT COLUMN
+            ══════════════════════════ -->
+            <div class="cs-main">
+
+                <!-- Who It's For -->
+                <div class="cs-block">
+                    <span class="cs-topper">Who It's For</span>
+                    <p class="cs-body-text">
+                        Athletes of all levels ages 6–adult looking for a training home.
+                    </p>
+                </div>
+
+                <!-- What Athletes Gain -->
+                <div class="cs-block">
+                    <span class="cs-topper">What Athletes Gain</span>
+                    <div class="cs-outcomes">
+                        <div class="cs-outcome">
+                            <span class="cs-check">✓</span>
+                            <span class="cs-outcome-text">Consistent improvement</span>
+                        </div>
+                        <div class="cs-outcome">
+                            <span class="cs-check">✓</span>
+                            <span class="cs-outcome-text">Training community</span>
+                        </div>
+                        <div class="cs-outcome">
+                            <span class="cs-check">✓</span>
+                            <span class="cs-outcome-text">Access to all programs</span>
+                        </div>
+                        <div class="cs-outcome">
+                            <span class="cs-check">✓</span>
+                            <span class="cs-outcome-text">Coach relationships</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What's Included -->
+                <div class="cs-block">
+                    <span class="cs-topper">What's Included</span>
+                    <div class="cs-features">
+                        <div class="cs-feature-row cs-feature-row-alt">
+                            <div class="cs-feature-dot"></div>
+                            <span class="cs-feature-text">Unlimited facility access (Pro+)</span>
+                        </div>
+                        <div class="cs-feature-row">
+                            <div class="cs-feature-dot"></div>
+                            <span class="cs-feature-text">Clinics + open play</span>
+                        </div>
+                        <div class="cs-feature-row cs-feature-row-alt">
+                            <div class="cs-feature-dot"></div>
+                            <span class="cs-feature-text">Film review suite</span>
+                        </div>
+                        <div class="cs-feature-row">
+                            <div class="cs-feature-dot"></div>
+                            <span class="cs-feature-text">Priority registration</span>
+                        </div>
+                        <div class="cs-feature-row cs-feature-row-alt">
+                            <div class="cs-feature-dot"></div>
+                            <span class="cs-feature-text">Community events</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial -->
+                <!-- Remove this block if program has no testimony -->
+                <div class="cs-testimonial">
+                    <div class="cs-testimonial-quote-mark" aria-hidden="true">"</div>
+                    <div class="cs-stars">★★★★★</div>
+                    <blockquote class="cs-testimonial-quote">
+                        "Recess gave my daughter a home. She went from nervous beginner to confident competitor in one season."
+                    </blockquote>
+                    <span class="cs-testimonial-attr">— David M., Parent</span>
+                </div>
+
+                <!-- FAQ -->
+                <div class="cs-block">
+                    <span class="cs-topper">Frequently Asked</span>
+                    <div class="cs-faq">
+
+                        <div class="cs-faq-item">
+                            <button class="cs-faq-btn" aria-expanded="false">
+                                <span>Is there a contract?</span>
+                                <span class="cs-faq-icon" aria-hidden="true">+</span>
+                            </button>
+                            <div class="cs-faq-answer" hidden>
+                                <p class="cs-faq-text">Month-to-month. No lock-in. We earn your loyalty.</p>
+                            </div>
+                        </div>
+
+                        <div class="cs-faq-item">
+                            <button class="cs-faq-btn" aria-expanded="false">
+                                <span>Family discount?</span>
+                                <span class="cs-faq-icon" aria-hidden="true">+</span>
+                            </button>
+                            <div class="cs-faq-answer" hidden>
+                                <p class="cs-faq-text">20% off each additional family member.</p>
+                            </div>
+                        </div>
+
+                        <div class="cs-faq-item">
+                            <button class="cs-faq-btn" aria-expanded="false">
+                                <span>Can I try first?</span>
+                                <span class="cs-faq-icon" aria-hidden="true">+</span>
+                            </button>
+                            <div class="cs-faq-answer" hidden>
+                                <p class="cs-faq-text">Yes — book a free evaluation. No card needed.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div><!-- /cs-main -->
+
+            <!-- ══════════════════════════
+                 SIDEBAR
+            ══════════════════════════ -->
+            <aside class="cs-sidebar">
+
+                <!-- Program details -->
+                <div class="cs-sidebar-block">
+                    <span class="cs-sidebar-heading">Program Details</span>
+                    <div class="cs-detail-row">
+                        <span class="cs-detail-label">Ages</span>
+                        <span class="cs-detail-value">6–Adult</span>
+                    </div>
+                    <div class="cs-detail-row">
+                        <span class="cs-detail-label">Season</span>
+                        <span class="cs-detail-value">Year-Round</span>
+                    </div>
+                    <div class="cs-detail-row">
+                        <span class="cs-detail-label">Commitment</span>
+                        <span class="cs-detail-value">Monthly</span>
+                    </div>
+                    <div class="cs-detail-row cs-detail-row-last">
+                        <span class="cs-detail-label">Pricing</span>
+                        <span class="cs-detail-value">From $49/mo</span>
+                    </div>
+                </div>
+
+                <!-- Tiers — remove this entire block if program has no tiers -->
+                <div class="cs-tier cs-tier-starter">
+                    <span class="cs-tier-name">Starter</span>
+                    <div class="cs-tier-price">$49<span class="cs-tier-period">/mo</span></div>
+                </div>
+
+                <div class="cs-tier cs-tier-pro">
+                    <div class="cs-tier-badge">⭐ Most Popular</div>
+                    <span class="cs-tier-name">Pro</span>
+                    <div class="cs-tier-price">$99<span class="cs-tier-period">/mo</span></div>
+                </div>
+
+                <div class="cs-tier cs-tier-elite">
+                    <span class="cs-tier-name">Elite</span>
+                    <div class="cs-tier-price">$179<span class="cs-tier-period">/mo</span></div>
+                </div>
+
+                <!-- CTA block -->
+                <div class="cs-sidebar-cta">
+                    <div class="cs-cta-title">READY TO START?</div>
+                    <p class="cs-cta-text">
+                        Book your free evaluation. Our coaches will set you up with the perfect program.
+                    </p>
+                    <a href="/book" class="cs-button-solid cs-cta-btn">Book Free Evaluation →</a>
+                </div>
+
+                <!-- Contact block -->
+                <div class="cs-sidebar-contact">
+                    <p class="cs-contact-text">
+                        Questions? Call us at <strong class="cs-contact-strong">(647) 123-4567</strong>
+                        or DM <strong class="cs-contact-gold">@therecess.club</strong>
+                    </p>
+                </div>
+
+            </aside>
+
+        </div>
+    </div>
+</section>
+
+<script>
+(function () {
+    const section = document.querySelector("#prog-content");
+    if (!section) return;
+
+    const faqBtns = section.querySelectorAll(".cs-faq-btn");
+
+    faqBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            const answer    = btn.nextElementSibling;
+            const isOpen    = btn.getAttribute("aria-expanded") === "true";
+
+            // Close all others
+            faqBtns.forEach(function (other) {
+                other.setAttribute("aria-expanded", "false");
+                other.nextElementSibling.setAttribute("hidden", "");
+            });
+
+            // Toggle clicked
+            if (!isOpen) {
+                btn.setAttribute("aria-expanded", "true");
+                answer.removeAttribute("hidden");
+            }
+        });
+    });
+})();
+</script>
+
+{% endblock %}

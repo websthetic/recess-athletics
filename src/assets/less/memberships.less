@@ -1,0 +1,263 @@
+/*-- -------------------------- -->
+<---          Memberships       -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #memberships {
+        background-color: var(--recessGrey);
+        padding: var(--sectionPadding);
+        padding-top: 10rem;
+    }
+
+    #memberships .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    /* ── Header ── */
+    #memberships .cs-header {
+        text-align: center;
+        margin-bottom: 3.75rem;
+    }
+
+    #memberships .cs-header .cs-title {
+        margin: 0 auto 1rem;
+    }
+
+    #memberships .cs-topper {
+        color: var(--recessYellow);
+    }
+
+    #memberships .cs-title {
+        font-size: clamp(3.5rem, 9vw, 6.875rem);
+        margin-bottom: 0;
+    }
+
+    #memberships .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+    }
+
+    #memberships .cs-text {
+        font-family: var(--bodyFont);
+        font-size: 0.8125rem;
+        color: rgba(239, 227, 194, 0.45);
+        max-width: 28.75rem;
+        margin: 1.125rem auto 0;
+        line-height: 1.9;
+    }
+
+    /* ── Tier Cards ── */
+    #memberships .cs-tiers {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3px;
+        margin-bottom: 3.75rem;
+    }
+
+    #memberships .cs-tier {
+        padding: 2.25rem 1.75rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border: 2px solid rgba(239, 227, 194, 0.08);
+    }
+
+    #memberships .cs-tier-starter { background-color: var(--recessBlack); }
+    #memberships .cs-tier-pro     { background-color: var(--recessGreen); border-color: var(--recessGreen); }
+    #memberships .cs-tier-elite   { background-color: var(--recessRed);   border-color: var(--recessRed); }
+
+    #memberships .cs-tier-badge {
+        position: absolute;
+        top: -0.875rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--recessYellow);
+        color: var(--recessBlack);
+        font-family: var(--bodyFont);
+        font-size: 0.5rem;
+        font-weight: 700;
+        letter-spacing: 0.1875rem;
+        padding: 0.3125rem 1rem;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    #memberships .cs-tier-name {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: var(--recessYellow);
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 0.625rem;
+    }
+
+    #memberships .cs-tier-price {
+        display: flex;
+        align-items: flex-end;
+        gap: 0.25rem;
+        margin-bottom: 0.375rem;
+    }
+
+    #memberships .cs-tier-amount {
+        font-family: var(--headerFont);
+        font-size: 4rem;
+        color: var(--headerColor);
+        line-height: 1;
+    }
+
+    #memberships .cs-tier-period {
+        font-family: var(--bodyFont);
+        font-size: 0.8125rem;
+        color: rgba(239, 227, 194, 0.45);
+        margin-bottom: 0.75rem;
+    }
+
+    #memberships .cs-tier-desc {
+        font-family: var(--bodyFont);
+        font-size: 0.6875rem;
+        color: rgba(239, 227, 194, 0.5);
+        line-height: 1.6;
+        margin-bottom: 1.75rem;
+    }
+
+    #memberships .cs-tier-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex: 1;
+    }
+
+    #memberships .cs-tier-feature {
+        font-family: var(--bodyFont);
+        font-size: 0.6875rem;
+        color: rgba(239, 227, 194, 0.75);
+        display: flex;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+
+    #memberships .cs-check {
+        color: var(--recessYellow);
+        flex-shrink: 0;
+    }
+
+    #memberships .cs-tier-btn {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    #memberships .cs-tier-btn-gold {
+        background-color: var(--recessYellow);
+        border-color: var(--recessYellow);
+        color: var(--recessBlack);
+    }
+
+    #memberships .cs-tier-btn-gold:hover {
+        color: var(--recessBlack);
+    }
+
+    /* ── Comparison Table ── */
+    #memberships .cs-comparison {
+        margin-top: 1rem;
+    }
+
+    #memberships .cs-comparison .cs-topper {
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    #memberships .cs-table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #memberships .cs-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 31.25rem;
+    }
+
+    #memberships .cs-th {
+        padding: 0.875rem 1.25rem;
+        text-align: center;
+        font-family: var(--headerFont);
+        font-size: 1.125rem;
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+        border-bottom: 2px solid rgba(239, 227, 194, 0.08);
+        background-color: transparent;
+    }
+
+    #memberships .cs-th-feature {
+        text-align: left;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        color: rgba(239, 227, 194, 0.3);
+        font-weight: 400;
+    }
+
+    #memberships .cs-th-highlight {
+        color: var(--recessYellow);
+        border-bottom-color: var(--recessYellow);
+        background-color: rgba(255, 178, 0, 0.04);
+    }
+
+    #memberships .cs-tr     { background-color: transparent; }
+    #memberships .cs-tr-alt { background-color: rgba(239, 227, 194, 0.015); }
+
+    #memberships .cs-td {
+        padding: 0.75rem 1.25rem;
+        text-align: center;
+        font-family: var(--bodyFont);
+        font-size: 0.75rem;
+        color: var(--headerColor);
+        border-bottom: 1px solid rgba(239, 227, 194, 0.04);
+    }
+
+    #memberships .cs-td-feature {
+        text-align: left;
+        font-size: 0.625rem;
+        text-transform: uppercase;
+        letter-spacing: 0.125rem;
+        color: rgba(239, 227, 194, 0.35);
+    }
+
+    #memberships .cs-td-highlight { background-color: rgba(255, 178, 0, 0.025); }
+    #memberships .cs-td-check     { color: var(--recessYellow); }
+    #memberships .cs-td-empty     { color: rgba(239, 227, 194, 0.2); }
+
+    #memberships .cs-footnote {
+        font-family: var(--bodyFont);
+        font-size: 0.625rem;
+        color: rgba(239, 227, 194, 0.2);
+        text-align: center;
+        margin-top: 1rem;
+        letter-spacing: 0.125rem;
+    }
+
+} /* end 0rem */
+
+/* Tablet - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #memberships .cs-tiers {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+} /* end 48rem */

@@ -1,0 +1,445 @@
+/*-- -------------------------- -->
+<---          Book Hero         -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #book-hero {
+        background-color: var(--recessYellow);
+        padding: 5rem 0 3.5rem;
+        padding-top: 8rem; /* offset fixed nav */
+        border-bottom: 3px solid var(--recessBlack);
+        margin-top: 4rem;
+    }
+
+    #book-hero .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #book-hero .cs-hero-label {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.625rem;
+        color: rgba(0, 0, 0, 0.5);
+        letter-spacing: 0.3125rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+    }
+
+    #book-hero .cs-title {
+        font-size: clamp(3.75rem, 9vw, 6.875rem);
+        color: var(--recessBlack);
+        line-height: 0.9;
+        margin-bottom: 1rem;
+    }
+
+    #book-hero .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessBlack);
+        font-size: 0.82em;
+    }
+
+    #book-hero .cs-text {
+        font-family: var(--bodyFont);
+        font-size: 0.8125rem;
+        color: rgba(0, 0, 0, 0.6);
+        max-width: 31.25rem;
+        line-height: 1.9;
+    }
+
+} /* end 0rem */
+
+/*-- -------------------------- -->
+<---        Book Section        -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #book-section {
+        background-color: var(--recessGrey);
+        padding: var(--sectionPadding);
+    }
+
+    #book-section .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #book-section .cs-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: start;
+    }
+
+    /* ── Left column ── */
+    #book-section .cs-topper {
+        color: var(--recessYellow);
+        margin-bottom: 1.5rem;
+    }
+
+    /* Steps */
+    #book-section .cs-steps {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    #book-section .cs-step {
+        display: flex;
+        gap: 1.25rem;
+        margin-bottom: 2rem;
+        align-items: flex-start;
+    }
+
+    #book-section .cs-step-num {
+        font-family: var(--headerFont);
+        font-size: 3rem;
+        color: var(--recessYellow);
+        opacity: 0.25;
+        line-height: 1;
+        flex-shrink: 0;
+        width: 3.25rem;
+    }
+
+    #book-section .cs-step-title {
+        font-family: var(--headerFont);
+        font-size: 1.375rem;
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+        margin-bottom: 0.375rem;
+    }
+
+    #book-section .cs-step-desc {
+        font-family: var(--bodyFont);
+        font-size: 0.6875rem;
+        color: rgba(239, 227, 194, 0.45);
+        line-height: 1.7;
+    }
+
+    /* Side photo */
+    #book-section .cs-side-photo {
+        margin-bottom: 0.75rem;
+    }
+
+    #book-section .cs-side-photo-img {
+        width: 100%;
+        height: 13.75rem;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    /* Contact block */
+    #book-section .cs-contact-block {
+        background-color: rgba(255, 178, 0, 0.08);
+        border: 1px solid rgba(255, 178, 0, 0.2);
+        padding: 1.5rem 1.25rem;
+        margin-bottom: 0.75rem;
+    }
+
+    #book-section .cs-contact-heading {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: var(--recessYellow);
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    #book-section .cs-contact-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    #book-section .cs-contact-item {
+        display: flex;
+        gap: 0.625rem;
+        align-items: flex-start;
+    }
+
+    #book-section .cs-contact-icon {
+        font-size: 0.75rem;
+        flex-shrink: 0;
+    }
+
+    #book-section .cs-contact-text {
+        font-family: var(--bodyFont);
+        font-size: 0.6875rem;
+        color: rgba(239, 227, 194, 0.65);
+    }
+
+    #book-section .cs-contact-link {
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    #book-section .cs-contact-link:hover {
+        color: var(--headerColor);
+    }
+
+    /* Stats strip */
+    #book-section .cs-stats {
+        display: flex;
+        gap: 3px;
+    }
+
+    #book-section .cs-stat {
+        flex: 1;
+        background-color: var(--recessRed);
+        padding: 1.25rem 0.75rem;
+        text-align: center;
+    }
+
+    #book-section .cs-stat-val {
+        font-family: var(--headerFont);
+        font-size: 2.25rem;
+        color: var(--headerColor);
+        line-height: 1;
+    }
+
+    #book-section .cs-gold { color: var(--recessYellow); }
+
+    #book-section .cs-stat-label {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5rem;
+        color: rgba(239, 227, 194, 0.5);
+        letter-spacing: 0.125rem;
+        text-transform: uppercase;
+        margin-top: 0.25rem;
+    }
+
+    /* ── Form panel ── */
+    #book-section .cs-form-wrap {
+        background-color: #111;
+        border: 1px solid rgba(239, 227, 194, 0.08);
+        padding: 2.25rem 2rem;
+    }
+
+    #book-section .cs-form-panel[hidden] { display: none; }
+
+    #book-section .cs-form-title {
+        font-family: var(--headerFont);
+        font-size: 2rem;
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+        margin-bottom: 0.25rem;
+    }
+
+    #book-section .cs-form-step-label {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: rgba(239, 227, 194, 0.35);
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Progress bar */
+    #book-section .cs-progress {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.75rem;
+    }
+
+    #book-section .cs-progress-dot {
+        width: 1.75rem;
+        height: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--bodyFont);
+        font-size: 0.6875rem;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+
+    #book-section .cs-progress-dot.cs-done {
+        background-color: var(--recessRed);
+        color: var(--headerColor);
+    }
+
+    #book-section .cs-progress-dot.cs-inactive {
+        background-color: #222;
+        border: 1px solid rgba(239, 227, 194, 0.15);
+        color: rgba(239, 227, 194, 0.3);
+    }
+
+    #book-section .cs-progress-line {
+        flex: 1;
+        height: 1.5px;
+    }
+
+    #book-section .cs-progress-line.cs-line-inactive { background-color: rgba(239, 227, 194, 0.1); }
+    #book-section .cs-progress-line.cs-line-active   { background-color: var(--recessRed); }
+
+    /* Inputs */
+    #book-section .cs-field-row {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.625rem;
+    }
+
+    #book-section .cs-input,
+    #book-section .cs-select,
+    #book-section .cs-textarea {
+        width: 100%;
+        background-color: #1a1a1a;
+        border: 1px solid rgba(239, 227, 194, 0.12);
+        border-bottom: 2px solid rgba(239, 227, 194, 0.2);
+        color: var(--headerColor);
+        padding: 0.8125rem 1rem;
+        font-family: var(--bodyFont);
+        font-size: 0.75rem;
+        outline: none;
+        display: block;
+        margin-bottom: 0.625rem;
+        box-sizing: border-box;
+        transition: border-bottom-color 0.2s ease;
+    }
+
+    #book-section .cs-input:focus,
+    #book-section .cs-select:focus,
+    #book-section .cs-textarea:focus {
+        border-bottom-color: var(--recessYellow);
+    }
+
+    #book-section .cs-select {
+        appearance: none;
+        cursor: pointer;
+        color: rgba(239, 227, 194, 0.35);
+    }
+
+    #book-section .cs-select.cs-has-value { color: var(--headerColor); }
+
+    #book-section .cs-input-full,
+    #book-section .cs-select-full { grid-column: 1 / -1; }
+
+    #book-section .cs-textarea {
+        resize: none;
+        line-height: 1.7;
+    }
+
+    /* Error */
+    #book-section .cs-error {
+        font-family: var(--bodyFont);
+        font-size: 0.625rem;
+        color: var(--recessRed);
+        margin-bottom: 0.75rem;
+    }
+
+    #book-section .cs-error[hidden] { display: none; }
+
+    /* Buttons */
+    #book-section .cs-form-btn {
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-top: 0.5rem;
+        font-family: var(--bodyFont);
+    }
+
+    #book-section .cs-form-actions {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    #book-section .cs-back-btn   { flex-shrink: 0; }
+    #book-section .cs-submit-btn { flex: 1; }
+
+    /* Success state */
+    #book-section .cs-success {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 3rem 0;
+    }
+
+    #book-section .cs-success-icon {
+        font-size: 3.75rem;
+    }
+
+    #book-section .cs-success-title {
+        font-family: var(--headerFont);
+        font-size: 3rem;
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+        line-height: 0.9;
+    }
+
+    #book-section .cs-success-text {
+        font-family: var(--bodyFont);
+        font-size: 0.8125rem;
+        color: rgba(239, 227, 194, 0.45);
+        line-height: 1.8;
+        max-width: 20rem;
+    }
+
+    #book-section .cs-success-next {
+        background-color: #1a1a1a;
+        border: 1px solid rgba(239, 227, 194, 0.08);
+        padding: 1.25rem 1.5rem;
+        width: 100%;
+        text-align: left;
+    }
+
+    #book-section .cs-success-next-heading {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: var(--recessYellow);
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 0.875rem;
+    }
+
+    #book-section .cs-success-next-item {
+        font-family: var(--bodyFont);
+        font-size: 0.6875rem;
+        color: rgba(239, 227, 194, 0.65);
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+
+} /* end 0rem */
+
+/* Tablet - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #book-section .cs-field-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+} /* end 48rem */
+
+/* Desktop - 64rem */
+@media only screen and (min-width: 64rem) {
+
+    #book-section .cs-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.75rem;
+    }
+
+} /* end 64rem */

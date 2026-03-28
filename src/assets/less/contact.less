@@ -1,0 +1,261 @@
+/*-- -------------------------- -->
+<---         Contact Hero       -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #contact-hero {
+        background-color: var(--recessBlue);
+        padding: 5rem 0 3.5rem;
+        padding-top: 8rem; /* offset fixed nav */
+        border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+        margin-top: 4rem;
+    }
+
+    #contact-hero .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #contact-hero .cs-topper {
+        color: var(--recessYellow);
+    }
+
+    #contact-hero .cs-title {
+        font-size: clamp(3.75rem, 9vw, 6.875rem);
+        color: var(--headerColor);
+        margin-bottom: 0;
+    }
+
+    #contact-hero .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--headerColor);
+    }
+
+    #contact-hero .cs-text {
+        font-family: var(--bodyFont);
+        font-size: 0.8125rem;
+        color: rgba(239, 227, 194, 0.65);
+        max-width: 25rem;
+        margin-top: 1rem;
+        line-height: 1.9;
+    }
+
+} /* end 0rem */
+
+/*-- -------------------------- -->
+<---       Contact Section      -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #contact-section {
+        background-color: var(--recessGrey);
+        padding: var(--sectionPadding);
+    }
+
+    #contact-section .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #contact-section .cs-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        align-items: start;
+    }
+
+    /* ── Left column ── */
+    #contact-section .cs-topper {
+        color: var(--recessYellow);
+        margin-bottom: 1.25rem;
+        display: block;
+    }
+
+    #contact-section .cs-detail-item {
+        display: flex;
+        gap: 1rem;
+        padding: 1.25rem 0;
+        border-bottom: 1px solid rgba(239, 227, 194, 0.07);
+        align-items: flex-start;
+    }
+
+    #contact-section .cs-detail-item-last {
+        border-bottom: none;
+    }
+
+    #contact-section .cs-detail-icon {
+        background-color: var(--recessRed);
+        width: 2.5rem;
+        height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+
+    #contact-section .cs-detail-body {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    #contact-section .cs-detail-label {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: var(--recessYellow);
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    #contact-section .cs-detail-value {
+        font-family: var(--bodyFont);
+        font-size: 0.75rem;
+        color: var(--headerColor);
+        line-height: 1.6;
+        font-style: normal;
+    }
+
+    #contact-section .cs-detail-link {
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    #contact-section .cs-detail-link:hover {
+        color: var(--recessYellow);
+    }
+
+    /* ── Form panel ── */
+    #contact-section .cs-form-wrap {
+        background-color: #111;
+        border: 1px solid rgba(239, 227, 194, 0.08);
+        padding: 2.25rem 2rem;
+    }
+
+    #contact-section #cs-contact-success[hidden],
+    #contact-section #cs-contact-form[hidden] {
+        display: none;
+    }
+
+    #contact-section .cs-form-title {
+        font-family: var(--headerFont);
+        font-size: 2rem;
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #contact-section .cs-input,
+    #contact-section .cs-select,
+    #contact-section .cs-textarea {
+        width: 100%;
+        background-color: #1a1a1a;
+        border: 1px solid rgba(239, 227, 194, 0.12);
+        border-bottom: 2px solid rgba(239, 227, 194, 0.2);
+        color: var(--headerColor);
+        padding: 0.8125rem 1rem;
+        font-family: var(--bodyFont);
+        font-size: 0.75rem;
+        outline: none;
+        display: block;
+        margin-bottom: 0.625rem;
+        box-sizing: border-box;
+        transition: border-bottom-color 0.2s ease;
+    }
+
+    #contact-section .cs-input:focus,
+    #contact-section .cs-select:focus,
+    #contact-section .cs-textarea:focus {
+        border-bottom-color: var(--recessYellow);
+    }
+
+    #contact-section .cs-select {
+        appearance: none;
+        cursor: pointer;
+        color: rgba(239, 227, 194, 0.35);
+    }
+
+    #contact-section .cs-select.cs-has-value {
+        color: var(--headerColor);
+    }
+
+    #contact-section .cs-textarea {
+        resize: none;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+    }
+
+    #contact-section .cs-error {
+        font-family: var(--bodyFont);
+        font-size: 0.625rem;
+        color: var(--recessRed);
+        margin-bottom: 0.75rem;
+    }
+
+    #contact-section .cs-error[hidden] { display: none; }
+
+    #contact-section .cs-submit-btn {
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+
+    /* ── Success state ── */
+    #contact-section #cs-contact-success {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 2.5rem 0;
+    }
+
+    #contact-section .cs-success-icon {
+        font-size: 3.25rem;
+    }
+
+    #contact-section .cs-success-title {
+        font-family: var(--headerFont);
+        font-size: 2.75rem;
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+        line-height: 0.9;
+    }
+
+    #contact-section .cs-success-text {
+        font-family: var(--bodyFont);
+        font-size: 0.75rem;
+        color: rgba(239, 227, 194, 0.45);
+        line-height: 1.8;
+        max-width: 17.5rem;
+    }
+
+    #contact-section .cs-success-btn {
+        margin-top: 0.5rem;
+    }
+
+} /* end 0rem */
+
+/* Desktop - 64rem */
+@media only screen and (min-width: 64rem) {
+
+    #contact-section .cs-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+} /* end 64rem */

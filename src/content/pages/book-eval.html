@@ -1,0 +1,300 @@
+---
+title: "Book Eval | Recess Athletics"
+description: "Meta description for the page"
+permalink: "/book-eval/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/book-eval.css">
+{% endblock %}
+
+{% block body %}
+
+   <!-- ============================================ -->
+<!--                  Book Hero                   -->
+<!-- ============================================ -->
+
+<div id="book-hero">
+    <div class="cs-container">
+        <span class="cs-hero-label">Free · No Commitment · 30–45 Mins</span>
+        <h1 class="cs-title">BOOK YOUR<br /><em class="cs-script">free eval.</em></h1>
+        <p class="cs-text">
+            Our coaching staff assesses your athlete, answers every question, and recommends
+            the perfect starting point — completely free.
+        </p>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!--             Book Main Section                -->
+<!-- ============================================ -->
+
+<section id="book-section">
+    <div class="cs-container">
+        <div class="cs-content">
+
+            <!-- ══ LEFT COLUMN ══ -->
+            <div class="cs-left">
+
+                <!-- Steps -->
+                <span class="cs-topper">What To Expect</span>
+                <div class="cs-steps">
+
+                    <div class="cs-step">
+                        <div class="cs-step-num" aria-hidden="true">01</div>
+                        <div class="cs-step-body">
+                            <div class="cs-step-title">Tell Us About Your Athlete</div>
+                            <p class="cs-step-desc">Quick form, basic details. We review before your visit.</p>
+                        </div>
+                    </div>
+
+                    <div class="cs-step">
+                        <div class="cs-step-num" aria-hidden="true">02</div>
+                        <div class="cs-step-body">
+                            <div class="cs-step-title">Schedule Your Session</div>
+                            <p class="cs-step-desc">Pick a time that works. Evaluations run 30–45 minutes.</p>
+                        </div>
+                    </div>
+
+                    <div class="cs-step">
+                        <div class="cs-step-num" aria-hidden="true">03</div>
+                        <div class="cs-step-body">
+                            <div class="cs-step-title">Come In &amp; Get Assessed</div>
+                            <p class="cs-step-desc">Low-pressure skill assessment by certified coaches.</p>
+                        </div>
+                    </div>
+
+                    <div class="cs-step">
+                        <div class="cs-step-num" aria-hidden="true">04</div>
+                        <div class="cs-step-body">
+                            <div class="cs-step-title">Get Your Roadmap</div>
+                            <p class="cs-step-desc">Walk away with a clear program path, pricing, and next steps.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 📸 PHOTO-BOOK-SIDE | Athlete/coach evaluation scene | Recommended: 600×380px -->
+                <div class="cs-side-photo">
+                    <img
+                        class="cs-side-photo-img"
+                        src="/assets/images/book/evaluation.jpg"
+                        alt="Evaluation session"
+                        width="600"
+                        height="380"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </div>
+
+                <!-- Contact info block -->
+                <div class="cs-contact-block">
+                    <span class="cs-contact-heading">Location &amp; Contact</span>
+                    <div class="cs-contact-list">
+                        <div class="cs-contact-item">
+                            <span class="cs-contact-icon">📍</span>
+                            <span class="cs-contact-text">201 Warden Avenue, Markham ON L3R 0A1</span>
+                        </div>
+                        <div class="cs-contact-item">
+                            <span class="cs-contact-icon">📞</span>
+                            <a href="tel:6471234567" class="cs-contact-text cs-contact-link">(647) 123-4567</a>
+                        </div>
+                        <div class="cs-contact-item">
+                            <span class="cs-contact-icon">✉️</span>
+                            <a href="mailto:hello@therecess.club" class="cs-contact-text cs-contact-link">hello@therecess.club</a>
+                        </div>
+                        <div class="cs-contact-item">
+                            <span class="cs-contact-icon">⏱</span>
+                            <span class="cs-contact-text">Response time: under 24 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats strip -->
+                <div class="cs-stats">
+                    <div class="cs-stat">
+                        <div class="cs-stat-val">500<span class="cs-gold">+</span></div>
+                        <span class="cs-stat-label">Athletes Trained</span>
+                    </div>
+                    <div class="cs-stat">
+                        <div class="cs-stat-val">30<span class="cs-gold">+</span></div>
+                        <span class="cs-stat-label">College Placements</span>
+                    </div>
+                    <div class="cs-stat">
+                        <div class="cs-stat-val">15<span class="cs-gold">+</span></div>
+                        <span class="cs-stat-label">Certified Coaches</span>
+                    </div>
+                </div>
+
+            </div><!-- /cs-left -->
+
+            <!-- ══ RIGHT COLUMN — FORM ══ -->
+            <div class="cs-form-wrap">
+
+                <!-- ── Step 1 ── -->
+                <div class="cs-form-panel cs-active" id="cs-step-1">
+                    <div class="cs-form-title">CONTACT INFO</div>
+                    <span class="cs-form-step-label">Step 1 of 2</span>
+
+                    <div class="cs-progress">
+                        <div class="cs-progress-dot cs-done">1</div>
+                        <div class="cs-progress-line cs-line-inactive" id="cs-progress-line"></div>
+                        <div class="cs-progress-dot cs-inactive" id="cs-dot-2">2</div>
+                    </div>
+
+                    <div class="cs-field-row">
+                        <input class="cs-input" type="text" id="cs-name"  placeholder="Full Name *"    autocomplete="name" />
+                        <input class="cs-input" type="tel"  id="cs-phone" placeholder="Phone Number *" autocomplete="tel" />
+                    </div>
+                    <input class="cs-input cs-input-full" type="email" id="cs-email" placeholder="Email Address *" autocomplete="email" />
+                    <div class="cs-field-row">
+                        <select class="cs-select" id="cs-age">
+                            <option value="">Athlete Age</option>
+                            <option>5–7</option>
+                            <option>8–10</option>
+                            <option>11–13</option>
+                            <option>14–15</option>
+                            <option>16–17</option>
+                            <option>18–20</option>
+                            <option>21+</option>
+                        </select>
+                        <select class="cs-select" id="cs-skill">
+                            <option value="">Skill Level</option>
+                            <option>Beginner</option>
+                            <option>Recreational</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                            <option>Elite</option>
+                        </select>
+                    </div>
+                    <select class="cs-select cs-select-full" id="cs-program">
+                        <option value="">Program Interest *</option>
+                        <option>MEMBERSHIP</option>
+                        <option>CAMPS</option>
+                        <option>CLINICS</option>
+                        <option>WORKSHOPS</option>
+                        <option>JR.NBA</option>
+                        <option>3-ON-3</option>
+                        <option>HOUSE LEAGUE</option>
+                        <option>REP</option>
+                        <option>AAU</option>
+                        <option>PREP ACADEMY</option>
+                    </select>
+                    <p class="cs-error" id="cs-error-1" hidden>Please fill in your name, email, and phone before continuing.</p>
+                    <button class="cs-button-solid cs-form-btn" id="cs-continue">Continue →</button>
+                </div>
+
+                <!-- ── Step 2 ── -->
+                <div class="cs-form-panel" id="cs-step-2" hidden>
+                    <div class="cs-form-title">ATHLETE DETAILS</div>
+                    <span class="cs-form-step-label">Step 2 of 2</span>
+
+                    <div class="cs-progress">
+                        <div class="cs-progress-dot cs-done">1</div>
+                        <div class="cs-progress-line cs-line-active"></div>
+                        <div class="cs-progress-dot cs-done">2</div>
+                    </div>
+
+                    <input class="cs-input cs-input-full" type="text" id="cs-team"
+                        placeholder="Current Team / School (Optional)" />
+                    <textarea class="cs-textarea" id="cs-goals" rows="4"
+                        placeholder="Tell us your goals — what do you want to achieve? (Optional)"></textarea>
+
+                    <div class="cs-form-actions">
+                        <button class="cs-button-outline cs-back-btn" id="cs-back">← Back</button>
+                        <button class="cs-button-solid cs-submit-btn" id="cs-submit">Submit &amp; Book →</button>
+                    </div>
+                </div>
+
+                <!-- ── Success state ── -->
+                <div class="cs-form-panel cs-success" id="cs-success" hidden>
+                    <div class="cs-success-icon">🏆</div>
+                    <div class="cs-success-title">YOU'RE IN!</div>
+                    <p class="cs-success-text">
+                        Our team will reach out within 24 hours. Welcome to the playground.
+                    </p>
+                    <div class="cs-success-next">
+                        <span class="cs-success-next-heading">What Happens Next</span>
+                        <p class="cs-success-next-item">✓ Check your email for confirmation</p>
+                        <p class="cs-success-next-item">✓ Follow us @therecess.club on Instagram</p>
+                        <p class="cs-success-next-item">✓ Our coach calls to confirm your session</p>
+                    </div>
+                    <a href="/programs" class="cs-button-outline cs-form-btn">Browse Programs →</a>
+                </div>
+
+            </div><!-- /cs-form-wrap -->
+
+        </div>
+    </div>
+</section>
+
+<script>
+
+(function () {
+    const section = document.querySelector("#book-section");
+    if (!section) return;
+
+    // Panels
+    const step1   = section.querySelector("#cs-step-1");
+    const step2   = section.querySelector("#cs-step-2");
+    const success = section.querySelector("#cs-success");
+
+    // Step 1 fields
+    const nameEl    = section.querySelector("#cs-name");
+    const emailEl   = section.querySelector("#cs-email");
+    const phoneEl   = section.querySelector("#cs-phone");
+    const error1    = section.querySelector("#cs-error-1");
+
+    // Progress elements
+    const progressLine = step1.querySelector("#cs-progress-line");
+    const dot2         = step1.querySelector("#cs-dot-2");
+
+    // Buttons
+    const continueBtn = section.querySelector("#cs-continue");
+    const backBtn     = section.querySelector("#cs-back");
+    const submitBtn   = section.querySelector("#cs-submit");
+
+    // ── Select colour state ──
+    section.querySelectorAll(".cs-select").forEach(function (sel) {
+        sel.addEventListener("change", function () {
+            sel.classList.toggle("cs-has-value", sel.value !== "");
+        });
+    });
+
+    // ── Step 1 → Step 2 ──
+    continueBtn.addEventListener("click", function () {
+        const name  = nameEl.value.trim();
+        const email = emailEl.value.trim();
+        const phone = phoneEl.value.trim();
+
+        if (!name || !email || !phone) {
+            error1.removeAttribute("hidden");
+            return;
+        }
+
+        error1.setAttribute("hidden", "");
+        step1.setAttribute("hidden", "");
+        step2.removeAttribute("hidden");
+        window.scrollTo({ top: section.offsetTop - 80, behavior: "smooth" });
+    });
+
+    // ── Step 2 → Step 1 ──
+    backBtn.addEventListener("click", function () {
+        step2.setAttribute("hidden", "");
+        step1.removeAttribute("hidden");
+        window.scrollTo({ top: section.offsetTop - 80, behavior: "smooth" });
+    });
+
+    // ── Submit → Success ──
+    submitBtn.addEventListener("click", function () {
+        // TODO: replace with real form submission (fetch / Netlify / etc.)
+        step2.setAttribute("hidden", "");
+        success.removeAttribute("hidden");
+        window.scrollTo({ top: section.offsetTop - 80, behavior: "smooth" });
+    });
+
+})();</script>
+
+{% endblock %}

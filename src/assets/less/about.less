@@ -1,0 +1,456 @@
+* {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/*-- -------------------------- -->
+<---          About Hero        -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #about-hero {
+        background-color: var(--recessGrey);
+        padding: 4.5rem 0 3.5rem;
+        padding-top: 8rem; /* offset fixed nav */
+        border-bottom: 2px solid rgba(239, 227, 194, 0.06);
+    }
+
+    #about-hero .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #about-hero .cs-topper {
+        color: var(--recessYellow);
+    }
+
+    #about-hero .cs-title {
+        font-size: clamp(4rem, 10vw, 7.5rem);
+        margin-bottom: 0;
+    }
+
+    #about-hero .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+    }
+
+    #about-hero .cs-text {
+        font-family: var(--bodyFont);
+        font-size: 0.875rem;
+        color: rgba(239, 227, 194, 0.6);
+        max-width: 35rem;
+        margin-top: 1rem;
+        line-height: 1.9;
+    }
+
+} /* end 0rem */
+
+/*-- -------------------------- -->
+<---         About Founder      -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #about-founder {
+        background-color: var(--recessGreen);
+        padding: var(--sectionPadding);
+    }
+
+    #about-founder .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #about-founder .cs-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        align-items: center;
+    }
+
+    /* ── Photo ── */
+    #about-founder .cs-picture-wrap {
+        position: relative;
+        overflow: hidden;
+    }
+
+    #about-founder .cs-picture {
+        width: 100%;
+        height: 25rem;
+        object-fit: cover;
+        object-position: top;
+        display: block;
+    }
+
+    #about-founder .cs-picture-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1.5rem;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    }
+
+    #about-founder .cs-caption-label {
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: var(--recessYellow);
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+    }
+
+    /* ── Text ── */
+    #about-founder .cs-topper {
+        color: var(--recessYellow);
+    }
+
+    #about-founder .cs-title {
+        font-size: clamp(2.75rem, 6vw, 5rem);
+        color: var(--headerColor);
+        margin-bottom: 0;
+    }
+
+    #about-founder .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+    }
+
+    #about-founder .cs-divider {
+        height: 3px;
+        width: 3.75rem;
+        background-color: var(--recessYellow);
+        margin: 1.5rem 0;
+    }
+
+    #about-founder .cs-text {
+        font-family: var(--bodyFont);
+        font-size: 0.8125rem;
+        color: rgba(239, 227, 194, 0.75);
+        line-height: 2;
+        margin-bottom: 1.125rem;
+        max-width: 100%;
+    }
+
+    #about-founder .cs-text-last {
+        margin-bottom: 2.25rem;
+    }
+
+} /* end 0rem */
+
+/* Desktop - 64rem */
+@media only screen and (min-width: 64rem) {
+
+    #about-founder .cs-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3.75rem;
+    }
+
+    #about-founder .cs-picture {
+        height: 31.25rem;
+    }
+
+} /* end 64rem */
+
+/*-- -------------------------- -->
+<---         About Values       -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #about-values {
+        background-color: var(--recessGrey);
+        padding: var(--sectionPadding);
+    }
+
+    #about-values .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #about-values .cs-topper {
+        color: var(--recessYellow);
+    }
+
+    #about-values .cs-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        margin-bottom: 3rem;
+    }
+
+    #about-values .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+    }
+
+    #about-values .cs-values {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+
+    #about-values .cs-value {
+        padding: 2.25rem 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #about-values .cs-value-red   { background-color: var(--recessRed); }
+    #about-values .cs-value-green { background-color: var(--recessGreen); }
+    #about-values .cs-value-dark  { background-color: #111; }
+    #about-values .cs-value-blue  { background-color: var(--recessBlue); }
+
+    #about-values .cs-value-num {
+        position: absolute;
+        bottom: -0.75rem;
+        right: 0.5rem;
+        font-family: var(--headerFont);
+        font-size: 5rem;
+        color: rgba(255, 255, 255, 0.05);
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    #about-values .cs-value-title {
+        font-family: var(--headerFont);
+        font-size: 2.25rem;
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+        margin-bottom: 0.75rem;
+    }
+
+    #about-values .cs-value-text {
+        font-family: var(--bodyFont);
+        font-size: 0.8125rem;
+        color: rgba(239, 227, 194, 0.75);
+        line-height: 1.8;
+        max-width: 100%;
+    }
+
+} /* end 0rem */
+
+/* Tablet - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #about-values .cs-values {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+} /* end 48rem */
+
+/*-- -------------------------- -->
+<---          About Team        -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #about-team {
+        background-color: #0a0a0a;
+        padding: var(--sectionPadding);
+    }
+
+    #about-team .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #about-team .cs-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+    }
+
+    #about-team .cs-topper {
+        color: var(--recessYellow);
+    }
+
+    #about-team .cs-title {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        margin-bottom: 0;
+    }
+
+    #about-team .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+    }
+
+    /* ── Team banner ── */
+    #about-team .cs-team-banner {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 3px;
+        height: 16.25rem;
+    }
+
+    #about-team .cs-team-banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    #about-team .cs-team-banner-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+        pointer-events: none;
+    }
+
+    /* ── Coach cards ── */
+    #about-team .cs-coaches {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+
+    #about-team .cs-coach {
+        background-color: #111;
+        border: 1px solid rgba(239, 227, 194, 0.07);
+        overflow: hidden;
+    }
+
+    #about-team .cs-coach-img {
+        width: 100%;
+        height: 10rem;
+        object-fit: cover;
+        object-position: top;
+        display: block;
+    }
+
+    #about-team .cs-coach-body {
+        padding: 1.25rem 1.125rem;
+    }
+
+    #about-team .cs-coach-name {
+        font-family: var(--headerFont);
+        font-size: 1.125rem;
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+        margin-bottom: 0.25rem;
+    }
+
+    #about-team .cs-coach-role {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: var(--recessYellow);
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 0.625rem;
+    }
+
+    #about-team .cs-coach-bio {
+        font-family: var(--bodyFont);
+        font-size: 0.625rem;
+        color: rgba(239, 227, 194, 0.45);
+        line-height: 1.7;
+    }
+
+} /* end 0rem */
+
+/* Tablet - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #about-team .cs-coaches {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+} /* end 48rem */
+
+/* Desktop - 64rem */
+@media only screen and (min-width: 64rem) {
+
+    #about-team .cs-coaches {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+} /* end 64rem */
+
+/*-- -------------------------- -->
+<---       About Culture        -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #about-culture {
+        position: relative;
+        height: 25rem;
+        overflow: hidden;
+    }
+
+    #about-culture .cs-culture-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    #about-culture .cs-culture-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #about-culture .cs-culture-content {
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    #about-culture .cs-culture-title {
+        font-family: var(--headerFont);
+        font-size: clamp(3rem, 8vw, 6.25rem);
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+        line-height: 0.9;
+        margin-bottom: 1.5rem;
+    }
+
+    #about-culture .cs-culture-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+        font-size: 0.7em;
+        display: block;
+    }
+
+    #about-culture .cs-culture-btn {
+        font-size: 0.875rem;
+        padding: 1rem 2rem;
+    }
+
+} /* end 0rem */

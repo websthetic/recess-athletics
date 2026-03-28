@@ -1,0 +1,1112 @@
+/*-- -------------------------- -->
+<---        Core Styles         -->
+<--- -------------------------- -*/
+
+/* CodeStitch Core Styles + Reset */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--bodyFont);
+    font-size: 100%;
+    transition: background-color 0.3s;
+    color: var(--bodyTextColor);
+    background-color: var(--recessGrey);
+    overflow-x: hidden;  // ← add this
+    max-width: 100%;     // ← add this
+}
+
+#main {
+    overflow: clip;  // ← was "overflow: visible" or "overflow: hidden"
+}
+
+@media only screen and (min-width: 0px) {
+    :root {
+        --recessRed: #940203;
+        --recessGreen: #144734;
+        --recessYellow: #FFB200;
+        --recessBlack: #0D0D0D;
+        --recessGrey: #1a1a1a;
+        --recessBlue: #3143AD;
+
+        --headerColor: #EFE3C2;
+        --bodyTextColor: #efe3c2;
+        --bodyTextColorWhite: #fafbfc;
+
+        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+        --headerFontSize: clamp(3.25rem, 8vw, 6.25rem);
+        --bodyFontSize: 1rem;
+        --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+
+        --headerFont: "Bebas Neue", sans-serif;
+        --bodyFont: "Roboto Mono", sans-serif;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cs-topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.25rem;
+        display: block;
+    }
+
+    .cs-title {
+        font-size: var(--headerFontSize);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 43.75rem;
+        margin: 0 0 1rem 0;
+        color: var(--headerColor);
+        position: relative;
+    }
+
+    .cs-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: 40.625rem;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+}
+
+/* Components + Utilities */
+@media only screen and (min-width: 0px) {
+	// Hidden screen reader skip nav button
+	.skip {
+		z-index: -1111111;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+	}
+
+	// Buttons - can be replaced using CodeStitch's "Button" Stitches. Make sure to clear the default .cs-button-solid/outline styles from any new stitches you place.
+.cs-button-solid {
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    background-color: var(--recessRed);
+    width: auto;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: (16/16em);
+    font-weight: bold;
+    overflow: hidden;
+    border: 1px solid var(--recessRed);
+
+    color: var(--bodyTextColor);
+    text-align: center;
+
+    &:hover {
+        color: var(--bodyTextColor);
+
+        &:before {
+            opacity: 1;
+        }
+    }
+
+    &:before {
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        display: block;
+        background-color: var(--recessGrey);
+        height: 100%;
+        width: 100%;
+
+        // Fade transition
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+}
+
+.cs-button-outline {
+      z-index: 1;
+      position: relative;
+      display: inline-block;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1rem;
+      line-height: 1em;
+      font-weight: bold;
+      border: 1px solid var(--bodyTextColor);
+      color: var(--bodyTextColor);
+      background: transparent;
+      cursor: pointer;
+      font-family: var(--bodyFont);
+      text-align: center;
+      overflow: hidden;
+    }
+    .cs-button-outline::before {
+      z-index: -1;
+      position: absolute;
+      top: 0; left: 0;
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .cs-button-outline:hover::before { opacity: 1; }
+ 
+
+	// Utilities - small classes useful in various common situations
+	.cs-color {
+		color: var(--primary);
+	}
+
+	.cs-bold {
+		font-weight: 700;
+	}
+
+	.cs-hide-on-mobile {
+		display: none !important;
+	}
+
+	.cs-dark,
+	.dark {
+		display: none !important;
+	}
+
+	body.dark-mode {
+		.cs-light,
+		.light {
+			display: none !important;
+		}
+
+		.cs-dark,
+		.dark {
+			display: block !important;
+		}
+
+		.cs-button-outline {
+			border-color: var(--bodyTextColor);
+			color: var(--bodyTextColor);
+		}
+	}
+}
+
+/* Desktop Utilities */
+@media only screen and (min-width: 64rem) {
+	.cs-hide-on-mobile {
+		display: block !important;
+	}
+
+	.cs-hide-on-desktop {
+		display: none !important;
+	}
+}
+
+/* Base Element Styles */
+@media only screen and (min-width: 0px) {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--headerFont);
+		line-height: 1.2em;
+		color: var(--headerColor);
+	}
+
+	p,
+	li,
+	a {
+		font-size: (16/16rem);
+		line-height: 1.5em;
+	}
+
+	p,
+	li {
+		color: var(--bodyTextColor);
+
+		a {
+			color: var(--primary);
+		}
+	}
+
+	a,
+	button {
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	body.dark-mode {
+		background-color: var(--dark);
+
+		p,
+		li,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: var(--bodyTextColor);
+		}
+	}
+}
+
+/* Fonts */
+@media only screen and (min-width: 0px) {
+	// Grab your fonts to locally host from https://gwfh.mranftl.com/fonts
+	/* ibmplex-mono-regular - latin */
+	@font-face {
+		font-style: normal;
+		font-family: "Roboto Mono";
+		font-weight: 400;
+		font-display: swap;
+		src: local(""), url("/assets/fonts/RobotoMono-Regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	}
+
+	/* Bebas-Neue-Regular- latin */
+	@font-face {
+		font-style: normal;
+		font-family: "Bebas Neue";
+		font-weight: 400;
+		font-display: swap;
+		src: local(""), url("/assets/fonts/BebasNeue-Regular.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	}
+
+	/* PlayfairDisplay-SemiBoldItalic - latin */
+	@font-face {
+		font-style: italic;
+		font-family: "Playfair Display";
+		font-weight: 600;
+		font-display: swap;
+		src: local(""), url("/assets/fonts/PlayfairDisplay-SemiBoldItalic.woff2") format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+	}
+}
+
+
+
+/*-- -------------------------- -->
+<---     Mobile Navigation      -->
+<--- -------------------------- -*/
+
+/* Mobile - 1023.5px */
+@media only screen and (max-width: 1023.5px) {
+
+  body.cs-open {
+    overflow: hidden;
+  }
+
+  #cs-navigation {
+    width: 100%;
+    height: 4rem;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
+  }
+
+  /* Show nav bar when menu is open so logo + X are visible */
+  #cs-navigation.cs-active {
+    background: var(--recessBlack);
+  }
+
+  /* Backdrop overlay behind open menu */
+  #cs-navigation:before {
+    content: "";
+    width: 100%;
+    height: 0vh;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: -1100;
+    transition: height 0.5s, opacity 0.5s;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+
+  #cs-navigation.cs-active:before {
+    height: 150vh;
+    opacity: 1;
+  }
+
+  #cs-navigation .cs-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  #cs-navigation .cs-logo {
+    height: 2rem;
+    width: auto;
+    margin: 0 auto 0 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  #cs-navigation .cs-logo img {
+    height: 2rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Hamburger toggle */
+  #cs-navigation .cs-toggle {
+    width: clamp(2.75rem, 6vw, 3rem);
+    height: clamp(2.75rem, 6vw, 3rem);
+    margin: 0 0 0 auto;
+    background: none;
+    border: none;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  #cs-navigation .cs-box {
+    width: clamp(1.5rem, 2vw, 1.75rem);
+    height: clamp(0.875rem, 1.5vw, 1rem);
+    position: relative;
+  }
+
+  #cs-navigation .cs-line {
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--headerColor);
+    border-radius: 0.125rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  #cs-navigation .cs-line1 {
+    top: 0;
+    transition: transform 0.5s, top 0.3s;
+    transform-origin: center;
+  }
+
+  #cs-navigation .cs-line2 {
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: top 0.3s, transform 0.5s;
+    transform-origin: center;
+  }
+
+  #cs-navigation .cs-line3 {
+    bottom: 0;
+    transition: bottom 0.3s, opacity 0.3s;
+  }
+
+  /* ✕ active state */
+  #cs-navigation .cs-toggle.cs-active .cs-line1 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(225deg);
+  }
+
+  #cs-navigation .cs-toggle.cs-active .cs-line2 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-225deg);
+  }
+
+  #cs-navigation .cs-toggle.cs-active .cs-line3 {
+    opacity: 0;
+    bottom: 100%;
+  }
+
+  /* Full-screen overlay */
+  #cs-navigation .cs-ul-wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: var(--recessBlack);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 6rem;
+    gap: 0.25rem;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s, opacity 0.3s;
+    pointer-events: none;
+  }
+
+  #cs-navigation.cs-active .cs-ul-wrapper {
+    opacity: 1;
+    transform: scaleY(1);
+    transition-delay: 0.05s;
+    pointer-events: all;
+  }
+
+  #cs-navigation .cs-ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  /* Staggered item entrance */
+  #cs-navigation .cs-li {
+    transform: translateY(-1.25rem);
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.6s;
+  }
+
+  #cs-navigation.cs-active .cs-li                { opacity: 1; transform: translateY(0); }
+  #cs-navigation.cs-active .cs-li:nth-of-type(1) { transition-delay: 0.10s; }
+  #cs-navigation.cs-active .cs-li:nth-of-type(2) { transition-delay: 0.15s; }
+  #cs-navigation.cs-active .cs-li:nth-of-type(3) { transition-delay: 0.20s; }
+  #cs-navigation.cs-active .cs-li:nth-of-type(4) { transition-delay: 0.25s; }
+
+  /* Nav links — Bebas Neue, large */
+  #cs-navigation .cs-li-link {
+    font-family: var(--headerFont);
+    font-size: 2.5rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--headerColor);
+    padding: 0.75rem 1.5rem;
+    display: inline-block;
+    line-height: 1;
+    transition: color 0.2s;
+  }
+
+  #cs-navigation .cs-li-link:hover,
+  #cs-navigation .cs-li-link.cs-active {
+    color: var(--recessYellow);
+  }
+
+  #cs-navigation .cs-li-link:before {
+    display: none !important;
+  }
+
+  /* Mobile CTA — nav-specific size override, visibility */
+  #cs-navigation .cs-mobile-cta {
+    display: inline-flex;
+    font-size: 0.8125rem;
+    padding: 0.75rem 1.75rem;
+    margin-top: 1.25rem;
+  }
+
+  /* Hide desktop CTA on mobile */
+  #cs-navigation .cs-desktop-cta {
+    display: none;
+  }
+}
+
+/*-- -------------------------- -->
+<---     Desktop Navigation     -->
+<--- -------------------------- -*/
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 1024px) {
+
+  #cs-navigation {
+    width: 100%;
+    height: 4rem;
+    box-sizing: border-box;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
+  }
+
+  /* Added by JS on scroll > 30px */
+  #cs-navigation.scrolled {
+    background: rgb(from var(--recessBlack) r g b / 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-color: rgb(from var(--headerColor) r g b / 0.07);
+  }
+
+  #cs-navigation .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    gap: 0;
+  }
+
+  #cs-navigation .cs-logo {
+    height: 2rem;
+    width: auto;
+    margin: 0 auto 0 0;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  #cs-navigation .cs-logo img {
+    height: 2rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  #cs-navigation .cs-toggle {
+    display: none;
+  }
+
+  /* Nav list */
+  #cs-navigation .cs-ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.375rem;
+    margin-right: 0.5rem;
+  }
+
+  #cs-navigation .cs-li {
+    padding: 0;
+    flex: none;
+  }
+
+  /* Nav links — Roboto Mono, small caps */
+  #cs-navigation .cs-li-link {
+    font-family: var(--bodyFont);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1875rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(from var(--headerColor) r g b / 0.45);
+    padding: 0.5rem 0.875rem;
+    display: block;
+    position: relative;
+    transition: color 0.2s;
+  }
+
+  #cs-navigation .cs-li-link:before {
+    display: none;
+  }
+
+  #cs-navigation .cs-li-link:hover,
+  #cs-navigation .cs-li-link.cs-active {
+    color: var(--headerColor);
+  }
+
+  /* Desktop CTA — nav-specific size override, visibility */
+  #cs-navigation .cs-desktop-cta {
+    display: inline-flex;
+    font-size: 0.75rem;
+    padding: 0.5rem 1.125rem;
+    margin-left: 0.5rem;
+    line-height: 1.6;
+    flex-shrink: 0;
+	
+  }
+
+  /* Hide mobile CTA on desktop */
+  #cs-navigation .cs-mobile-cta {
+    display: none;
+  }
+}
+                                
+/*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0px) {
+	#banner-310 {
+		/* 144px - 252px */
+		padding-top: clamp(9rem, 25vw, 15.75rem);
+		/* 80px - 140px */
+		padding-bottom: clamp(5rem, 13vw, 8.75rem);
+		position: relative;
+		z-index: 1;
+
+		.cs-container {
+			width: 100%;
+			max-width: (1280/16rem);
+			margin: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		.cs-int-title {
+			/* 39px - 49px */
+			font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
+			font-weight: 900;
+			line-height: 1.2em;
+			text-align: center;
+			max-width: (700/16rem);
+			margin: 0 auto (12/16rem);
+			color: var(--bodyTextColorWhite);
+			position: relative;
+		}
+
+		.cs-breadcrumbs {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.cs-link {
+			/* 14px - 16px */
+			font-size: clamp(0.875rem, 1.5vw, 1rem);
+			line-height: 1.2em;
+			text-decoration: none;
+			color: var(--bodyTextColorWhite);
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			&:last-of-type {
+				/* remove the chevron on the last list item */
+				&::after {
+					display: none;
+				}
+			}
+
+			&:after {
+				/* chevron - added as pseudo to make adding and removing them easier */
+				content: "";
+				width: (7/16rem);
+				height: (12/16rem);
+				margin-left: (12/16rem);
+				margin-right: (12/16rem);
+				background: url("/assets/svgs/chevron.svg");
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+
+			&.cs-active {
+				color: var(--primaryLight);
+			}
+		}
+
+		.cs-background {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			z-index: -1;
+
+			&:before {
+				/* black overlay box */
+				content: "";
+				width: 100%;
+				height: 100%;
+				background: #000;
+				opacity: 0.72;
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+/*-- -------------------------- -->
+<---           Home CTA         -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #home-cta {
+        position: relative;
+        overflow: hidden;
+        background-color: var(--recessGrey);
+    }
+
+    /* Diagonal split background */
+    #home-cta .cs-diagonal {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, var(--recessBlack) 50%, var(--recessRed) 50%);
+        pointer-events: none;
+    }
+
+    #home-cta .cs-container {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 6.25rem 1rem;
+        box-sizing: border-box;
+        /* centred content block */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #home-cta .cs-topper {
+        color: var(--recessYellow);
+        margin-bottom: 1rem;
+    }
+
+    #home-cta .cs-title {
+        font-size: clamp(4rem, 10vw, 8.125rem);
+        line-height: 0.87;
+        letter-spacing: 0.02em;
+        color: var(--headerColor);
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+    }
+
+    #home-cta .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+        font-size: 0.95em;
+    }
+
+    #home-cta .cs-text {
+        font-family: var(--bodyFont);
+        font-size: 0.8125rem;
+        line-height: 1.9;
+        color: rgba(239, 227, 194, 0.65);
+        max-width: 30rem;
+        margin: 0 auto 2.5rem;
+    }
+
+    #home-cta .cs-button-group {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Larger button sizing for this CTA */
+    #home-cta .cs-button-solid,
+    #home-cta .cs-button-outline {
+        padding: 1.125rem 2.25rem;
+        font-size: 0.875rem;
+    }
+}
+
+/*-- -------------------------- -->
+<---            Footer          -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #cs-footer {
+        background-color: #080808;
+        border-top: 3px solid var(--recessRed);
+    }
+
+    /* ── Partner strip ── */
+    #cs-footer .cs-partner-strip {
+        border-bottom: 1px solid rgba(239, 227, 194, 0.06);
+        padding: 1.5rem 0;
+    }
+
+    #cs-footer .cs-partner-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        flex-wrap: wrap;
+    }
+
+    #cs-footer .cs-partner-logo {
+        height: 2rem;
+        width: auto;
+        opacity: 0.45;
+        filter: brightness(0) invert(1);
+        display: block;
+    }
+
+    /* ── Main container ── */
+    #cs-footer .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    /* ── Footer grid — 1 col mobile ── */
+    #cs-footer .cs-footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 4rem 0 3rem;
+    }
+
+    /* ── Brand column ── */
+    #cs-footer .cs-logo-link {
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 0.25rem;
+    }
+
+    #cs-footer .cs-logo-text {
+        font-family: var(--headerFont);
+        font-size: 3rem;
+        letter-spacing: 0.25rem;
+        line-height: 1;
+        color: var(--headerColor);
+    }
+
+    #cs-footer .cs-logo-sub {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 1.125rem;
+        color: var(--recessYellow);
+        margin-bottom: 1rem;
+    }
+
+    #cs-footer .cs-brand-desc {
+        font-family: var(--bodyFont);
+        font-size: var(--bodyFontSize);
+        color: rgba(239, 227, 194, 0.4);
+        line-height: 1.9;
+        max-width: 16.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* Social icons */
+    #cs-footer .cs-social {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    #cs-footer .cs-social-link {
+        width: 2.25rem;
+        height: 2.25rem;
+        border: 1px solid rgba(239, 227, 194, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+        text-decoration: none;
+        transition: border-color 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    #cs-footer .cs-social-link:hover {
+        border-color: var(--recessYellow);
+    }
+
+    /* ── Nav columns ── */
+    #cs-footer .cs-col-heading {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: var(--bodyFontSize);
+        color: var(--recessYellow);
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 1.25rem;
+    }
+
+    #cs-footer .cs-col-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    #cs-footer .cs-col-link {
+        font-family: var(--bodyFont);
+        font-size: var(--bodyFontSize);
+        color: rgba(239, 227, 194, 0.4);
+        letter-spacing: 0.03125rem;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        display: inline-block;
+    }
+
+    #cs-footer .cs-col-link:hover {
+        color: var(--headerColor);
+    }
+
+    /* ── Contact column ── */
+    #cs-footer .cs-contact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    #cs-footer .cs-contact-item {
+        display: flex;
+        gap: 0.625rem;
+        align-items: flex-start;
+    }
+
+    #cs-footer .cs-contact-icon {
+        font-size: 0.75rem;
+        flex-shrink: 0;
+        margin-top: 0.0625rem;
+    }
+
+    #cs-footer .cs-contact-text {
+        font-family: var(--bodyFont);
+        font-size: var(--bodyFont);
+        color: rgba(239, 227, 194, 0.4);
+        font-style: normal;
+        line-height: 1.6;
+    }
+
+    #cs-footer .cs-contact-link {
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    #cs-footer .cs-contact-link:hover {
+        color: var(--headerColor);
+    }
+
+    #cs-footer .cs-hours-divider {
+        height: 1px;
+        background-color: rgba(239, 227, 194, 0.08);
+        margin: 1rem 0;
+    }
+
+    #cs-footer .cs-hours-heading {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: var(--bodyFontSize);
+        color: rgba(239, 227, 194, 0.3);
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+        margin-bottom: 0.375rem;
+    }
+
+    #cs-footer .cs-hours-text {
+        font-family: var(--bodyFont);
+        font-size: var(--bodyFontSize);
+        color: rgba(239, 227, 194, 0.35);
+        line-height: 1.8;
+    }
+
+    /* ── Bottom bar ── */
+    #cs-footer .cs-bottom-divider {
+        height: 1px;
+        background-color: rgba(239, 227, 194, 0.06);
+    }
+
+    #cs-footer .cs-bottom-bar {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1.25rem 0;
+    }
+
+    #cs-footer .cs-copyright,
+    #cs-footer .cs-location {
+        font-family: var(--bodyFont);
+        font-size: 0.625rem;
+        color: rgba(239, 227, 194, 0.2);
+        letter-spacing: 0.125rem;
+    }
+}
+
+/* Tablet - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #cs-footer .cs-footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #cs-footer .cs-bottom-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Desktop - 64rem */
+@media only screen and (min-width: 64rem) {
+
+    #cs-footer .cs-footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 3rem;
+    }
+}

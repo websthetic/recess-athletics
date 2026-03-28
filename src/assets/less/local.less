@@ -1,0 +1,1142 @@
+* {
+  max-width: 100%;
+  min-width: 0;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/*-- -------------------------- -->
+<---       What Is Recess       -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+
+    #what-is-recess {
+        background-color: var(--recessGreen);
+        padding: var(--sectionPadding);
+        position: relative;
+        overflow: clip;
+    }
+
+    /* ── Decorative background letter ── */
+    #what-is-recess .cs-bg-letter {
+        position: absolute;
+        right: -2.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: var(--headerFont);
+        font-size: 40vw;
+        color: rgba(239, 227, 194, 0.04);
+        line-height: 1;
+        pointer-events: none;
+        letter-spacing: -0.075em;
+        user-select: none;
+        z-index: 0;
+    }
+
+    #what-is-recess .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Single column on mobile */
+    #what-is-recess .cs-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        align-items: center;
+    }
+
+    /* ── Left Column ── */
+    #what-is-recess .cs-left {
+        position: relative;
+        z-index: 2;
+    }
+
+    #what-is-recess .cs-topper {
+        color: var(--recessYellow);
+        margin-bottom: 0.875rem;
+    }
+
+    #what-is-recess .cs-title {
+        font-size: var(--headerFontSize);
+        color: var(--headerColor);
+        line-height: 1.05;
+        margin-bottom: 0;
+    }
+
+    /* Italic script accent — "everyone." */
+    #what-is-recess .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+    }
+
+    #what-is-recess .cs-divider {
+        height: 3px;
+        width: 3.75rem;
+        background-color: var(--recessYellow);
+        margin: 1.5rem 0;
+    }
+
+    #what-is-recess .cs-text {
+        font-size: var(--bodyFontSize);
+        color: rgba(239, 227, 194, 0.75);
+        line-height: 2;
+        max-width: 100%;
+        margin-bottom: 1.125rem;
+    }
+
+    #what-is-recess .cs-text-last {
+        margin-bottom: 2.25rem;
+    }
+
+    #what-is-recess .cs-button-group {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    /* ── Right Column ── */
+    #what-is-recess .cs-right {
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Photo */
+    #what-is-recess .cs-picture-wrapper {
+        position: relative;
+        margin-bottom: 3px;
+        overflow: hidden;
+    }
+
+    #what-is-recess .cs-picture {
+        display: block;
+        width: 100%;
+        height: 18.75rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    #what-is-recess .cs-picture-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(20, 71, 52, 0.5), transparent);
+        pointer-events: none;
+    }
+
+    /* Stat grid */
+    #what-is-recess .cs-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3px;
+    }
+
+    #what-is-recess .cs-stat {
+        border: 1px solid rgba(239, 227, 194, 0.1);
+        padding: 1.75rem 1.25rem;
+        text-align: center;
+    }
+
+    #what-is-recess .cs-stat-red {
+        background-color: var(--recessRed);
+    }
+
+    #what-is-recess .cs-stat-dark {
+        background-color: rgba(239, 227, 194, 0.08);
+    }
+
+    #what-is-recess .cs-stat-black {
+        background-color: var(--recessBlack);
+    }
+
+    #what-is-recess .cs-stat-icon {
+        color: var(--recessYellow);
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #what-is-recess .cs-stat-value {
+        font-family: var(--headerFont);
+        font-size: 3rem;
+        color: var(--headerColor);
+        line-height: 1;
+        letter-spacing: 0.125rem;
+    }
+
+    #what-is-recess .cs-gold {
+        color: var(--recessYellow);
+    }
+
+    #what-is-recess .cs-stat-label {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: rgba(239, 227, 194, 0.4);
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+
+    #what-is-recess .cs-picture {
+        height: 25rem;
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+
+    #what-is-recess .cs-content {
+        grid-template-columns: 50% 50%;
+        gap: 0;
+    }
+
+    #what-is-recess .cs-left {
+        padding-right: 2.5rem;
+    }
+
+    #what-is-recess .cs-right {
+        padding-left: 2.5rem;
+    }
+
+    #what-is-recess .cs-picture {
+        height: 25rem;
+    }
+}
+
+/*-- -------------------------- -->
+<---       Choose Your Path     -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #choose-your-path {
+        background-color: var(--recessBlack);
+        padding: var(--sectionPadding);
+    }
+
+    #choose-your-path .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    /* ── Header row ── */
+    #choose-your-path .cs-header-row {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-bottom: 3rem;
+    }
+
+    #choose-your-path .cs-topper {
+        color: var(--recessYellow);
+    }
+
+    #choose-your-path .cs-title {
+        font-size: var(--headerFontSize);
+        margin-bottom: 0;
+    }
+
+    #choose-your-path .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+    }
+
+    /* ── Cards grid — 1 col mobile ── */
+    #choose-your-path .cs-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+
+    /* ── Individual card ── */
+    #choose-your-path .cs-card {
+        position: relative;
+        overflow: hidden;
+        padding: 1.75rem 1.25rem 1.5rem;
+        background-color: #111;
+        border: 1px solid rgba(239, 227, 194, 0.07);
+        text-decoration: none;
+        display: block;
+        cursor: pointer;
+        transition: background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    #choose-your-path .cs-card:hover {
+        border-color: var(--cs-card-accent, rgba(239, 227, 194, 0.07));
+        background-color: var(--cs-card-accent, #111);
+    }
+
+    /* Background number watermark */
+    #choose-your-path .cs-card-num {
+        position: absolute;
+        bottom: -0.5rem;
+        right: 0.25rem;
+        font-family: var(--headerFont);
+        font-size: 5rem;
+        color: rgba(255, 255, 255, 0.04);
+        line-height: 1;
+        pointer-events: none;
+        letter-spacing: -0.125rem;
+        user-select: none;
+    }
+
+    #choose-your-path .cs-card-icon {
+        font-size: 1.75rem;
+        margin-bottom: 0.875rem;
+        display: block;
+    }
+
+    #choose-your-path .cs-card-label {
+        font-family: var(--headerFont);
+        font-size: 1.125rem;
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+    }
+
+    #choose-your-path .cs-card-meta {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: rgba(239, 227, 194, 0.45);
+        letter-spacing: 0.0625rem;
+    }
+
+    #choose-your-path .cs-card-arrow {
+        margin-top: 1rem;
+        color: var(--recessYellow);
+        font-size: 1rem;
+        transition: transform 0.2s ease;
+    }
+
+    #choose-your-path .cs-card:hover .cs-card-arrow {
+        transform: translateX(6px);
+    }
+}
+
+/* Tablet - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #choose-your-path .cs-header-row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    #choose-your-path .cs-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop - 64rem */
+@media only screen and (min-width: 64rem) {
+
+    #choose-your-path .cs-cards {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+}
+
+/*-- -------------------------- -->
+<---      Development Pathway   -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #development-pathway {
+        background-color: var(--recessGrey);
+        padding: var(--sectionPadding);
+    }
+
+    #development-pathway .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #development-pathway .cs-topper {
+        color: var(--recessYellow);
+    }
+
+    #development-pathway .cs-title {
+        font-size: var(--headerFontSize);
+        margin-bottom: 0;
+    }
+
+    #development-pathway .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+    }
+
+    #development-pathway .cs-pathway-intro {
+        font-size: var(--bodyFontSize);
+        color: rgba(239, 227, 194, 0.45);
+        max-width: 30rem;
+        margin-top: 1rem;
+        margin-bottom: 3.5rem;
+        line-height: 2;
+    }
+
+    /* ── Tabs ── */
+    #development-pathway .cs-tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        margin-bottom: 3px;
+    }
+
+    #development-pathway .cs-tab {
+        flex: 1;
+        padding: 0.875rem 1rem;
+        background-color: #111;
+        border: 1px solid rgba(239, 227, 194, 0.08);
+        border-right: 1px solid rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+        text-align: left;
+    }
+
+    #development-pathway .cs-tab:last-child {
+        border-right: 1px solid rgba(239, 227, 194, 0.08);
+    }
+
+    #development-pathway .cs-tab.cs-active {
+        background-color: var(--cs-tab-bg, #144734);
+        border-color: var(--cs-tab-bg, #144734);
+    }
+
+    #development-pathway .cs-tab-stage {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        font-weight: 700;
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        color: rgba(239, 227, 194, 0.35);
+        margin-bottom: 0.375rem;
+        transition: color 0.2s ease;
+    }
+
+    #development-pathway .cs-tab.cs-active .cs-tab-stage {
+        color: var(--headerColor);
+    }
+
+    #development-pathway .cs-tab-label {
+        display: block;
+        font-family: var(--headerFont);
+        font-size: 1.375rem;
+        color: rgba(239, 227, 194, 0.4);
+        letter-spacing: 0.125rem;
+        line-height: 1;
+        transition: color 0.2s ease;
+    }
+
+    #development-pathway .cs-tab.cs-active .cs-tab-label {
+        color: var(--headerColor);
+    }
+
+    /* ── Panels ── */
+    #development-pathway .cs-panel {
+        border: 1px solid rgba(239, 227, 194, 0.1);
+        padding: 2rem 1.25rem;
+        background-color: var(--cs-panel-bg, #144734);
+        transition: background-color 0.3s ease;
+    }
+
+    #development-pathway .cs-panel[hidden] {
+        display: none;
+    }
+
+    #development-pathway .cs-panel-inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    /* Left: ages + stage name */
+    #development-pathway .cs-panel-ages-label {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: var(--recessYellow);
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    #development-pathway .cs-panel-ages {
+        font-family: var(--headerFont);
+        font-size: 4.5rem;
+        color: var(--headerColor);
+        line-height: 1;
+        letter-spacing: 0.125rem;
+    }
+
+    #development-pathway .cs-panel-stage-name {
+        font-family: var(--headerFont);
+        font-size: 2rem;
+        color: var(--recessRed);
+        letter-spacing: 0.125rem;
+        margin-top: 0.25rem;
+    }
+
+    /* Right: desc + program tags */
+    #development-pathway .cs-panel-desc {
+        font-family: var(--bodyFont);
+        font-size: var(--bodyFontSize);
+        color: rgba(239, 227, 194, 0.8);
+        line-height: 2;
+        margin-bottom: 1.75rem;
+        max-width: 100%;
+    }
+
+    #development-pathway .cs-panel-programs-label {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: var(--recessYellow);
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        margin-bottom: 0.875rem;
+    }
+
+    #development-pathway .cs-panel-programs {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    #development-pathway .cs-program-tag {
+        background-color: rgba(239, 227, 194, 0.08);
+        border: 1px solid rgba(239, 227, 194, 0.15);
+        color: var(--headerColor);
+        font-family: var(--bodyFont);
+        font-size: 0.625rem;
+        font-weight: 700;
+        letter-spacing: 0.1875rem;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+        display: inline-block;
+    }
+
+    #development-pathway .cs-program-tag:hover {
+        background-color: var(--recessRed);
+        border-color: var(--recessRed);
+        color: var(--headerColor);
+    }
+}
+
+/* Tablet - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #development-pathway .cs-tabs {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #development-pathway .cs-panel {
+        padding: 3rem 2.5rem;
+    }
+
+    #development-pathway .cs-panel-inner {
+        grid-template-columns: 1fr 2fr;
+        gap: 3rem;
+    }
+
+    #development-pathway .cs-panel-ages {
+        font-size: 4.5rem;
+    }
+}
+
+/*-- -------------------------- -->
+<---        Testimonials        -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #testimonials {
+        background-color: #0a0a0a;
+        padding: var(--sectionPadding);
+    }
+
+    #testimonials .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    /* ── Header row ── */
+    #testimonials .cs-header-row {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+    }
+
+    #testimonials .cs-topper {
+        color: var(--recessYellow);
+    }
+
+    #testimonials .cs-title {
+        font-size: var(--headerFontSize);
+        margin-bottom: 0;
+    }
+
+    #testimonials .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+    }
+
+    /* Dot indicators */
+    #testimonials .cs-dots {
+        display: flex;
+        gap: 0.25rem;
+        align-items: center;
+    }
+
+    #testimonials .cs-dot {
+        width: 0.625rem;
+        height: 0.625rem;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        background-color: rgba(239, 227, 194, 0.15);
+        transition: background-color 0.2s ease;
+        padding: 0;
+        flex-shrink: 0;
+    }
+
+    #testimonials .cs-dot.cs-active {
+        background-color: var(--recessRed);
+    }
+
+    /* ── Featured panel ── */
+    #testimonials .cs-featured {
+        background-color: var(--recessGreen);
+        padding: 2rem 1.25rem;
+        margin-bottom: 3px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #testimonials .cs-featured-quote-mark {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        font-family: var(--headerFont);
+        font-size: 7.5rem;
+        color: rgba(255, 255, 255, 0.05);
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    /* Slides */
+    #testimonials .cs-slide[hidden] {
+        display: none;
+    }
+
+    #testimonials .cs-slide-inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Headshot */
+    #testimonials .cs-headshot-wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    #testimonials .cs-headshot {
+        width: 6.25rem;
+        height: 6.25rem;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--recessYellow);
+        display: block;
+    }
+
+    /* Slide content */
+    #testimonials .cs-stars {
+        color: var(--recessYellow);
+        font-size: 0.875rem;
+        letter-spacing: 0.25rem;
+        margin-bottom: 1rem;
+    }
+
+    #testimonials .cs-quote {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: clamp(1.125rem, 2.5vw, 1.625rem);
+        color: var(--headerColor);
+        line-height: 1.65;
+        margin-bottom: 1.25rem;
+        border: none;
+        padding: 0;
+    }
+
+    #testimonials .cs-name {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.6875rem;
+        color: rgba(239, 227, 194, 0.6);
+        letter-spacing: 0.125rem;
+    }
+
+    #testimonials .cs-role {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: var(--recessYellow);
+        letter-spacing: 0.1875rem;
+        text-transform: uppercase;
+        margin-top: 0.25rem;
+    }
+
+    /* ── Thumbnail strip ── */
+    #testimonials .cs-thumbnails {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2px;
+    }
+
+    #testimonials .cs-thumb {
+        background-color: #111;
+        border: 1px solid rgba(239, 227, 194, 0.07);
+        padding: 1.25rem 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.625rem;
+    }
+
+    #testimonials .cs-thumb.cs-active {
+        background-color: #1a1a1a;
+        border-color: var(--recessRed);
+    }
+
+    #testimonials .cs-thumb-img {
+        width: 2.75rem;
+        height: 2.75rem;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(239, 227, 194, 0.15);
+        transition: border-color 0.2s ease;
+        display: block;
+    }
+
+    #testimonials .cs-thumb.cs-active .cs-thumb-img {
+        border-color: var(--recessYellow);
+    }
+
+    #testimonials .cs-thumb-name {
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: rgba(239, 227, 194, 0.35);
+        text-align: center;
+        line-height: 1.4;
+        transition: color 0.2s ease;
+    }
+
+    #testimonials .cs-thumb.cs-active .cs-thumb-name {
+        color: var(--headerColor);
+    }
+}
+
+/* Tablet - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #testimonials .cs-header-row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    #testimonials .cs-featured {
+        padding: 3rem 2.5rem;
+    }
+
+    #testimonials .cs-featured-quote-mark {
+        font-size: 7.5rem;
+    }
+
+    #testimonials .cs-slide-inner {
+        grid-template-columns: auto 1fr;
+        gap: 2rem;
+    }
+
+    #testimonials .cs-headshot-wrap {
+        justify-content: flex-start;
+    }
+}
+
+/*-- -------------------------- -->
+<---         Urgency Banner     -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #urgency-banner {
+        background-color: var(--recessYellow);
+        border-top: 2px solid var(--recessBlack);
+        border-bottom: 2px solid var(--recessBlack);
+    }
+
+    #urgency-banner .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    #urgency-banner .cs-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+
+    /* ── Alert cell ── */
+    #urgency-banner .cs-alert {
+        padding: 1.75rem 1.5rem;
+        border-right: 2px solid var(--recessBlack);
+        border-bottom: 2px solid var(--recessBlack);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+    }
+
+    /* Remove bottom border on last two cells (bottom row on mobile) */
+    #urgency-banner .cs-alert:nth-child(3),
+    #urgency-banner .cs-alert:nth-child(4) {
+        border-bottom: none;
+    }
+
+    /* Remove right border on even cells (right col on mobile) */
+    #urgency-banner .cs-alert:nth-child(2),
+    #urgency-banner .cs-alert:nth-child(4) {
+        border-right: none;
+    }
+
+    #urgency-banner .cs-alert:hover {
+        background-color: rgba(0, 0, 0, 0.06);
+    }
+
+    #urgency-banner .cs-alert-label {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.5625rem;
+        color: rgba(0, 0, 0, 0.55);
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+    }
+
+    #urgency-banner .cs-alert-stat {
+        font-family: var(--headerFont);
+        font-size: 2.5rem;
+        color: var(--recessBlack);
+        line-height: 1;
+        letter-spacing: 0.125rem;
+    }
+
+    #urgency-banner .cs-alert-cta {
+        font-family: var(--bodyFont);
+        font-size: 0.625rem;
+        color: rgba(0, 0, 0, 0.7);
+        letter-spacing: 0.125rem;
+        font-weight: 700;
+        margin-top: 0.25rem;
+    }
+}
+
+/* Desktop - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #urgency-banner .cs-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* All cells: restore bottom border removal only for single row */
+    #urgency-banner .cs-alert {
+        border-bottom: none;
+    }
+
+    /* Last cell: no right border */
+    #urgency-banner .cs-alert:nth-child(4) {
+        border-right: none;
+    }
+
+    /* Restore right border on 2nd cell (was removed for mobile 2-col) */
+    #urgency-banner .cs-alert:nth-child(2) {
+        border-right: 2px solid var(--recessBlack);
+    }
+
+    #urgency-banner .cs-alert-stat {
+        font-size: 2.5rem;
+    }
+}
+
+/*-- -------------------------- -->
+<---           Facility         -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #facility {
+        background-color: #0a0a0a;
+        padding: var(--sectionPadding);
+    }
+
+    #facility .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    /* ── Header row ── */
+    #facility .cs-header-row {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin-bottom: 3.5rem;
+        flex-wrap: wrap;
+    }
+
+    #facility .cs-topper {
+        color: var(--recessYellow);
+    }
+
+    #facility .cs-title {
+        font-size: var(--headerFontSize);
+        margin-bottom: 0;
+        white-space: normal;
+    }
+
+    #facility .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+    }
+
+    /* ── Photo grid — single col mobile ── */
+    #facility .cs-photo-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 3px;
+        margin-bottom: 3px;
+    }
+
+    #facility .cs-photo-main,
+    #facility .cs-photo-secondary,
+    #facility .cs-photo-tertiary {
+        position: relative;
+        overflow: hidden;
+        background-color: #111;
+    }
+
+    #facility .cs-photo-main    { height: 18.75rem; }
+    #facility .cs-photo-secondary { height: 12.5rem; }
+    #facility .cs-photo-tertiary  { height: 12.5rem; }
+
+    #facility .cs-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    /* Main photo overlay + caption */
+    #facility .cs-photo-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 60%);
+        pointer-events: none;
+    }
+
+    #facility .cs-photo-caption {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+
+    #facility .cs-caption-address {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: 0.625rem;
+        color: var(--recessYellow);
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+    }
+
+    #facility .cs-caption-title {
+        font-family: var(--headerFont);
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        color: var(--headerColor);
+        line-height: 0.95;
+        letter-spacing: 0.125rem;
+    }
+
+    /* ── Hours strip ── */
+    #facility .cs-hours-strip {
+        background-color: var(--recessGrey);
+        border: 1px solid rgba(239, 227, 194, 0.07);
+        padding: 1.25rem 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 3px;
+    }
+
+    #facility .cs-hours-list {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    #facility .cs-hours-item {
+        font-family: var(--bodyFont);
+        font-size: 0.6875rem;
+        color: rgba(239, 227, 194, 0.65);
+    }
+
+    /* Small button variant for hours strip */
+    #facility .cs-button-sm {
+        padding: 0.5rem 1.25rem;
+        font-size: 0.75rem;
+    }
+
+    /* ── Feature grid — 1 col mobile ── */
+    #facility .cs-features {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3px;
+    }
+
+    #facility .cs-feature {
+        background-color: #111;
+        border: 1px solid rgba(239, 227, 194, 0.07);
+        padding: 1.75rem 1.5rem;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    #facility .cs-feature:hover {
+        background-color: #191919;
+        border-color: rgba(239, 227, 194, 0.18);
+    }
+
+    #facility .cs-feature-icon {
+        font-size: 1.625rem;
+        margin-bottom: 0.875rem;
+    }
+
+    #facility .cs-feature-title {
+        font-family: var(--headerFont);
+        font-size: 1.125rem;
+        color: var(--headerColor);
+        letter-spacing: 0.125rem;
+        margin-bottom: 0.5rem;
+    }
+
+    #facility .cs-feature-text {
+        font-family: var(--bodyFont);
+        font-size: 0.625rem;
+        color: rgba(239, 227, 194, 0.5);
+        line-height: 1.8;
+        max-width: 100%;
+    }
+}
+
+/* Tablet - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #facility .cs-header-row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    #facility .cs-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop - 64rem */
+@media only screen and (min-width: 64rem) {
+
+    /* Photo grid: main spans 2 rows, secondary + tertiary stack right */
+    #facility .cs-photo-grid {
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 18.75rem 12.5rem;
+    }
+
+    #facility .cs-photo-main {
+        grid-row: 1 / 3;
+        height: auto; /* fills both rows via grid */
+    }
+
+    #facility .cs-photo-secondary { height: auto; }
+    #facility .cs-photo-tertiary  { height: auto; }
+
+    #facility .cs-features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #facility .cs-title {
+  white-space: nowrap;
+}
+}
