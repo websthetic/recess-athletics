@@ -1062,6 +1062,341 @@ img, svg {
 }
 
 /*-- -------------------------- -->
+<---     Multi-Sport & Perf     -->
+<--- -------------------------- -*/
+
+/* Mobile - 0px */
+@media only screen and (min-width: 0rem) {
+
+    #split-offerings {
+        background-color: var(--recessBlack);
+        overflow: hidden;
+    }
+
+    /* ── Outer grid — stacked on mobile, side-by-side on desktop ── */
+    #split-offerings .cs-split-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    /* ── Shared panel base ── */
+    #split-offerings .cs-panel-a,
+    #split-offerings .cs-panel-b {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ── Panel content ── */
+    #split-offerings .cs-panel-content {
+        position: relative;
+        z-index: 2;
+        padding: clamp(2.5rem, 6vw, 4rem) clamp(1.25rem, 4vw, 3rem);
+        box-sizing: border-box;
+    }
+
+    #split-offerings .cs-topper {
+        display: block;
+        font-family: var(--bodyFont);
+        font-size: var(--topperFontSize);
+        font-weight: 700;
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        color: var(--recessYellow);
+        margin-bottom: 0.75rem;
+    }
+
+    #split-offerings .cs-panel-title {
+        font-family: var(--headerFont);
+        font-size: clamp(2.5rem, 7vw, 4.5rem);
+        line-height: 0.95;
+        letter-spacing: 0.05em;
+        color: var(--headerColor);
+        margin: 0 0 1.25rem 0;
+    }
+
+    #split-offerings .cs-script {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-weight: 600;
+        color: var(--recessYellow);
+        display: inline;
+    }
+
+    #split-offerings .cs-panel-sub {
+        font-family: var(--bodyFont);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        color: rgba(239, 227, 194, 0.5);
+        margin: 0 0 0.875rem 0;
+    }
+
+    #split-offerings .cs-panel-text {
+        font-family: var(--bodyFont);
+        font-size: 0.8125rem;
+        line-height: 1.9;
+        color: rgba(239, 227, 194, 0.55);
+        max-width: 32rem;
+        margin: 0 0 1.5rem 0;
+    }
+
+    /* ── Bullet list ── */
+    #split-offerings .cs-panel-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #split-offerings .cs-panel-list-item {
+        font-family: var(--bodyFont);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        color: var(--headerColor);
+        padding-left: 1.25rem;
+        position: relative;
+
+        /* Yellow dash bullet */
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.5rem;
+            height: 2px;
+            background-color: var(--recessYellow);
+        }
+    }
+
+    #split-offerings .cs-panel-cta {
+        display: inline-block;
+    }
+
+    /* ────────────────────────────── */
+    /* PANEL A — Multi-Sport          */
+    /* ────────────────────────────── */
+    #split-offerings .cs-panel-a {
+        background-color: var(--recessGrey);
+    }
+
+    /* ── Carousel ── */
+    #split-offerings .cs-carousel {
+        position: relative;
+        width: 100%;
+        height: 22rem;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    #split-offerings .cs-carousel-track {
+        position: absolute;
+        inset: 0;
+    }
+
+    #split-offerings .cs-carousel-slide {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.8s ease;
+    }
+
+    #split-offerings .cs-carousel-slide.cs-active {
+        opacity: 1;
+    }
+
+    /* Dark gradient over carousel so content reads cleanly */
+    #split-offerings .cs-carousel::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to top,
+            rgba(26, 26, 26, 1) 0%,
+            rgba(26, 26, 26, 0.4) 50%,
+            rgba(26, 26, 26, 0.1) 100%
+        );
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    /* Dot indicators */
+    #split-offerings .cs-carousel-dots {
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0.375rem;
+        z-index: 2;
+    }
+
+    #split-offerings .cs-carousel-dot {
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 50%;
+        border: none;
+        background-color: rgba(239, 227, 194, 0.25);
+        cursor: pointer;
+        padding: 0;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+
+        &.cs-active {
+            background-color: var(--recessYellow);
+            transform: scale(1.3);
+        }
+    }
+
+    /* ────────────────────────────── */
+    /* PANEL B — Performance          */
+    /* ────────────────────────────── */
+    #split-offerings .cs-panel-b {
+        background-color: var(--recessGreen);
+    }
+
+    /* Decorative watermark accent — large "R" behind content */
+    #split-offerings .cs-panel-b-accent {
+        position: absolute;
+        bottom: -2rem;
+        right: -1rem;
+        font-family: var(--headerFont);
+        font-size: clamp(12rem, 25vw, 20rem);
+        color: rgba(239, 227, 194, 0.04);
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+        z-index: 1;
+
+        &::after {
+            content: "R";
+        }
+    }
+
+    /* Override button outline color for green panel */
+    #split-offerings .cs-panel-b .cs-button-outline {
+        border-color: rgba(239, 227, 194, 0.4);
+        color: var(--headerColor);
+
+        &:hover {
+            border-color: var(--recessYellow);
+            color: var(--recessYellow);
+        }
+    }
+
+    /* ── Divider ── */
+    #split-offerings .cs-split-divider {
+        height: 3px;
+        background: linear-gradient(
+            to right,
+            var(--recessRed),
+            var(--recessYellow),
+            var(--recessRed)
+        );
+        width: 100%;
+    }
+}
+
+/* Tablet - 48rem */
+@media only screen and (min-width: 48rem) {
+
+    #split-offerings .cs-carousel {
+        height: 28rem;
+    }
+}
+
+/* Desktop - 64rem */
+@media only screen and (min-width: 64rem) {
+
+    /* Side by side — equal halves */
+    #split-offerings .cs-split-grid {
+        grid-template-columns: 1fr 3px 1fr;
+        grid-template-rows: 1fr;
+        min-height: 45rem; /* Increased slightly for better content breathing room */
+    }
+
+    #split-offerings .cs-panel-a,
+    #split-offerings .cs-panel-b {
+        min-height: 45rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Divider becomes vertical */
+    #split-offerings .cs-split-divider {
+        height: auto;
+        width: 3px;
+        background: linear-gradient(
+            to bottom,
+            var(--recessRed),
+            var(--recessYellow),
+            var(--recessRed)
+        );
+    }
+
+    /* Unified Content Wrapper for Alignment */
+    #split-offerings .cs-panel-content {
+        padding: 4rem; 
+        height: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* Aligns headers to the top */
+        flex: 1;
+        z-index: 3;
+    }
+
+    /* Pushes buttons to the bottom so they align horizontally */
+    #split-offerings .cs-panel-cta {
+        margin-top: auto; 
+        align-self: flex-start;
+    }
+
+    /* Ensures the description text area has a consistent footprint */
+    #split-offerings .cs-panel-text {
+        min-height: 5.5rem; 
+        margin-bottom: 1.5rem;
+    }
+
+    /* Panel A: carousel sits behind content as full-height bg */
+    #split-offerings .cs-panel-a {
+        position: relative;
+    }
+
+    #split-offerings .cs-carousel {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+    }
+
+    /* Gradient angles left-to-right so text sits on dark overlay */
+    #split-offerings .cs-carousel::after {
+        background: linear-gradient(
+            to right,
+            rgba(26, 26, 26, 0.95) 0%,
+            rgba(26, 26, 26, 0.7) 50%,
+            rgba(26, 26, 26, 0.1) 100%
+        );
+    }
+
+    /* Reposition dots to avoid overlapping aligned text */
+    #split-offerings .cs-carousel-dots {
+        bottom: 2rem;
+        left: 4rem;
+        transform: none;
+    }
+}
+
+/*-- -------------------------- -->
 <---        Testimonials        -->
 <--- -------------------------- -*/
 
