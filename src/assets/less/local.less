@@ -79,6 +79,8 @@ img, svg {
         font-style: italic;
         font-weight: 600;
         color: var(--recessYellow);
+        display: inline;        /* ← forces it to stay inline, not block */
+        white-space: nowrap;    /* ← prevents mid-word wrapping */
     }
 
     #what-is-recess .cs-divider {
@@ -216,21 +218,364 @@ img, svg {
     #what-is-recess .cs-picture {
         height: 25rem;
     }
+
+    #what-is-recess .cs-title {
+        white-space: normal;  /* let the br tags control breaks, not auto-wrap */
+    }
+}
+
+/*-- -------------------------- -->
+<---        How It Works        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #how-it-works {
+        padding: var(--sectionPadding);
+        background-color: var(--recessBlack);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(3rem, 6vw, 4rem);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Section header ── */
+        .cs-topper {
+            color: var(--recessYellow);
+            width: auto;
+        }
+
+        .cs-content {
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cs-title {
+            font-size: var(--headerFontSize);
+            margin: 0;
+        }
+
+        .cs-script {
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+            font-weight: 600;
+            color: var(--recessYellow);
+            display: block;
+        }
+
+        /* ── Steps + button row ── */
+        .cs-flex {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: (48/16rem);
+        }
+
+        /* ── Panel box ── */
+        .cs-box {
+            /* Using an RGBA value for transparency (0.9 = 90% solid) */
+            /* Adjust the 0.9 lower (like 0.7) to see more of the picture */
+            background-color: rgba(26, 26, 26, 0.9); 
+            
+            /* Optional: Add a backdrop blur for a high-end "Glassmorphism" look */
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+
+            border: 1px solid rgba(239, 227, 194, 0.1);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-box-content {
+            margin: 0;
+            padding: clamp(2rem, 2.5vw, 2.5rem) clamp(1.5rem, 3vw, 2.5rem);
+            box-sizing: border-box;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            transition: opacity 0.3s, transform 0.5s;
+
+            &.cs-hidden {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translateY(1.5rem);
+                pointer-events: none;
+            }
+        }
+
+        /* Large watermark step number inside panel */
+        .cs-step-num {
+            font-family: var(--headerFont);
+            font-size: clamp(4rem, 10vw, 7rem);
+            color: rgba(239, 227, 194, 0.06);
+            line-height: 1;
+            letter-spacing: 0.125rem;
+            margin-bottom: 0.5rem;
+            user-select: none;
+        }
+
+        .cs-h3 {
+            font-family: var(--headerFont);
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            line-height: 1.1;
+            letter-spacing: 0.075rem;
+            font-weight: 400;
+            margin: 0 0 (16/16rem);
+            color: var(--headerColor);
+            text-transform: uppercase;
+        }
+
+        .cs-box-text {
+            font-family: var(--bodyFont);
+            font-size: (16/16rem);
+            line-height: 1.9;
+            margin: 0;
+            padding: 0;
+            color: rgba(239, 227, 194, 0.55);
+        }
+
+        /* ── Step selector buttons ── */
+        .cs-button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .cs-button {
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 1.125rem 0;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(239, 227, 194, 0.1);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: (16/16rem);
+            cursor: pointer;
+            transition: border-color 0.2s ease;
+
+            &.cs-active,
+            &:hover {
+                .cs-button-num {
+                    color: var(--recessYellow);
+                }
+                .cs-button-text {
+                    color: var(--headerColor);
+                }
+                .cs-arrow {
+                    opacity: 1;
+                    color: var(--recessRed);
+                }
+            }
+        }
+
+        .cs-button-num {
+            font-family: var(--headerFont);
+            font-size: 1.5rem;
+            letter-spacing: 0.125rem;
+            color: rgba(239, 227, 194, 0.2);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 2.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .cs-button-text {
+            font-family: var(--bodyFont);
+            font-size: (14/16rem);
+            font-weight: 700;
+            letter-spacing: 0.125rem;
+            text-transform: uppercase;
+            line-height: 1.3;
+            color: rgba(239, 227, 194, 0.4);
+            flex: 1;
+            transition: color 0.2s ease;
+        }
+
+        .cs-arrow {
+            font-family: var(--bodyFont);
+            font-size: 1rem;
+            color: rgba(239, 227, 194, 0.15);
+            margin-left: auto;
+            flex-shrink: 0;
+            opacity: 0.4;
+            transition: opacity 0.2s ease, color 0.2s ease;
+        }
+
+        /* CTA below step buttons */
+        .cs-section-cta {
+            margin-top: 2rem;
+            display: inline-block;
+            align-self: flex-start;
+        }
+
+        /* ── Photo group ── */
+        .cs-image-group {
+            width: 100%;
+            height: 100vw;
+            min-height: (400/16rem);
+            max-height: (680/16rem);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center top;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+       /* Floating badge — bottom-right of photo */
+        .cs-floater {
+            background-color: var(--recessRed);
+            border: 1px solid rgba(239, 227, 194, 0.1);
+            /* 16px - 20px top/bottom, 20px - 24px left/right */
+            padding: clamp(1rem, 2vw, 1.25rem) clamp(1.25rem, 3vw, 1.5rem);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: (2/16rem);
+            position: absolute;
+            /* Positioning logic */
+            bottom: (24/16rem);
+            right: (24/16rem);
+            left: auto; 
+            z-index: 10;
+        }
+
+        .cs-floater-label {
+            display: block;
+            font-family: var(--bodyFont);
+            font-size: 0.5rem;
+            font-weight: 700;
+            color: rgba(239, 227, 194, 0.65);
+            letter-spacing: 0.25rem;
+            text-transform: uppercase;
+        }
+
+        .cs-floater-value {
+            display: block;
+            font-family: var(--headerFont);
+            font-size: 2rem;
+            color: var(--headerColor);
+            line-height: 1;
+            letter-spacing: 0.25rem;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #how-it-works {
+        .cs-container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: stretch;
+        }
+
+        .cs-content {
+            width: 100%;
+        }
+
+        .cs-flex {
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        .cs-box {
+            width: 50%;
+            display: flex;
+            order: 2;
+        }
+
+        .cs-box-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cs-button-group {
+            width: 50%;
+            justify-content: center;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #how-it-works {
+        .cs-content {
+            width: 53%;
+            padding: (48/16rem) 0 0 0;
+            box-sizing: border-box;
+        }
+
+        .cs-flex {
+            width: 74%;
+            max-width: (848/16rem);
+            padding: 0 0 (48/16rem);
+            box-sizing: border-box;
+        }
+
+        /* Photo: full height, pinned right, behind content */
+        .cs-image-group {
+            width: 40vw;
+            max-width: (522/16rem);
+            height: 100%;
+            max-height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+        }
+    }
 }
 
 /*-- -------------------------- -->
 <---       Choose Your Path     -->
 <--- -------------------------- -*/
 
-/* Mobile - 0px */
-@media only screen and (min-width: 0rem) {
+#choose-your-path {
+    padding: var(--sectionPadding);
+    background-color: var(--recessGrey);
 
-    #choose-your-path {
-        background-color: var(--recessBlack);
-        padding: var(--sectionPadding);
-    }
-
-    #choose-your-path .cs-container {
+    .cs-container {
         width: 100%;
         max-width: 80rem;
         margin: 0 auto;
@@ -238,125 +583,184 @@ img, svg {
         box-sizing: border-box;
     }
 
-    /* ── Header row ── */
-    #choose-your-path .cs-header-row {
+    .cs-topper {
+        color: var(--recessYellow); /* Specific Yellow adaptation */
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .cs-title {
+        font-family: var(--headerFont);
+        /* REDUCED SIZE: changed from var(--headerFontSize) to a smaller clamp */
+        font-size: clamp(2.5rem, 6vw, 4.5rem); 
+        line-height: 0.9;
+        margin: 0;
+        color: var(--headerColor);
+        text-transform: uppercase;
+        
+        /* FORCES 2 LINES: Adjust this width if you want it to break differently */
+        max-width: 25ch;
+        width: 100%;
+        display: block;
+
+        .cs-script {
+            font-family: "Playfair Display", serif;
+            font-style: italic;
+            font-weight: 600;
+            color: var(--recessYellow);
+            text-transform: lowercase;
+            /* Adjusting the script size relative to the smaller title */
+            font-size: 0.9em; 
+            display: block; /* Ensures it starts on a new line if <br> is missing */
+            margin-top: 0; 
+            width: max-content;
+        }
+    }
+
+    /* Adapted Intro Text from Development Pathway */
+    .cs-pathway-intro {
+        font-size: var(--bodyFontSize);
+        color: rgba(239, 227, 194, 0.45);
+        max-width: 40rem;
+        margin-top: 1.5rem;
+        margin-bottom: 3.5rem;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    /* Header Row Layout Fix */
+    .cs-header-row {
         display: flex;
         flex-direction: column;
-        gap: 1.25rem;
-        margin-bottom: 3rem;
-    }
-
-    #choose-your-path .cs-topper {
-        color: var(--recessYellow);
-    }
-
-    #choose-your-path .cs-title {
-        font-size: var(--headerFontSize);
-        margin-bottom: 0;
-    }
-
-    #choose-your-path .cs-script {
-        font-family: "Playfair Display", serif;
-        font-style: italic;
-        font-weight: 600;
-        color: var(--recessYellow);
-    }
-
-    /* ── Cards grid — 1 col mobile ── */
-    #choose-your-path .cs-cards {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2px;
-    }
-
-    /* ── Individual card ── */
-    #choose-your-path .cs-card {
-        position: relative;
-        overflow: hidden;
-        padding: 1.75rem 1.25rem 1.5rem;
-        background-color: #111;
-        border: 1px solid rgba(239, 227, 194, 0.07);
-        text-decoration: none;
-        display: block;
-        cursor: pointer;
-        transition: background-color 0.25s ease, border-color 0.25s ease;
-    }
-
-    #choose-your-path .cs-card:hover {
-        border-color: var(--cs-card-accent, rgba(239, 227, 194, 0.07));
-        background-color: var(--cs-card-accent, #111);
-    }
-
-    /* Background number watermark */
-    #choose-your-path .cs-card-num {
-        position: absolute;
-        bottom: -0.5rem;
-        right: 0.25rem;
-        font-family: var(--headerFont);
-        font-size: 5rem;
-        color: rgba(255, 255, 255, 0.04);
-        line-height: 1;
-        pointer-events: none;
-        letter-spacing: -0.125rem;
-        user-select: none;
-    }
-
-    #choose-your-path .cs-card-icon {
-        font-size: 1.75rem;
-        margin-bottom: 0.875rem;
-        display: block;
-    }
-
-    #choose-your-path .cs-card-label {
-        font-family: var(--headerFont);
-        font-size: 1.125rem;
-        color: var(--headerColor);
-        letter-spacing: 0.125rem;
-        line-height: 1.1;
-        margin-bottom: 0.5rem;
-    }
-
-    #choose-your-path .cs-card-meta {
-        display: block;
-        font-family: var(--bodyFont);
-        font-size: 0.5625rem;
-        color: rgba(239, 227, 194, 0.45);
-        letter-spacing: 0.0625rem;
-    }
-
-    #choose-your-path .cs-card-arrow {
-        margin-top: 1rem;
-        color: var(--recessYellow);
-        font-size: 1rem;
-        transition: transform 0.2s ease;
-    }
-
-    #choose-your-path .cs-card:hover .cs-card-arrow {
-        transform: translateX(6px);
-    }
-}
-
-/* Tablet - 48rem */
-@media only screen and (min-width: 48rem) {
-
-    #choose-your-path .cs-header-row {
-        flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: flex-start;
+        gap: 1.5rem;
+
+        @media only screen and (min-width: 48rem) {
+            flex-direction: row;
+            align-items: flex-end;
+            margin-bottom: 3.5rem; /* Matches the intro text bottom margin */
+        }
     }
 
-    #choose-your-path .cs-cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Desktop - 64rem */
-@media only screen and (min-width: 64rem) {
-
-    #choose-your-path .cs-cards {
-        grid-template-columns: repeat(5, 1fr);
+    /* Keep the Button Outline consistent with the section */
+    .cs-button-outline {
+        margin-bottom: 3.5rem; /* Keeps it level with intro on mobile stack */
+        @media only screen and (min-width: 48rem) {
+            margin-bottom: 0; 
+        }
     }
 
+    .cs-cards-hybrid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .cs-card-big {
+        grid-column: span 12;
+        text-decoration: none;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 32rem; /* Taller to accommodate icons and text */
+        padding: 2.5rem;
+        overflow: hidden;
+        background-color: #000;
+        border: 1px solid rgba(239, 227, 194, 0.1);
+        transition: border-color 0.3s;
+
+        &:hover {
+            border-color: var(--recessRed);
+            
+            .cs-background img {
+                transform: scale(1.1);
+                opacity: 0.2; /* Dims more on hover to highlight text */
+            }
+
+            .cs-card-arrow {
+                background-color: var(--recessRed);
+                color: #fff;
+            }
+        }
+
+        @media only screen and (min-width: 48rem) {
+            grid-column: span 4;
+        }
+    }
+
+    .cs-card-content {
+        position: relative;
+        z-index: 10; /* Ensures icons sit above the image */
+    }
+
+    .cs-card-num {
+        font-family: var(--headerFont);
+        font-size: 1rem;
+        color: var(--recessRed);
+        margin-bottom: 1.5rem;
+    }
+
+    .cs-card-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+
+    .cs-card-label {
+        font-family: var(--headerFont);
+        font-size: 1.75rem;
+        color: var(--headerColor);
+        text-transform: uppercase;
+        margin: 0 0 0.75rem 0;
+        line-height: 1.2;
+    }
+
+    .cs-card-text {
+        font-family: var(--bodyFont);
+        font-size: 0.9375rem;
+        color: rgba(239, 227, 194, 0.7);
+        margin: 0 0 1.5rem 0;
+        line-height: 1.5;
+    }
+
+    .cs-card-arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid currentColor;
+        color: var(--headerColor);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .cs-background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4; /* Base transparency */
+            transition: transform 0.6s, opacity 0.3s;
+        }
+        
+        /* The "Secret Sauce": A dark gradient so text stays readable */
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 100%);
+        }
+    }
 }
 
 /*-- -------------------------- -->
@@ -367,7 +771,7 @@ img, svg {
 @media only screen and (min-width: 0rem) {
 
     #development-pathway {
-        background-color: var(--recessGrey);
+        background-color: var(--recessBlack);
         padding: var(--sectionPadding);
     }
 
@@ -465,9 +869,9 @@ img, svg {
     /* ── Panels ── */
     #development-pathway .cs-panel {
         border: 1px solid rgba(239, 227, 194, 0.1);
-        padding: 2rem 1.25rem;
         background-color: var(--cs-panel-bg, #144734);
         transition: background-color 0.3s ease;
+        overflow: hidden;
     }
 
     #development-pathway .cs-panel[hidden] {
@@ -477,11 +881,57 @@ img, svg {
     #development-pathway .cs-panel-inner {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 2rem;
-        align-items: start;
+        gap: 0;
+        align-items: stretch;
     }
 
-    /* Left: ages + stage name */
+    /* ── Left column: full-bleed photo card ── */
+    #development-pathway .cs-panel-left {
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        min-height: 22rem;
+        padding: 1.75rem 1.25rem;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        /* Photo layer — driven by JS via --cs-panel-img */
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: var(--cs-panel-img, none);
+            background-size: cover;
+            background-position: var(--cs-panel-pos, center top);
+            z-index: 0;
+            transition: background-image 0.3s ease;
+        }
+
+        /* Dark gradient bottom-up — text readable over any photo */
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.92) 0%,
+                rgba(0, 0, 0, 0.65) 45%,
+                rgba(0, 0, 0, 0.25) 100%
+            );
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* All text content sits above both layers */
+        > * {
+            position: relative;
+            z-index: 2;
+        }
+    }
+
+    /* Ages label */
     #development-pathway .cs-panel-ages-label {
         display: block;
         font-family: var(--bodyFont);
@@ -492,9 +942,14 @@ img, svg {
         margin-bottom: 0.5rem;
     }
 
+    /* LTD label spacing */
+    #development-pathway .cs-ltd-label {
+        margin-top: 1rem;
+    }
+
     #development-pathway .cs-panel-ages {
         font-family: var(--headerFont);
-        font-size: 4.5rem;
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
         color: var(--headerColor);
         line-height: 1;
         letter-spacing: 0.125rem;
@@ -506,9 +961,23 @@ img, svg {
         color: var(--recessRed);
         letter-spacing: 0.125rem;
         margin-top: 0.25rem;
+        margin-bottom: 0;
     }
 
-    /* Right: desc + program tags */
+    #development-pathway .cs-panel-ltd {
+        font-family: var(--bodyFont);
+        font-size: 0.8125rem;
+        color: rgba(239, 227, 194, 0.7);
+        line-height: 1.5;
+        margin-top: 0.25rem;
+    }
+
+    /* ── Right column ── */
+    #development-pathway .cs-panel-right {
+        padding: 2rem 1.25rem;
+        box-sizing: border-box;
+    }
+
     #development-pathway .cs-panel-desc {
         font-family: var(--bodyFont);
         font-size: var(--bodyFontSize);
@@ -564,17 +1033,31 @@ img, svg {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    #development-pathway .cs-panel {
-        padding: 3rem 2.5rem;
-    }
-
+    /* Two-column panel: photo left, content right */
     #development-pathway .cs-panel-inner {
         grid-template-columns: 1fr 2fr;
-        gap: 3rem;
+        align-items: stretch;
+    }
+
+    #development-pathway .cs-panel-left {
+        min-height: 24rem;
+        padding: 2.5rem;
+    }
+
+    #development-pathway .cs-panel-right {
+        padding: 3rem 2.5rem;
     }
 
     #development-pathway .cs-panel-ages {
         font-size: 4.5rem;
+    }
+}
+
+/* Desktop - 64rem */
+@media only screen and (min-width: 64rem) {
+
+    #development-pathway .cs-panel-left {
+        min-height: 28rem;
     }
 }
 
