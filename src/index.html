@@ -33,99 +33,100 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-    <section class="hero" id="hero">
- 
-      <!-- BG layer: swap in your photo by setting ASSETS.photoHeroBg -->
-      <div class="hero-bg" id="hero-bg-layer">
-        <!-- SVG court fallback (shown when no photo) -->
-        <svg class="hero-court-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <rect x="50"  y="50"  width="700" height="500" fill="none" stroke="#EFE3C2" stroke-width="2"/>
-          <line x1="400" y1="50"  x2="400" y2="550" stroke="#EFE3C2" stroke-width="2"/>
-          <circle cx="400" cy="300" r="80" fill="none" stroke="#EFE3C2" stroke-width="2"/>
-          <circle cx="400" cy="300" r="60" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
-          <circle cx="400" cy="300" r="8"  fill="#EFE3C2"/>
-          <line x1="0" y1="300" x2="800" y2="300" stroke="#EFE3C2" stroke-width="1.5"/>
-          <rect x="0"   y="140" width="180" height="320" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
-          <rect x="620" y="140" width="180" height="320" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
-          <path d="M 0 300 A 80 80 0 0 0 160 300"   fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
-          <path d="M 640 300 A 80 80 0 0 0 800 300" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
+<section class="hero" id="hero">
+
+    <!-- BG layer: full-bleed image + dark overlay -->
+    <!-- Swap src via ASSETS.photoHeroBg in the script block below -->
+    <div class="hero-bg" id="hero-bg-layer">
+        <!-- SVG court lines — visible only when no photo is set -->
+        <svg class="hero-court-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="50"  y="50"  width="700" height="500" fill="none" stroke="#EFE3C2" stroke-width="2"/>
+            <line x1="400" y1="50"  x2="400" y2="550" stroke="#EFE3C2" stroke-width="2"/>
+            <circle cx="400" cy="300" r="80" fill="none" stroke="#EFE3C2" stroke-width="2"/>
+            <circle cx="400" cy="300" r="60" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
+            <circle cx="400" cy="300" r="8"  fill="#EFE3C2"/>
+            <line x1="0" y1="300" x2="800" y2="300" stroke="#EFE3C2" stroke-width="1.5"/>
+            <rect x="0"   y="140" width="180" height="320" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
+            <rect x="620" y="140" width="180" height="320" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
+            <path d="M 0 300 A 80 80 0 0 0 160 300"   fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
+            <path d="M 640 300 A 80 80 0 0 0 800 300" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
         </svg>
-      </div>
- 
-      <!-- Watermark -->
-      <div class="hero-watermark" id="hero-watermark">
+    </div>
+
+    <!-- Watermark -->
+    <div class="hero-watermark" id="hero-watermark" aria-hidden="true">
         <div class="hero-watermark-letter">R</div>
-      </div>
- 
-      <!-- Red accent bar -->
-      <div class="hero-accent-bar"></div>
- 
-      <!-- Main grid -->
-      <div class="hero-grid">
- 
+    </div>
+
+    <!-- Red accent bar -->
+    <div class="hero-accent-bar" aria-hidden="true"></div>
+
+    <!-- Main grid -->
+    <div class="hero-grid">
+
         <!-- LEFT CONTENT -->
         <div class="hero-container">
-          <div class="hero-left">
- 
-            <!-- Badge -->
-            <div class="hero-badge anim-up d1">
-              <span class="hero-badge-dot"></span>
-              <span class="hero-badge-text">Markham, Ontario · Est. 2019</span>
-            </div>
- 
-            <!-- Headline -->
-            <div class="anim-up d2">
-              <div class="hero-headline">
-                THE<br/>
-                <span class="hero-headline-outline">PLAYGROUND</span>
-                <span class="hero-headline-row">
-                  FOR&nbsp;<span class="hero-script">athletes.</span>
-                </span>
-              </div>
-            </div>
- 
-            <!-- Sub copy -->
-            <p class="hero-sub anim-up d3">
-              Basketball. Badminton. Volleyball. Pickleball.<br/>
-              Train together. Compete together. Build something real.
-            </p>
- 
-            <!-- CTAs -->
-            <div class="hero-cta anim-up d4">
-              <a href="/memberships/" class="cs-button-solid" onclick="navigateTo('memberships')">Join Recess →</a>
-              <a href="book-eval"        class="cs-button-outline" onclick="navigateTo('book')">Book Free Evaluation</a>
-            </div>
+            <div class="hero-left">
 
-            <!-- ─── STATS + SCROLL INDICATOR ─── -->
-            <div class="hero-stats-wrap anim-up d5">
-              <div class="hero-stats" id="hero-stats">
-                <!-- Injected by JS -->
-              </div>
-              <!-- Red scroll progress bar -->
-              <div class="hero-stats-track">
-                <div class="hero-stats-thumb" id="stats-thumb"></div>
-              </div>
+                <!-- Badge -->
+                <div class="hero-badge anim-up d1">
+                    <span class="hero-badge-dot"></span>
+                    <span class="hero-badge-text">Markham, Ontario · Est. 2019</span>
+                </div>
+
+                <!-- Headline -->
+                <div class="anim-up d2">
+                    <div class="hero-headline">
+                        THE<br/>
+                        <span class="hero-headline-outline">PLAYGROUND</span>
+                        <span class="hero-headline-row">
+                            FOR&nbsp;<span class="hero-script">athletes.</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Sub copy -->
+                <p class="hero-sub anim-up d3">
+                    Basketball. Badminton. Volleyball. Pickleball.<br/>
+                    Train together. Compete together. Build something real.
+                </p>
+
+                <!-- ─── Body copy block ─── -->
+                <div class="hero-body anim-up d4">
+                    <h3 class="hero-body-heading">A Clear Path for Every Athlete</h3>
+                    <p class="hero-body-text">
+                        Basketball-first training built for real development — from beginners
+                        learning the game to athletes competing at a high level.
+                    </p>
+                    <p class="hero-body-text">Every athlete starts with a plan.</p>
+                    <em class="hero-body-em">Book Your Free Athlete Evaluation</em>
+                </div>
+
+                <!-- CTAs — delay bumped d4 → d5 to preserve stagger -->
+                <div class="hero-cta anim-up d5">
+                    <a href="/memberships/" class="cs-button-solid">Join Recess →</a>
+                    <a href="/book-eval"    class="cs-button-outline">Book Free Evaluation</a>
+                </div>
+
             </div>
- 
-          </div>
         </div>
- 
-        <!-- RIGHT PHOTO (placeholder when no photo) -->
+
+        <!-- RIGHT PHOTO slot -->
         <div id="hero-right-slot">
-          <div class="hero-photo-placeholder">
-            <div class="hero-photo-placeholder-icon">📷</div>
-            <p class="hero-photo-placeholder-text">
-              PHOTO-HERO-SIDE<br/>Set ASSETS.photoHeroSide
-            </p>
-          </div>
+            <div class="hero-photo-placeholder">
+                <div class="hero-photo-placeholder-icon">📷</div>
+                <p class="hero-photo-placeholder-text">
+                    PHOTO-HERO-SIDE<br/>Set ASSETS.photoHeroSide
+                </p>
+            </div>
         </div>
- 
-      </div>
- 
-      <!-- Domain watermark -->
-      <div class="hero-domain">THERECESS.CLUB</div>
- 
-    </section>
+
+    </div>
+
+    <!-- Domain watermark -->
+    <div class="hero-domain" aria-hidden="true">THERECESS.CLUB</div>
+
+</section>
 
   <!-- ═══════════════════════════════════════
        MARQUEE
@@ -798,14 +799,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
       logoHero:      "",   // e.g. "/assets/images/logo.svg"
     };
  
-    /* ── STATS ───────────────────────────── */
-    const STATS = [
-      { val: "500+",  label: "Athletes Trained"      },
-      { val: "30+",   label: "College Placements"    },
-      { val: "15+",   label: "Certified Coaches"     },
-      { val: "4",     label: "Sports Offered"        },
-      { val: "95%",   label: "Member Retention"      },
-    ];
+
  
     /* ── MARQUEE ─────────────────────────── */
     const MARQUEE_ITEMS = [
@@ -823,20 +817,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
       `).join("");
     }
  
-    /* ── STATS ROW ───────────────────────── */
-    function buildStats() {
-      const container = document.getElementById("hero-stats");
-      container.innerHTML = STATS.map((s, i) => {
-        const num    = s.val.replace(/[+%]/g, "");
-        const suffix = s.val.match(/[+%]/)?.[0] || "";
-        return `
-          <div class="hero-stat">
-            <div class="hero-stat-val">${num}<span>${suffix}</span></div>
-            <div class="hero-stat-label">${s.label}</div>
-          </div>
-        `;
-      }).join("");
-    }
+    
  
     /* ── HERO: apply photos if provided ─── */
     function buildHero() {
@@ -872,33 +853,12 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
       console.log("Navigate to:", page);
     }
 
-    /* ── STATS SCROLL INDICATOR ─────────── */
-    function initStatsScroll() {
-      const statsEl = document.getElementById("hero-stats");
-      const thumb   = document.getElementById("stats-thumb");
-
-      function updateThumb() {
-        const scrollable = statsEl.scrollWidth - statsEl.clientWidth;
-        if (scrollable <= 0) {
-          // All stats visible — fill bar completely
-          thumb.style.width = "100%";
-          return;
-        }
-        const pct = ((statsEl.clientWidth + statsEl.scrollLeft) / statsEl.scrollWidth) * 100;
-        thumb.style.width = Math.min(pct, 100) + "%";
-      }
-
-      statsEl.addEventListener("scroll", updateThumb);
-      // Set initial state after stats are rendered
-      setTimeout(updateThumb, 50);
-    }
+    
  
     /* ── INIT ────────────────────────────── */
     document.addEventListener("DOMContentLoaded", () => {
       buildMarquee();
-      buildStats();
       buildHero();
-      initStatsScroll();  // ← scroll indicator
     });
   </script>
 

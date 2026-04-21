@@ -94,7 +94,14 @@ body { overflow-x: hidden; }
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgba(13,13,13,0.92) 55%, rgba(13,13,13,0.3) 100%);
+  // Full-screen dark overlay — ensures cream + yellow text stays legible
+  // over any photo regardless of how bright or busy it is
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.70) 0%,
+    rgba(0, 0, 0, 0.55) 55%,
+    rgba(0, 0, 0, 0.38) 100%
+  );
 }
 
 /* SVG court fallback */
@@ -259,6 +266,49 @@ body { overflow-x: hidden; }
   width: 100%;
   text-align: center;
 }
+
+/* ── Hero body copy block ── */
+.hero-body {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(239, 227, 194, 0.1);
+  max-width: 100%;
+}
+
+.hero-body-heading {
+  font-family: var(--headerFont);  /* ← Bebas Neue — thick display font */
+  font-size: clamp(1.25rem, 3.5vw, 1.75rem);  /* ← bump size up too, Bebas reads smaller */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--headerColor);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.hero-body-text {
+  font-family: var(--bodyFont);
+  font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+  line-height: 1.8;
+  color: rgba(239, 227, 194, 0.55);
+  margin: 0 0 0.5rem 0;
+
+  &:last-of-type {
+    margin-bottom: 1rem;
+  }
+}
+
+.hero-body-em {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(0.9375rem, 2.2vw, 1.125rem);
+  color: var(--recessYellow);
+  display: block;
+  line-height: 1.4;
+}
+
 .hero-cta .cs-button-solid,
 .hero-cta .cs-button-outline {
   display: block;
@@ -267,9 +317,9 @@ body { overflow-x: hidden; }
   padding: 1rem 2rem;
 }
 
-/* ── Stats wrapper ── */
+/* ── Stats wrapper — removed per design spec ── */
 .hero-stats-wrap {
-  margin-top: 52px;
+  display: none !important;
 }
 
 /* ── Stats row ── */
