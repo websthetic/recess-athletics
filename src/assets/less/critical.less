@@ -211,7 +211,7 @@ body { overflow-x: hidden; }
 /* Headline (mobile size) */
 .hero-headline {
   font-family: var(--headerFont);
-  font-size: clamp(60px, 18vw, 100px);
+  font-size: clamp(44px, 12vw, 72px);  /* ← was clamp(60px, 18vw, 100px) */
   line-height: 0.87;
   letter-spacing: 0.02em;
   color: var(--headerColor);
@@ -220,7 +220,7 @@ body { overflow-x: hidden; }
 .hero-headline-outline {
   -webkit-text-stroke: 2px var(--headerColor);
   color: transparent;
-  display: block;
+  display: inline;
 }
 .hero-headline-row {
   display: flex;
@@ -413,7 +413,7 @@ body { overflow-x: hidden; }
 
 /* Headline: full desktop size */
 .hero-headline {
-  font-size: clamp(72px, 13vw, 160px);
+  font-size: clamp(52px, 9vw, 110px);  /* ← was clamp(72px, 13vw, 160px) */
 }
 
 /* Headline row: restore nowrap on desktop */
