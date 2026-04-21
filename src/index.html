@@ -33,99 +33,94 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-    <section class="hero" id="hero">
- 
-      <!-- BG layer: swap in your photo by setting ASSETS.photoHeroBg -->
-      <div class="hero-bg" id="hero-bg-layer">
-        <!-- SVG court fallback (shown when no photo) -->
-        <svg class="hero-court-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-          <rect x="50"  y="50"  width="700" height="500" fill="none" stroke="#EFE3C2" stroke-width="2"/>
-          <line x1="400" y1="50"  x2="400" y2="550" stroke="#EFE3C2" stroke-width="2"/>
-          <circle cx="400" cy="300" r="80" fill="none" stroke="#EFE3C2" stroke-width="2"/>
-          <circle cx="400" cy="300" r="60" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
-          <circle cx="400" cy="300" r="8"  fill="#EFE3C2"/>
-          <line x1="0" y1="300" x2="800" y2="300" stroke="#EFE3C2" stroke-width="1.5"/>
-          <rect x="0"   y="140" width="180" height="320" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
-          <rect x="620" y="140" width="180" height="320" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
-          <path d="M 0 300 A 80 80 0 0 0 160 300"   fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
-          <path d="M 640 300 A 80 80 0 0 0 800 300" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
+<section class="hero" id="hero">
+
+    <!-- BG layer: full-bleed image + dark overlay -->
+    <!-- Swap src via ASSETS.photoHeroBg in the script block below -->
+    <div class="hero-bg" id="hero-bg-layer">
+        <!-- SVG court lines — visible only when no photo is set -->
+        <svg class="hero-court-svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="50"  y="50"  width="700" height="500" fill="none" stroke="#EFE3C2" stroke-width="2"/>
+            <line x1="400" y1="50"  x2="400" y2="550" stroke="#EFE3C2" stroke-width="2"/>
+            <circle cx="400" cy="300" r="80" fill="none" stroke="#EFE3C2" stroke-width="2"/>
+            <circle cx="400" cy="300" r="60" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
+            <circle cx="400" cy="300" r="8"  fill="#EFE3C2"/>
+            <line x1="0" y1="300" x2="800" y2="300" stroke="#EFE3C2" stroke-width="1.5"/>
+            <rect x="0"   y="140" width="180" height="320" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
+            <rect x="620" y="140" width="180" height="320" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
+            <path d="M 0 300 A 80 80 0 0 0 160 300"   fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
+            <path d="M 640 300 A 80 80 0 0 0 800 300" fill="none" stroke="#EFE3C2" stroke-width="1.5"/>
         </svg>
-      </div>
- 
-      <!-- Watermark -->
-      <div class="hero-watermark" id="hero-watermark">
+    </div>
+
+    <!-- Watermark -->
+    <div class="hero-watermark" id="hero-watermark" aria-hidden="true">
         <div class="hero-watermark-letter">R</div>
-      </div>
- 
-      <!-- Red accent bar -->
-      <div class="hero-accent-bar"></div>
- 
-      <!-- Main grid -->
-      <div class="hero-grid">
- 
+    </div>
+
+    <!-- Red accent bar -->
+    <div class="hero-accent-bar" aria-hidden="true"></div>
+
+    <!-- Main grid -->
+    <div class="hero-grid">
+
         <!-- LEFT CONTENT -->
         <div class="hero-container">
-          <div class="hero-left">
- 
-            <!-- Badge -->
-            <div class="hero-badge anim-up d1">
-              <span class="hero-badge-dot"></span>
-              <span class="hero-badge-text">Markham, Ontario · Est. 2019</span>
-            </div>
- 
-            <!-- Headline -->
-            <div class="anim-up d2">
-              <div class="hero-headline">
-                THE<br/>
-                <span class="hero-headline-outline">PLAYGROUND</span>
-                <span class="hero-headline-row">
-                  FOR&nbsp;<span class="hero-script">athletes.</span>
-                </span>
-              </div>
-            </div>
- 
-            <!-- Sub copy -->
-            <p class="hero-sub anim-up d3">
-              Basketball. Badminton. Volleyball. Pickleball.<br/>
-              Train together. Compete together. Build something real.
-            </p>
- 
-            <!-- CTAs -->
-            <div class="hero-cta anim-up d4">
-              <a href="/memberships/" class="cs-button-solid" onclick="navigateTo('memberships')">Join Recess →</a>
-              <a href="book-eval"        class="cs-button-outline" onclick="navigateTo('book')">Book Free Evaluation</a>
-            </div>
+            <div class="hero-left">
 
-            <!-- ─── STATS + SCROLL INDICATOR ─── -->
-            <div class="hero-stats-wrap anim-up d5">
-              <div class="hero-stats" id="hero-stats">
-                <!-- Injected by JS -->
-              </div>
-              <!-- Red scroll progress bar -->
-              <div class="hero-stats-track">
-                <div class="hero-stats-thumb" id="stats-thumb"></div>
-              </div>
+                <!-- Badge -->
+                <div class="hero-badge anim-up d1">
+                    <span class="hero-badge-dot"></span>
+                    <span class="hero-badge-text">Markham, Ontario · Est. 2019</span>
+                </div>
+
+                <!-- Headline -->
+                <div class="anim-up d2">
+                    <div class="hero-headline">
+                        A CLEAR <span class="hero-headline-outline">PATH</span><br/>
+                       <span class="hero-headline-row">
+                        FOR EVERY&nbsp;<span class="hero-script">athletes.</span>
+                       </span>
+                    </div>
+                </div>
+
+                <!-- Sub copy -->
+                <p class="hero-sub anim-up d3">
+                    Basketball-first training built for real development;<br/>
+                    from beginners learning the game to athletes competing at a high level.<br/>
+                    Every athlete starts with a plan.
+                </p>
+
+                <!-- ─── Body copy block ─── -->
+                <div class="hero-action-block anim-up d4">
+                    <h3 class="hero-body-heading">Book Your Free Athlete Evaluation</h3>
+                    
+
+                <!-- CTAs — delay bumped d4 → d5 to preserve stagger -->
+                <div class="hero-cta anim-up d5">
+                    <a href="/memberships/" class="cs-button-solid">Join Recess →</a>
+                    <a href="/book-eval"    class="cs-button-outline">Book Free Evaluation</a>
+                </div>
+
             </div>
- 
-          </div>
         </div>
- 
-        <!-- RIGHT PHOTO (placeholder when no photo) -->
+
+        <!-- RIGHT PHOTO slot -->
         <div id="hero-right-slot">
-          <div class="hero-photo-placeholder">
-            <div class="hero-photo-placeholder-icon">📷</div>
-            <p class="hero-photo-placeholder-text">
-              PHOTO-HERO-SIDE<br/>Set ASSETS.photoHeroSide
-            </p>
-          </div>
+            <div class="hero-photo-placeholder">
+                <div class="hero-photo-placeholder-icon">📷</div>
+                <p class="hero-photo-placeholder-text">
+                    PHOTO-HERO-SIDE<br/>Set ASSETS.photoHeroSide
+                </p>
+            </div>
         </div>
- 
-      </div>
- 
-      <!-- Domain watermark -->
-      <div class="hero-domain">THERECESS.CLUB</div>
- 
-    </section>
+
+    </div>
+
+    <!-- Domain watermark -->
+    <div class="hero-domain" aria-hidden="true">THERECESS.CLUB</div>
+
+</section>
 
   <!-- ═══════════════════════════════════════
        MARQUEE
@@ -149,20 +144,18 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 
             <!-- ======= LEFT COLUMN ======= -->
             <div class="cs-left">
-                <span class="cs-topper">What We Are</span>
+                <span class="cs-topper">START HERE</span>
                 <h2 class="cs-title">
-                    A PLAYGROUND<br />
-                    FOR <em class="cs-script">everyone.</em>
+                    Not sure where to start?<br />
+                     <em class="cs-script">We’ve got you.</em>
                 </h2>
                 <div class="cs-divider"></div>
                 <p class="cs-text">
-                    Recess is a playground for adults — a vibrant community built from a deep love for the game.
-                    Whether you're a beginner looking to learn, a casual player seeking fun, or a competitor ready
-                    to test your skills, Recess offers the perfect space to grow and play.
+                    At Recess, we don’t guess where athletes belong. We assess, place, and develop them the right way from day one.
+
                 </p>
                 <p class="cs-text cs-text-last">
-                    With organized leagues, open play sessions, skill-building workshops, and social events,
-                    we create an environment where everyone feels welcome.
+                    Every new athlete begins with a free evaluation.
                 </p>
                 <div class="cs-button-group">
                     <a href="/about" class="cs-button-solid">Our Story →</a>
@@ -177,7 +170,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 <div class="cs-picture-wrapper">
                     <img
                         class="cs-picture"
-                        src="/assets/images/what-is-recess.jpg"
+                        src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/DSC06231-what-we-are.webp"
                         alt="Recess community"
                         width="800"
                         height="400"
@@ -214,102 +207,172 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 </section>
 
 <!-- ============================================ -->
+<!--              How It Works                    -->
+<!-- ============================================ -->
+
+<section id="how-it-works">
+    <div class="cs-container">
+
+        <!-- ── Left: Photo group ── -->
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/DSC06312-How-it-works.webp">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/DSC06312-How-it-works.webp">
+                <img
+                    loading="lazy"
+                    decoding="async"
+                    src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/DSC06312-How-it-works.webp"
+                    alt="Recess Athletics coach directing a young player on court during an evaluation session"
+                    width="562"
+                    height="680"
+                />
+            </picture>
+            <!-- Floating badge pinned to bottom-left of photo -->
+            <div class="cs-floater" aria-hidden="true">
+                <span class="cs-floater-label">Free to</span>
+                <span class="cs-floater-value">START</span>
+            </div>
+        </div>
+
+        <!-- ── Right: Content ── -->
+        <div class="cs-content">
+            <span class="cs-topper">The Process</span>
+            <h2 class="cs-title">
+                THREE STEPS TO YOUR
+                <em class="cs-script">athlete plan.</em>
+            </h2>
+        </div>
+
+        <!-- ── Steps + button group ── -->
+        <div class="cs-flex">
+
+            <!-- Step content panels — JS swaps visibility -->
+            <div class="cs-box">
+                <div class="cs-box-content" data-box="one">
+                    <div class="cs-step-num">01</div>
+                    <h3 class="cs-h3">Book Your Evaluation</h3>
+                    <p class="cs-box-text">
+                        Choose a time that works for you. Takes less than
+                        2 minutes to get on the calendar — no commitment required.
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="two">
+                    <div class="cs-step-num">02</div>
+                    <h3 class="cs-h3">Get Assessed by Coaches</h3>
+                    <p class="cs-box-text">
+                        We evaluate skill level, experience, and goals —
+                        on court, face to face. No guesswork, no generic advice.
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="three">
+                    <div class="cs-step-num">03</div>
+                    <h3 class="cs-h3">Get Your Athlete Plan</h3>
+                    <p class="cs-box-text">
+                        We place your athlete into the right program or membership.
+                        A clear path from day one — built around your goals.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Step selector buttons -->
+            <div class="cs-button-group">
+
+                <button class="cs-button cs-active" data-filter="one">
+                    <span class="cs-button-num">01</span>
+                    <span class="cs-button-text">Book Your Evaluation</span>
+                    <span class="cs-arrow" aria-hidden="true">→</span>
+                </button>
+
+                <button class="cs-button" data-filter="two">
+                    <span class="cs-button-num">02</span>
+                    <span class="cs-button-text">Get Assessed by Coaches</span>
+                    <span class="cs-arrow" aria-hidden="true">→</span>
+                </button>
+
+                <button class="cs-button" data-filter="three">
+                    <span class="cs-button-num">03</span>
+                    <span class="cs-button-text">Get Your Athlete Plan</span>
+                    <span class="cs-arrow" aria-hidden="true">→</span>
+                </button>
+
+                <!-- CTA below buttons -->
+                <a href="/book-eval" class="cs-button-solid cs-section-cta">
+                    Start Your Free Evaluation →
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ============================================ -->
 <!--             Choose Your Path                 -->
 <!-- ============================================ -->
 
 <section id="choose-your-path">
     <div class="cs-container">
 
-        <!-- Header row -->
         <div class="cs-header-row">
             <div>
-                <span class="cs-topper">Find Your Path</span>
-                <h2 class="cs-title">CHOOSE YOUR <em class="cs-script">path.</em></h2>
+                <span class="cs-topper">BASKETBALL DEVELOPMENT</span>
+                <h2 class="cs-title">Basketball Development, <br><em class="cs-script">Done Right
+</em></h2>
+                <p class="cs-pathway-intro">
+            We’ve built a structured training system that develops athletes at every stage; not just sessions, but progression.
+        </p>
             </div>
-            <a href="/programs" class="cs-button-outline">View All Programs →</a>
+            <a href="/programs" class="cs-button-outline">View Basketball Programs →</a>
         </div>
 
-        <!-- Program cards grid -->
-        <div class="cs-cards">
+        <div class="cs-cards-hybrid">
 
-            <a href="/programs/membership" class="cs-card" data-accent="#144734">
-                <div class="cs-card-num" aria-hidden="true">01</div>
-                <div class="cs-card-icon">🏅</div>
-                <div class="cs-card-label">MEMBERSHIP</div>
-                <span class="cs-card-meta">6–Adult · Year-Round</span>
-                <div class="cs-card-arrow">→</div>
+            <a href="/memberships" class="cs-card-big">
+                <div class="cs-card-content">
+                    <div class="cs-card-num" aria-hidden="true">01</div>
+                    <div class="cs-card-icon">🏅</div>
+                    <h3 class="cs-card-label">Membership (Core)</h3>
+                    <p class="cs-card-text">
+                        Consistent weekly training built around skill development and long-term growth.
+                    </p>
+                    <div class="cs-card-arrow">→</div>
+                </div>
+                <picture class="cs-background">
+                    <img decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/choose%20your%20paths/DSC02354choose1.webp" alt="Basketball training" width="400" height="560" aria-hidden="true">
+                </picture>
             </a>
 
-            <a href="/programs/camps" class="cs-card" data-accent="#940203">
-                <div class="cs-card-num" aria-hidden="true">02</div>
-                <div class="cs-card-icon">🏕️</div>
-                <div class="cs-card-label">CAMPS</div>
-                <span class="cs-card-meta">8–17 · Summer</span>
-                <div class="cs-card-arrow">→</div>
+            <a href="/programs" class="cs-card-big">
+                <div class="cs-card-content">
+                    <div class="cs-card-num" aria-hidden="true">02</div>
+                    <div class="cs-card-icon">🏀</div>
+                    <h3 class="cs-card-label">Programs</h3>
+                    <p class="cs-card-text">
+                        Jr. NBA, After School, and Camps designed for younger athletes.
+                    </p>
+                    <div class="cs-card-arrow">→</div>
+                </div>
+                <picture class="cs-background">
+                    <img decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/choose%20your%20paths/DSC06713choose2.webp" alt="Youth basketball camp" width="400" height="560" aria-hidden="true">
+                </picture>
             </a>
 
-            <a href="/programs/clinics" class="cs-card" data-accent="#3143AD">
-                <div class="cs-card-num" aria-hidden="true">03</div>
-                <div class="cs-card-icon">🎯</div>
-                <div class="cs-card-label">CLINICS</div>
-                <span class="cs-card-meta">10–18 · Year-Round</span>
-                <div class="cs-card-arrow">→</div>
-            </a>
-
-            <a href="/programs/workshops" class="cs-card" data-accent="#144734">
-                <div class="cs-card-num" aria-hidden="true">04</div>
-                <div class="cs-card-icon">🧠</div>
-                <div class="cs-card-label">WORKSHOPS</div>
-                <span class="cs-card-meta">12–21 · Year-Round</span>
-                <div class="cs-card-arrow">→</div>
-            </a>
-
-            <a href="/programs/jrnba" class="cs-card" data-accent="#940203">
-                <div class="cs-card-num" aria-hidden="true">05</div>
-                <div class="cs-card-icon">🏀</div>
-                <div class="cs-card-label">JR.NBA</div>
-                <span class="cs-card-meta">6–14 · Fall</span>
-                <div class="cs-card-arrow">→</div>
-            </a>
-
-            <a href="/programs/3on3" class="cs-card" data-accent="#FFB200">
-                <div class="cs-card-num" aria-hidden="true">06</div>
-                <div class="cs-card-icon">⚡</div>
-                <div class="cs-card-label">3-ON-3</div>
-                <span class="cs-card-meta">10–Adult · Spring</span>
-                <div class="cs-card-arrow">→</div>
-            </a>
-
-            <a href="/programs/house-league" class="cs-card" data-accent="#144734">
-                <div class="cs-card-num" aria-hidden="true">07</div>
-                <div class="cs-card-icon">🏟️</div>
-                <div class="cs-card-label">HOUSE LEAGUE</div>
-                <span class="cs-card-meta">6–17 · Winter</span>
-                <div class="cs-card-arrow">→</div>
-            </a>
-
-            <a href="/programs/rep" class="cs-card" data-accent="#940203">
-                <div class="cs-card-num" aria-hidden="true">08</div>
-                <div class="cs-card-icon">🏆</div>
-                <div class="cs-card-label">REP</div>
-                <span class="cs-card-meta">9–17 · Year-Round</span>
-                <div class="cs-card-arrow">→</div>
-            </a>
-
-            <a href="/programs/aau" class="cs-card" data-accent="#3143AD">
-                <div class="cs-card-num" aria-hidden="true">09</div>
-                <div class="cs-card-icon">🌎</div>
-                <div class="cs-card-label">AAU</div>
-                <span class="cs-card-meta">14–18 · Spring</span>
-                <div class="cs-card-arrow">→</div>
-            </a>
-
-            <a href="/programs/prep" class="cs-card" data-accent="#FFB200">
-                <div class="cs-card-num" aria-hidden="true">10</div>
-                <div class="cs-card-icon">⭐</div>
-                <div class="cs-card-label">PREP ACADEMY</div>
-                <span class="cs-card-meta">15–20 · Year-Round</span>
-                <div class="cs-card-arrow">→</div>
+            <a href="/memberships" class="cs-card-big">
+                <div class="cs-card-content">
+                    <div class="cs-card-num" aria-hidden="true">03</div>
+                    <div class="cs-card-icon">🎯</div>
+                    <h3 class="cs-card-label">Private Training</h3>
+                    <p class="cs-card-text">
+                        1-on-1 and small group sessions for focused, individualized development.
+                    </p>
+                    <div class="cs-card-arrow">→</div>
+                </div>
+                <picture class="cs-background">
+                    <img decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/choose%20your%20paths/DSC05788choose3.webp" alt="Private coaching session" width="400" height="560" aria-hidden="true">
+                </picture>
             </a>
 
         </div>
@@ -327,7 +390,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <span class="cs-topper">Athlete Development</span>
         <h2 class="cs-title">THE <em class="cs-script">pathway.</em></h2>
         <p class="cs-text cs-pathway-intro">
-            Every athlete starts somewhere. We build the bridge from first steps to scholarship.
+            Every athlete starts somewhere. We build the bridge from first steps to performance.
         </p>
 
         <!-- Stage tabs -->
@@ -354,97 +417,214 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <button class="cs-tab" role="tab" aria-selected="false"
                 aria-controls="cs-panel-3" data-index="3" data-bg="#0D0D0D">
                 <span class="cs-tab-stage">Stage 4</span>
-                <span class="cs-tab-label">Elite</span>
+                <span class="cs-tab-label">Performance</span>
             </button>
 
         </div>
 
         <!-- Stage panels -->
+        <!-- 📸 Set data-img on each panel to your image path -->
+        <!-- Recommended: portrait crop, min 600x700px, subject centered -->
         <div class="cs-panels">
 
-            <div class="cs-panel cs-active" id="cs-panel-0" role="tabpanel">
+            <!-- Panel 1: Foundation -->
+            <!-- 📸 PHOTO-PATHWAY-1 | Young kids, fun, learning | /assets/images/pathway/foundation.jpg -->
+            <div class="cs-panel cs-active" id="cs-panel-0" role="tabpanel"
+                data-img="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Development%20pathway/DSC06406pathways1.webp" data-pos="center 80%">
                 <div class="cs-panel-inner">
                     <div class="cs-panel-left">
-                        <span class="cs-panel-ages-label">Ages</span>
-                        <div class="cs-panel-ages">6–10</div>
+                        <span class="cs-panel-ages-label">Age Range</span>
+                        <div class="cs-panel-ages">Boys 0–9<br/>Girls 0–8</div>
                         <div class="cs-panel-stage-name">Foundation</div>
+                        <span class="cs-panel-ages-label cs-ltd-label">LTD Stage</span>
+                        <div class="cs-panel-ltd">Active Start / FUNdamentals</div>
                     </div>
                     <div class="cs-panel-right">
                         <p class="cs-panel-desc">
-                            Build love for the game through fundamentals and fun competition.
+                            Physical literacy begins here. Agility, balance, coordination,
+                            and speed — the ABCs. Fun-first, no early specialization.
                         </p>
                         <span class="cs-panel-programs-label">Programs at this stage</span>
                         <div class="cs-panel-programs">
-                            <a href="/programs/jrnba" class="cs-program-tag">JR.NBA</a>
-                            <a href="/programs/house-league" class="cs-program-tag">House League</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cs-panel" id="cs-panel-1" role="tabpanel" hidden>
-                <div class="cs-panel-inner">
-                    <div class="cs-panel-left">
-                        <span class="cs-panel-ages-label">Ages</span>
-                        <div class="cs-panel-ages">10–14</div>
-                        <div class="cs-panel-stage-name">Development</div>
-                    </div>
-                    <div class="cs-panel-right">
-                        <p class="cs-panel-desc">
-                            Sharpen skills with position-specific coaching and structured competition.
-                        </p>
-                        <span class="cs-panel-programs-label">Programs at this stage</span>
-                        <div class="cs-panel-programs">
-                            <a href="/programs/clinics" class="cs-program-tag">Clinics</a>
+                            <a href="/programs/jrnba" class="cs-program-tag">Jr. NBA</a>
                             <a href="/programs/camps" class="cs-program-tag">Camps</a>
-                            <a href="/programs/house-league" class="cs-program-tag">House League</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="cs-panel" id="cs-panel-2" role="tabpanel" hidden>
+            <!-- Panel 2: Development -->
+            <!-- 📸 PHOTO-PATHWAY-2 | Skill drills, coaching | /assets/images/pathway/development.jpg -->
+            <div class="cs-panel" id="cs-panel-1" role="tabpanel" hidden
+                data-img="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Development%20pathway/DSC06449pathways2.webp" data-pos="90% center">
                 <div class="cs-panel-inner">
                     <div class="cs-panel-left">
-                        <span class="cs-panel-ages-label">Ages</span>
-                        <div class="cs-panel-ages">13–17</div>
+                        <span class="cs-panel-ages-label">Age Range</span>
+                        <div class="cs-panel-ages">Boys 9–12<br/>Girls 8–11</div>
+                        <div class="cs-panel-stage-name">Development</div>
+                        <span class="cs-panel-ages-label cs-ltd-label">LTD Stage</span>
+                        <div class="cs-panel-ltd">Learn to Train</div>
+                    </div>
+                    <div class="cs-panel-right">
+                        <p class="cs-panel-desc">
+                            Critical window for sport skill acquisition. Brain and body
+                            primed for learning. Introduction to formal competition.
+                        </p>
+                        <span class="cs-panel-programs-label">Programs at this stage</span>
+                        <div class="cs-panel-programs">
+                            <a href="/programs/jrnba" class="cs-program-tag">Jr. NBA</a>
+                            <a href="/programs/membership" class="cs-program-tag">Membership</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel 3: Competitive -->
+            <!-- 📸 PHOTO-PATHWAY-3 | Game action, intensity | /assets/images/pathway/competitive.jpg -->
+            <div class="cs-panel" id="cs-panel-2" role="tabpanel" hidden
+                data-img="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Development%20pathway/DSC06527pathways3.webp" data-pos="center top">
+                <div class="cs-panel-inner">
+                    <div class="cs-panel-left">
+                        <span class="cs-panel-ages-label">Age Range</span>
+                        <div class="cs-panel-ages">Boys 12–16<br/>Girls 11–15</div>
                         <div class="cs-panel-stage-name">Competitive</div>
+                        <span class="cs-panel-ages-label cs-ltd-label">LTD Stage</span>
+                        <div class="cs-panel-ltd">Train to Train</div>
                     </div>
                     <div class="cs-panel-right">
                         <p class="cs-panel-desc">
-                            Enter the competitive stream. Train with purpose, compete with heart.
+                            Athletes are made or broken here. Major aerobic and strength
+                            development. Serious skill refinement begins.
                         </p>
                         <span class="cs-panel-programs-label">Programs at this stage</span>
                         <div class="cs-panel-programs">
-                            <a href="/programs/rep" class="cs-program-tag">Rep</a>
-                            <a href="/programs/3on3" class="cs-program-tag">3-on-3</a>
-                            <a href="/programs/workshops" class="cs-program-tag">Workshops</a>
+                            <a href="/programs/membership" class="cs-program-tag">Membership</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="cs-panel" id="cs-panel-3" role="tabpanel" hidden>
+            <!-- Panel 4: Performance -->
+            <!-- 📸 PHOTO-PATHWAY-4 | Elite training | /assets/images/pathway/performance.jpg -->
+            <div class="cs-panel" id="cs-panel-3" role="tabpanel" hidden
+                data-img="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Development%20pathway/DSC06294pathways4.webp" data-pos="center 80%">
                 <div class="cs-panel-inner">
                     <div class="cs-panel-left">
-                        <span class="cs-panel-ages-label">Ages</span>
-                        <div class="cs-panel-ages">16–21</div>
-                        <div class="cs-panel-stage-name">Elite</div>
+                        <span class="cs-panel-ages-label">Age Range</span>
+                        <div class="cs-panel-ages">Boys 16+<br/>Girls 15+</div>
+                        <div class="cs-panel-stage-name">Performance</div>
+                        <span class="cs-panel-ages-label cs-ltd-label">LTD Stage</span>
+                        <div class="cs-panel-ltd">Train to Compete / Win</div>
                     </div>
                     <div class="cs-panel-right">
                         <p class="cs-panel-desc">
-                            Full commitment to college scholarship pathway and professional preparation.
+                            Specialization by sport, position, and event. High competition
+                            volume. Individualized coaching required.
                         </p>
                         <span class="cs-panel-programs-label">Programs at this stage</span>
                         <div class="cs-panel-programs">
-                            <a href="/programs/aau" class="cs-program-tag">AAU</a>
-                            <a href="/programs/prep" class="cs-program-tag">Prep Academy</a>
+                            <a href="/programs/membership" class="cs-program-tag">Membership</a>
+                            <a href="/programs/prep" class="cs-program-tag">Private Training</a>
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--          Multi-Sport & Performance          -->
+<!-- ============================================ -->
+ 
+<section id="split-offerings">
+    <div class="cs-split-grid">
+ 
+        <!-- ════════════════════════════════ -->
+        <!-- PANEL A — Multi-Sport & Facility -->
+        <!-- ════════════════════════════════ -->
+        <div class="cs-panel-a">
+ 
+            <!-- Rotating photo carousel -->
+            <!-- 📸 Add your images to data-slides below -->
+            <div class="cs-carousel" id="carousel-a"
+                data-slides='[
+                    "https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Multi-Sport%20&%20Performance%20%20/DSC05788BASKETBALL.webp",
+                    "https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Multi-Sport%20&%20Performance%20%20/DSC06842VOLLEYBALL.webp"
+                ]'>
+                <div class="cs-carousel-track">
+                    <!-- Slides injected by JS -->
+                </div>
+                <!-- Dot indicators -->
+                <div class="cs-carousel-dots" aria-label="Photo navigation"></div>
+            </div>
+ 
+            <!-- Content overlay -->
+            <div class="cs-panel-content">
+                <span class="cs-topper">The Facility</span>
+                <h2 class="cs-panel-title">
+                    MULTI-SPORT &amp;<br/>
+                    <em class="cs-script">facility.</em>
+                </h2>
+                <p class="cs-panel-sub">More Than Basketball</p>
+                <p class="cs-panel-text">
+                    Recess is built for movement, competition, and community.
+                    Our facility adapts to multiple sports and formats, giving
+                    athletes and teams space to play, train, and compete.
+                </p>
+                <ul class="cs-panel-list">
+                    <li class="cs-panel-list-item">Volleyball</li>
+                    <li class="cs-panel-list-item">Badminton</li>
+                    <li class="cs-panel-list-item">Pickleball</li>
+                    <li class="cs-panel-list-item">Leagues &amp; Court Rentals</li>
+                </ul>
+                <a href="/memberships/" target="_blank" rel="noopener"
+                    class="cs-button-solid cs-panel-cta">
+                    View Schedules &amp; Availability →
+                </a>
+            </div>
+ 
+        </div>
+ 
+        <!-- Divider bar -->
+        <div class="cs-split-divider" aria-hidden="true"></div>
+ 
+        <!-- ══════════════════════════════════ -->
+        <!-- PANEL B — Performance & Recovery   -->
+        <!-- ══════════════════════════════════ -->
+        <div class="cs-panel-b">
+ 
+            <!-- Content -->
+            <div class="cs-panel-content">
+                <span class="cs-topper">Beyond the Court</span>
+                <h2 class="cs-panel-title">
+                    PERFORMANCE &amp;<br/>
+                    <em class="cs-script">recovery.</em>
+                </h2>
+                <p class="cs-panel-sub">Train. Recover. Perform.</p>
+                <p class="cs-panel-text">
+                    Athlete development doesn't stop on the court. With a full
+                    performance training space and an integrated wellness clinic,
+                    athletes have access to the tools they need to stay healthy,
+                    build capacity, and perform at their best.
+                </p>
+                <ul class="cs-panel-list">
+                    <li class="cs-panel-list-item">HYROX-style performance gym</li>
+                    <li class="cs-panel-list-item">Strength &amp; conditioning</li>
+                    <li class="cs-panel-list-item">On-site rehab &amp; recovery (Revibe)</li>
+                </ul>
+                <a href="https://revibeto.com/bookmarkham/" target="_blank" rel="noopener"
+                    class="cs-button-outline cs-panel-cta">
+                    Explore Performance &amp; Recovery →
+                </a>
+            </div>
+ 
+            <!-- Decorative background accent -->
+            <div class="cs-panel-b-accent" aria-hidden="true"></div>
+ 
+        </div>
+ 
     </div>
 </section>
 
@@ -676,7 +856,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <div class="cs-photo-main">
                 <img
                     class="cs-photo"
-                    src="/assets/images/facility/court-1.jpg"
+                    src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/DSC05741-Pano-Hero.webp"
                     alt="Recess court overview"
                     width="1200"
                     height="675"
@@ -696,7 +876,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <div class="cs-photo-secondary">
                 <img
                     class="cs-photo"
-                    src="/assets/images/facility/court-2.jpg"
+                    src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/DSC05769-COURT.webp"
                     alt="Court interior"
                     width="600"
                     height="400"
@@ -708,7 +888,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <div class="cs-photo-tertiary">
                 <img
                     class="cs-photo"
-                    src="/assets/images/facility/court-3.jpg"
+                    src="https://placehold.co/1200x800/1a1a1a/EFE3C2/png?text=IMAGE+COMING+SOON"
                     alt="Strength and conditioning room"
                     width="600"
                     height="400"
@@ -793,19 +973,12 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
        Leave as "" to use the built-in fallbacks.
     ──────────────────────────────────────── */
     const ASSETS = {
-      photoHeroBg:   "",   // e.g. "/assets/images/hero-bg.jpg"
+      photoHeroBg:   "https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/DSC05741-Pano-Hero.webp",   // e.g. "/assets/images/hero-bg.jpg"
       photoHeroSide: "",   // e.g. "/assets/images/hero-side.jpg"
       logoHero:      "",   // e.g. "/assets/images/logo.svg"
     };
  
-    /* ── STATS ───────────────────────────── */
-    const STATS = [
-      { val: "500+",  label: "Athletes Trained"      },
-      { val: "30+",   label: "College Placements"    },
-      { val: "15+",   label: "Certified Coaches"     },
-      { val: "4",     label: "Sports Offered"        },
-      { val: "95%",   label: "Member Retention"      },
-    ];
+
  
     /* ── MARQUEE ─────────────────────────── */
     const MARQUEE_ITEMS = [
@@ -823,20 +996,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
       `).join("");
     }
  
-    /* ── STATS ROW ───────────────────────── */
-    function buildStats() {
-      const container = document.getElementById("hero-stats");
-      container.innerHTML = STATS.map((s, i) => {
-        const num    = s.val.replace(/[+%]/g, "");
-        const suffix = s.val.match(/[+%]/)?.[0] || "";
-        return `
-          <div class="hero-stat">
-            <div class="hero-stat-val">${num}<span>${suffix}</span></div>
-            <div class="hero-stat-label">${s.label}</div>
-          </div>
-        `;
-      }).join("");
-    }
+    
  
     /* ── HERO: apply photos if provided ─── */
     function buildHero() {
@@ -872,33 +1032,34 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
       console.log("Navigate to:", page);
     }
 
-    /* ── STATS SCROLL INDICATOR ─────────── */
-    function initStatsScroll() {
-      const statsEl = document.getElementById("hero-stats");
-      const thumb   = document.getElementById("stats-thumb");
+    /* ── How It Works: tab switcher JS ── */
+(function () {
+    const section = document.querySelector("#how-it-works");
+    if (!section) return;
 
-      function updateThumb() {
-        const scrollable = statsEl.scrollWidth - statsEl.clientWidth;
-        if (scrollable <= 0) {
-          // All stats visible — fill bar completely
-          thumb.style.width = "100%";
-          return;
-        }
-        const pct = ((statsEl.clientWidth + statsEl.scrollLeft) / statsEl.scrollWidth) * 100;
-        thumb.style.width = Math.min(pct, 100) + "%";
-      }
+    const buttons  = section.querySelectorAll(".cs-button[data-filter]");
+    const panels   = section.querySelectorAll(".cs-box-content[data-box]");
 
-      statsEl.addEventListener("scroll", updateThumb);
-      // Set initial state after stats are rendered
-      setTimeout(updateThumb, 50);
+    function activate(filter) {
+        buttons.forEach(function (btn) {
+            btn.classList.toggle("cs-active", btn.dataset.filter === filter);
+        });
+        panels.forEach(function (panel) {
+            panel.classList.toggle("cs-hidden", panel.dataset.box !== filter);
+        });
     }
+
+    buttons.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+            activate(btn.dataset.filter);
+        });
+    });
+})();
  
     /* ── INIT ────────────────────────────── */
     document.addEventListener("DOMContentLoaded", () => {
       buildMarquee();
-      buildStats();
       buildHero();
-      initStatsScroll();  // ← scroll indicator
     });
   </script>
 
@@ -950,6 +1111,18 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
     // Panel background colours — match data-bg on each tab
     const panelBgs = ["#144734", "#1a1a1a", "#940203", "#0D0D0D"];
 
+    // Apply the background image from data-img on the panel
+    // to the .cs-panel-left column as a CSS custom property
+    function applyPanelImage(panel) {
+        const img      = panel.getAttribute("data-img");
+        const pos     = panel.getAttribute("data-pos");
+        const leftCol  = panel.querySelector(".cs-panel-left");
+        if (img && leftCol) {
+            leftCol.style.setProperty("--cs-panel-img", "url('" + img + "')");
+            if (pos) leftCol.style.setProperty("--cs-panel-pos", pos);
+        }
+    }
+
     function activate(index) {
         tabs.forEach(function (tab, i) {
             const isActive = i === index;
@@ -966,8 +1139,10 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             if (isActive) {
                 panel.removeAttribute("hidden");
                 panel.classList.add("cs-active");
-                // Drive panel background from the same colour array
+                // Drive panel background from the colour array
                 panel.style.setProperty("--cs-panel-bg", panelBgs[i]);
+                // Drive the left column background image
+                applyPanelImage(panel);
             } else {
                 panel.setAttribute("hidden", "");
                 panel.classList.remove("cs-active");
@@ -989,9 +1164,86 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         });
     });
 
-    // Initialise first panel bg
+    // Initialise first panel — bg colour + image
     panels[0].style.setProperty("--cs-panel-bg", panelBgs[0]);
+    applyPanelImage(panels[0]);
+
 })();</script>
+
+<!-- ── Split Offerings: carousel JS ── -->
+<script>// ============================================
+//             Split Offerings Carousel
+// ============================================
+(function () {
+    const section = document.querySelector("#split-offerings");
+    if (!section) return;
+ 
+    const carousel = section.querySelector("#carousel-a");
+    if (!carousel) return;
+ 
+    const track  = carousel.querySelector(".cs-carousel-track");
+    const dotsEl = carousel.querySelector(".cs-carousel-dots");
+ 
+    let slides   = [];
+    let current  = 0;
+    let timer    = null;
+ 
+    // Parse slide paths from data attribute
+    try {
+        slides = JSON.parse(carousel.getAttribute("data-slides") || "[]");
+    } catch (e) {
+        slides = [];
+    }
+ 
+    if (!slides.length) return;
+ 
+    // Build slide elements
+    slides.forEach(function (src, i) {
+        const slide = document.createElement("div");
+        slide.className = "cs-carousel-slide" + (i === 0 ? " cs-active" : "");
+        slide.style.backgroundImage = "url('" + src + "')";
+        track.appendChild(slide);
+    });
+ 
+    // Build dot indicators
+    slides.forEach(function (_, i) {
+        const dot = document.createElement("button");
+        dot.className = "cs-carousel-dot" + (i === 0 ? " cs-active" : "");
+        dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+        dot.addEventListener("click", function () { goTo(i); });
+        dotsEl.appendChild(dot);
+    });
+ 
+    function goTo(index) {
+        const allSlides = track.querySelectorAll(".cs-carousel-slide");
+        const allDots   = dotsEl.querySelectorAll(".cs-carousel-dot");
+ 
+        allSlides[current].classList.remove("cs-active");
+        allDots[current].classList.remove("cs-active");
+ 
+        current = index % slides.length;
+ 
+        allSlides[current].classList.add("cs-active");
+        allDots[current].classList.add("cs-active");
+    }
+ 
+    // Auto-advance every 4 seconds
+    function startTimer() {
+        timer = setInterval(function () {
+            goTo(current + 1);
+        }, 4000);
+    }
+ 
+    function stopTimer() {
+        clearInterval(timer);
+    }
+ 
+    carousel.addEventListener("mouseenter", stopTimer);
+    carousel.addEventListener("mouseleave", startTimer);
+ 
+    startTimer();
+})();
+</script>
 
 <script>// ============================================
 //              Testimonials
