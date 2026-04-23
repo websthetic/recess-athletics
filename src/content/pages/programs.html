@@ -20,8 +20,8 @@ permalink: "/programs/"
 <section id="programs-banner">
     <img
         class="cs-banner-img"
-        src="/assets/images/programs/banner.jpg"
-        alt="Programs header"
+        src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/ProgramspageBanner.webp"
+        alt="Athletes training at Recess Athletics facility in Markham Ontario"
         width="1920"
         height="500"
         loading="eager"
@@ -30,8 +30,29 @@ permalink: "/programs/"
     <div class="cs-banner-overlay"></div>
     <div class="cs-banner-content">
         <div class="cs-container">
-            <span class="cs-topper">All Programs</span>
-            <h1 class="cs-title">FIND YOUR <em class="cs-script">program.</em></h1>
+
+            <!-- Left: heading + body -->
+            <div class="cs-banner-left">
+                <span class="cs-topper">All Programs</span>
+                <h1 class="cs-title">
+                    FIND THE RIGHT
+                    STARTING<br/> POINT for
+                    <em class="cs-script"> you.</em>
+                </h1>
+                <p class="cs-banner-body">
+                    Not sure where to start? We'll guide you.<br/>
+                    Every athlete at Recess follows a clear development path
+                    starting with the right program.
+                </p>
+            </div>
+
+            <!-- Right: CTA -->
+            <div class="cs-banner-right">
+                <a href="/book-eval" class="cs-button-solid cs-banner-cta">
+                    Book Free Athlete Evaluation →
+                </a>
+            </div>
+
         </div>
     </div>
 </section>
@@ -42,18 +63,12 @@ permalink: "/programs/"
 
 <div id="programs-filter">
     <div class="cs-container">
-        <div class="cs-tabs" role="tablist" aria-label="Filter programs">
+        <div class="cs-tabs" role="tablist" aria-label="Filter programs by category">
             <button class="cs-tab cs-active" role="tab" aria-selected="true"  data-filter="all">All</button>
-            <button class="cs-tab" role="tab" aria-selected="false" data-filter="membership">Membership</button>
-            <button class="cs-tab" role="tab" aria-selected="false" data-filter="camps">Camps</button>
-            <button class="cs-tab" role="tab" aria-selected="false" data-filter="clinics">Clinics</button>
-            <button class="cs-tab" role="tab" aria-selected="false" data-filter="workshops">Workshops</button>
-            <button class="cs-tab" role="tab" aria-selected="false" data-filter="jrnba">JR.NBA</button>
-            <button class="cs-tab" role="tab" aria-selected="false" data-filter="3on3">3-on-3</button>
-            <button class="cs-tab" role="tab" aria-selected="false" data-filter="house-league">House League</button>
-            <button class="cs-tab" role="tab" aria-selected="false" data-filter="rep">Rep</button>
-            <button class="cs-tab" role="tab" aria-selected="false" data-filter="aau">AAU</button>
-            <button class="cs-tab" role="tab" aria-selected="false" data-filter="prep">Prep</button>
+            <button class="cs-tab" role="tab" aria-selected="false" data-filter="beginner">Beginner</button>
+            <button class="cs-tab" role="tab" aria-selected="false" data-filter="development">Development</button>
+            <button class="cs-tab" role="tab" aria-selected="false" data-filter="competitive">Competitive</button>
+            <button class="cs-tab" role="tab" aria-selected="false" data-filter="seasonal">Seasonal</button>
         </div>
     </div>
 </div>
@@ -64,234 +79,589 @@ permalink: "/programs/"
 
 <section id="programs-grid">
     <div class="cs-container">
-        <div class="cs-cards">
 
-            <!-- ── Membership ── -->
-            <a href="/programs/membership" class="cs-card" data-program="membership" data-accent="#144734">
-                <div class="cs-card-img-wrap">
-                    <!-- 📸 PHOTO-PROG-MEMBERSHIP | Recommended: 600×360px -->
-                    <img class="cs-card-img" src="/assets/images/programs/membership.jpg"
-                        alt="Membership" width="600" height="360" loading="lazy" decoding="async" />
-                    <div class="cs-card-img-overlay">
-                        <span class="cs-card-icon">🏅</span>
-                    </div>
-                </div>
-                <div class="cs-card-body">
-                    <span class="cs-card-slug" style="color:#144734">membership</span>
-                    <div class="cs-card-title">MEMBERSHIP</div>
-                    <p class="cs-card-tagline">Your all-access pass to the playground.</p>
-                    <div class="cs-card-meta">
-                        <span class="cs-card-tag">Ages 6–Adult</span>
-                        <span class="cs-card-tag">⏱ Year-Round</span>
-                    </div>
-                    <div class="cs-card-arrow">→</div>
-                </div>
-            </a>
+        <!-- ══════════════════════════════════════════ -->
+        <!-- ALL VIEW — grouped under sub-headings      -->
+        <!-- ══════════════════════════════════════════ -->
 
-            <!-- ── Camps ── -->
-            <a href="/programs/camps" class="cs-card" data-program="camps" data-accent="#940203">
-                <div class="cs-card-img-wrap">
-                    <!-- 📸 PHOTO-PROG-CAMPS | Recommended: 600×360px -->
-                    <img class="cs-card-img" src="/assets/images/programs/camps.jpg"
-                        alt="Camps" width="600" height="360" loading="lazy" decoding="async" />
-                    <div class="cs-card-img-overlay">
-                        <span class="cs-card-icon">🏕️</span>
+        <!-- Group 1: Core Programs -->
+        <div class="cs-group" data-group="all">
+            <div class="cs-group-header">
+                <span class="cs-group-label">Core Programs</span>
+            </div>
+            <div class="cs-cards">
+                <!-- Membership -->
+                <a href="/programs/membership" class="cs-card cs-card-featured" data-accent="#144734">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/membership.webp"
+                            alt="Recess Athletics Membership program — year-round training for all ages"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏅</span></div>
                     </div>
-                </div>
-                <div class="cs-card-body">
-                    <span class="cs-card-slug" style="color:#940203">camps</span>
-                    <div class="cs-card-title">CAMPS</div>
-                    <p class="cs-card-tagline">Five days to transform your game.</p>
-                    <div class="cs-card-meta">
-                        <span class="cs-card-tag">Ages 8–17</span>
-                        <span class="cs-card-tag">⏱ Summer</span>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#144734">membership</span>
+                        <div class="cs-card-title">MEMBERSHIP</div>
+                        <p class="cs-card-tagline">Your all-access pass to the playground.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 6–Adult</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
                     </div>
-                    <div class="cs-card-arrow">→</div>
-                </div>
-            </a>
-
-            <!-- ── Clinics ── -->
-            <a href="/programs/clinics" class="cs-card" data-program="clinics" data-accent="#3143AD">
-                <div class="cs-card-img-wrap">
-                    <!-- 📸 PHOTO-PROG-CLINICS | Recommended: 600×360px -->
-                    <img class="cs-card-img" src="/assets/images/programs/clinics.jpg"
-                        alt="Clinics" width="600" height="360" loading="lazy" decoding="async" />
-                    <div class="cs-card-img-overlay">
-                        <span class="cs-card-icon">🎯</span>
+                </a>
+                <!-- Jr. NBA -->
+                <a href="/programs/jrnba" class="cs-card" data-accent="#940203">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/JRnba.webp"
+                            alt="Jr. NBA program at Recess Athletics — basketball for ages 6 to 14"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏀</span></div>
                     </div>
-                </div>
-                <div class="cs-card-body">
-                    <span class="cs-card-slug" style="color:#3143AD">clinics</span>
-                    <div class="cs-card-title">CLINICS</div>
-                    <p class="cs-card-tagline">Position-specific. Purposeful. Progressive.</p>
-                    <div class="cs-card-meta">
-                        <span class="cs-card-tag">Ages 10–18</span>
-                        <span class="cs-card-tag">⏱ Year-Round</span>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#940203">jr. nba</span>
+                        <div class="cs-card-title">JR. NBA</div>
+                        <p class="cs-card-tagline">Official Jr. NBA programming. Learn the game right.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 6–14</span>
+                            <span class="cs-card-tag">⏱ Fall</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
                     </div>
-                    <div class="cs-card-arrow">→</div>
-                </div>
-            </a>
-
-            <!-- ── Workshops ── -->
-            <a href="/programs/workshops" class="cs-card" data-program="workshops" data-accent="#144734">
-                <div class="cs-card-img-wrap">
-                    <!-- 📸 PHOTO-PROG-WORKSHOPS | Recommended: 600×360px -->
-                    <img class="cs-card-img" src="/assets/images/programs/workshops.jpg"
-                        alt="Workshops" width="600" height="360" loading="lazy" decoding="async" />
-                    <div class="cs-card-img-overlay">
-                        <span class="cs-card-icon">🧠</span>
+                </a>
+                <!-- Camps -->
+                <a href="/programs/camps" class="cs-card" data-accent="#940203">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/camps.webp"
+                            alt="Recess Athletics summer basketball camps for ages 8 to 17"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏕️</span></div>
                     </div>
-                </div>
-                <div class="cs-card-body">
-                    <span class="cs-card-slug" style="color:#144734">workshops</span>
-                    <div class="cs-card-title">WORKSHOPS</div>
-                    <p class="cs-card-tagline">The mental edge separates good from great.</p>
-                    <div class="cs-card-meta">
-                        <span class="cs-card-tag">Ages 12–21</span>
-                        <span class="cs-card-tag">⏱ Year-Round</span>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#940203">camps</span>
+                        <div class="cs-card-title">CAMPS</div>
+                        <p class="cs-card-tagline">Five days to transform your game.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 8–17</span>
+                            <span class="cs-card-tag">⏱ Summer</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
                     </div>
-                    <div class="cs-card-arrow">→</div>
-                </div>
-            </a>
-
-            <!-- ── JR.NBA ── -->
-            <a href="/programs/jrnba" class="cs-card" data-program="jrnba" data-accent="#940203">
-                <div class="cs-card-img-wrap">
-                    <!-- 📸 PHOTO-PROG-JRNBA | Recommended: 600×360px -->
-                    <img class="cs-card-img" src="/assets/images/programs/jrnba.jpg"
-                        alt="JR.NBA" width="600" height="360" loading="lazy" decoding="async" />
-                    <div class="cs-card-img-overlay">
-                        <span class="cs-card-icon">🏀</span>
-                    </div>
-                </div>
-                <div class="cs-card-body">
-                    <span class="cs-card-slug" style="color:#940203">jrnba</span>
-                    <div class="cs-card-title">JR.NBA</div>
-                    <p class="cs-card-tagline">The official NBA youth development program.</p>
-                    <div class="cs-card-meta">
-                        <span class="cs-card-tag">Ages 6–14</span>
-                        <span class="cs-card-tag">⏱ Fall</span>
-                    </div>
-                    <div class="cs-card-arrow">→</div>
-                </div>
-            </a>
-
-            <!-- ── 3-on-3 ── -->
-            <a href="/programs/3on3" class="cs-card" data-program="3on3" data-accent="#FFB200">
-                <div class="cs-card-img-wrap">
-                    <!-- 📸 PHOTO-PROG-3ON3 | Recommended: 600×360px -->
-                    <img class="cs-card-img" src="/assets/images/programs/3on3.jpg"
-                        alt="3-on-3" width="600" height="360" loading="lazy" decoding="async" />
-                    <div class="cs-card-img-overlay">
-                        <span class="cs-card-icon">⚡</span>
-                    </div>
-                </div>
-                <div class="cs-card-body">
-                    <span class="cs-card-slug" style="color:#FFB200">3-on-3</span>
-                    <div class="cs-card-title">3-ON-3</div>
-                    <p class="cs-card-tagline">Fast. Physical. Relentless.</p>
-                    <div class="cs-card-meta">
-                        <span class="cs-card-tag">Ages 10–Adult</span>
-                        <span class="cs-card-tag">⏱ Spring</span>
-                    </div>
-                    <div class="cs-card-arrow">→</div>
-                </div>
-            </a>
-
-            <!-- ── House League ── -->
-            <a href="/programs/house-league" class="cs-card" data-program="house-league" data-accent="#144734">
-                <div class="cs-card-img-wrap">
-                    <!-- 📸 PHOTO-PROG-HOUSELEAGUE | Recommended: 600×360px -->
-                    <img class="cs-card-img" src="/assets/images/programs/house-league.jpg"
-                        alt="House League" width="600" height="360" loading="lazy" decoding="async" />
-                    <div class="cs-card-img-overlay">
-                        <span class="cs-card-icon">🏟️</span>
-                    </div>
-                </div>
-                <div class="cs-card-body">
-                    <span class="cs-card-slug" style="color:#144734">house league</span>
-                    <div class="cs-card-title">HOUSE LEAGUE</div>
-                    <p class="cs-card-tagline">Compete. Improve. Belong.</p>
-                    <div class="cs-card-meta">
-                        <span class="cs-card-tag">Ages 6–17</span>
-                        <span class="cs-card-tag">⏱ Winter</span>
-                    </div>
-                    <div class="cs-card-arrow">→</div>
-                </div>
-            </a>
-
-            <!-- ── Rep ── -->
-            <a href="/programs/rep" class="cs-card" data-program="rep" data-accent="#940203">
-                <div class="cs-card-img-wrap">
-                    <!-- 📸 PHOTO-PROG-REP | Recommended: 600×360px -->
-                    <img class="cs-card-img" src="/assets/images/programs/rep.jpg"
-                        alt="Rep" width="600" height="360" loading="lazy" decoding="async" />
-                    <div class="cs-card-img-overlay">
-                        <span class="cs-card-icon">🏆</span>
-                    </div>
-                </div>
-                <div class="cs-card-body">
-                    <span class="cs-card-slug" style="color:#940203">rep</span>
-                    <div class="cs-card-title">REP</div>
-                    <p class="cs-card-tagline">Train like a pro. Compete for real.</p>
-                    <div class="cs-card-meta">
-                        <span class="cs-card-tag">Ages 9–17</span>
-                        <span class="cs-card-tag">⏱ Year-Round</span>
-                    </div>
-                    <div class="cs-card-arrow">→</div>
-                </div>
-            </a>
-
-            <!-- ── AAU ── -->
-            <a href="/programs/aau" class="cs-card" data-program="aau" data-accent="#3143AD">
-                <div class="cs-card-img-wrap">
-                    <!-- 📸 PHOTO-PROG-AAU | Recommended: 600×360px -->
-                    <img class="cs-card-img" src="/assets/images/programs/aau.jpg"
-                        alt="AAU" width="600" height="360" loading="lazy" decoding="async" />
-                    <div class="cs-card-img-overlay">
-                        <span class="cs-card-icon">🌎</span>
-                    </div>
-                </div>
-                <div class="cs-card-body">
-                    <span class="cs-card-slug" style="color:#3143AD">aau</span>
-                    <div class="cs-card-title">AAU</div>
-                    <p class="cs-card-tagline">Play on the biggest stages. Get seen.</p>
-                    <div class="cs-card-meta">
-                        <span class="cs-card-tag">Ages 14–18</span>
-                        <span class="cs-card-tag">⏱ Spring</span>
-                    </div>
-                    <div class="cs-card-arrow">→</div>
-                </div>
-            </a>
-
-            <!-- ── Prep Academy ── -->
-            <a href="/programs/prep" class="cs-card" data-program="prep" data-accent="#FFB200">
-                <div class="cs-card-img-wrap">
-                    <!-- 📸 PHOTO-PROG-PREP | Recommended: 600×360px -->
-                    <img class="cs-card-img" src="/assets/images/programs/prep.jpg"
-                        alt="Prep Academy" width="600" height="360" loading="lazy" decoding="async" />
-                    <div class="cs-card-img-overlay">
-                        <span class="cs-card-icon">⭐</span>
-                    </div>
-                </div>
-                <div class="cs-card-body">
-                    <span class="cs-card-slug" style="color:#FFB200">prep academy</span>
-                    <div class="cs-card-title">PREP ACADEMY</div>
-                    <p class="cs-card-tagline">Relentless. Year-round. Elite.</p>
-                    <div class="cs-card-meta">
-                        <span class="cs-card-tag">Ages 15–20</span>
-                        <span class="cs-card-tag">⏱ Year-Round</span>
-                    </div>
-                    <div class="cs-card-arrow">→</div>
-                </div>
-            </a>
-
+                </a>
+            </div>
         </div>
+
+        <!-- Group 2: Skill Development -->
+        <div class="cs-group" data-group="all">
+            <div class="cs-group-header">
+                <span class="cs-group-label">Skill Development</span>
+            </div>
+            <div class="cs-cards">
+                <!-- Clinics -->
+                <a href="/programs/clinics" class="cs-card" data-accent="#3143AD">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/Clinics.webp"
+                            alt="Recess Athletics basketball clinics — position-specific skill development"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🎯</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#3143AD">clinics</span>
+                        <div class="cs-card-title">CLINICS</div>
+                        <p class="cs-card-tagline">Position-specific. Purposeful. Progressive.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 10–18</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Workshops -->
+                <a href="/programs/workshops" class="cs-card" data-accent="#144734">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/workshops.webp"
+                            alt="Recess Athletics basketball workshops — mental skills and game IQ"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🧠</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#144734">workshops</span>
+                        <div class="cs-card-title">WORKSHOPS</div>
+                        <p class="cs-card-tagline">The mental edge separates good from great.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 12–21</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- 3-on-3 -->
+                <a href="/programs/3on3" class="cs-card" data-accent="#FFB200">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/3on3.webp"
+                            alt="Recess Athletics 3-on-3 basketball league for ages 10 to adult"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⚡</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#FFB200">3-on-3</span>
+                        <div class="cs-card-title">3-ON-3</div>
+                        <p class="cs-card-tagline">Fast. Physical. Relentless.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 10–Adult</span>
+                            <span class="cs-card-tag">⏱ Spring</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Group 3: Competitive Pathways -->
+        <div class="cs-group" data-group="all">
+            <div class="cs-group-header">
+                <span class="cs-group-label">Competitive Pathways</span>
+            </div>
+            <div class="cs-cards">
+                <!-- House League -->
+                <a href="/programs/house-league" class="cs-card" data-accent="#144734">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/houseleague.webp"
+                            alt="Recess Athletics house league basketball for ages 6 to 17"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏟️</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#144734">house league</span>
+                        <div class="cs-card-title">HOUSE LEAGUE</div>
+                        <p class="cs-card-tagline">Compete. Improve. Belong.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 6–17</span>
+                            <span class="cs-card-tag">⏱ Winter</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Rep -->
+                <a href="/programs/rep" class="cs-card" data-accent="#940203">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/repteam.webp"
+                            alt="Recess Athletics rep basketball team — competitive travel program"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏆</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#940203">rep</span>
+                        <div class="cs-card-title">REP TEAM</div>
+                        <p class="cs-card-tagline">Structured competition. Team environment.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 9–17</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- AAU -->
+                <a href="/programs/aau" class="cs-card" data-accent="#3143AD">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/AAU.webp"
+                            alt="Recess Athletics AAU basketball — travel and exposure program"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🌎</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#3143AD">aau</span>
+                        <div class="cs-card-title">AAU</div>
+                        <p class="cs-card-tagline">Travel. Exposure. Elite pathway.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 14–18</span>
+                            <span class="cs-card-tag">⏱ Spring</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Prep Academy -->
+                <a href="/programs/prep" class="cs-card" data-accent="#FFB200">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/prepacademy.webp"
+                            alt="Recess Athletics Prep Academy — elite college pathway program"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⭐</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#FFB200">prep academy</span>
+                        <div class="cs-card-title">PREP ACADEMY</div>
+                        <p class="cs-card-tagline">Relentless. Year-round. Elite.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 15–20</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- BEGINNER VIEW                              -->
+        <!-- ══════════════════════════════════════════ -->
+
+        <div class="cs-group cs-hidden" data-group="beginner">
+            <div class="cs-group-header cs-group-header-full">
+                <span class="cs-group-label">Beginner Programs</span>
+                <span class="cs-group-desc">For athletes starting their basketball journey</span>
+            </div>
+            <div class="cs-cards">
+                <!-- Jr. NBA — Featured -->
+                <a href="/programs/jrnba" class="cs-card cs-card-featured" data-accent="#940203">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/JRnba.webp"
+                            alt="Jr. NBA program at Recess Athletics — basketball for ages 6 to 12"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⭐</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#940203">jr. nba · featured</span>
+                        <div class="cs-card-title">JR. NBA</div>
+                        <p class="cs-card-tagline">Learn the game. Build the foundation.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 6–12</span>
+                            <span class="cs-card-tag">⏱ Fall</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Camps -->
+                <a href="/programs/camps" class="cs-card" data-accent="#940203">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/camps.webp"
+                            alt="Recess Athletics summer basketball camps — build confidence"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏕️</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#940203">camps</span>
+                        <div class="cs-card-title">CAMPS</div>
+                        <p class="cs-card-tagline">Build confidence. Fun and structured.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 8–17</span>
+                            <span class="cs-card-tag">⏱ Summer</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- After School -->
+                <a href="/programs/after-school" class="cs-card" data-accent="#144734">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/afterschool.webp"
+                            alt="Recess Athletics after school multi-sport program for ages 6 to 12"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏫</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#144734">after school</span>
+                        <div class="cs-card-title">AFTER SCHOOL</div>
+                        <p class="cs-card-tagline">Multi-sport intro. Movement every day.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 6–12</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Clinics Small -->
+                <a href="/programs/clinics" class="cs-card" data-accent="#3143AD">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/Clinics.webp"
+                            alt="Recess Athletics small group clinics — intro skill work for beginners"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🎯</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#3143AD">clinics</span>
+                        <div class="cs-card-title">CLINICS (SMALL)</div>
+                        <p class="cs-card-tagline">Intro skill work in a small group setting.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 8–12</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- DEVELOPMENT VIEW                           -->
+        <!-- ══════════════════════════════════════════ -->
+
+        <div class="cs-group cs-hidden" data-group="development">
+            <div class="cs-group-header cs-group-header-full">
+                <span class="cs-group-label">Development Programs</span>
+                <span class="cs-group-desc">For athletes building real skill &amp; consistency</span>
+            </div>
+            <div class="cs-cards">
+                <!-- Membership — Featured -->
+                <a href="/programs/membership" class="cs-card cs-card-featured" data-accent="#144734">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/membership.webp"
+                            alt="Recess Athletics Membership — core training 2 to 3 times per week"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⭐</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#144734">membership · featured</span>
+                        <div class="cs-card-title">MEMBERSHIP</div>
+                        <p class="cs-card-tagline">Core training. 2–3x per week. Real results.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 6–Adult</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Clinics -->
+                <a href="/programs/clinics" class="cs-card" data-accent="#3143AD">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/Clinics.webp"
+                            alt="Recess Athletics clinics — position-specific skill development"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🎯</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#3143AD">clinics</span>
+                        <div class="cs-card-title">CLINICS</div>
+                        <p class="cs-card-tagline">Position-specific. Skill development.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 10–18</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- 3-on-3 -->
+                <a href="/programs/3on3" class="cs-card" data-accent="#FFB200">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/3on3.webp"
+                            alt="Recess Athletics 3-on-3 — game reps and decision making"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⚡</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#FFB200">3-on-3</span>
+                        <div class="cs-card-title">3-ON-3</div>
+                        <p class="cs-card-tagline">Game reps. Decision-making under pressure.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 10–Adult</span>
+                            <span class="cs-card-tag">⏱ Spring</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Camps -->
+                <a href="/programs/camps" class="cs-card" data-accent="#940203">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/camps.webp"
+                            alt="Recess Athletics camps — skill progression and seasonal boost"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏕️</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#940203">camps</span>
+                        <div class="cs-card-title">CAMPS</div>
+                        <p class="cs-card-tagline">Skill progression. Seasonal boost.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 8–17</span>
+                            <span class="cs-card-tag">⏱ Summer</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- COMPETITIVE VIEW                           -->
+        <!-- ══════════════════════════════════════════ -->
+
+        <div class="cs-group cs-hidden" data-group="competitive">
+            <div class="cs-group-header cs-group-header-full">
+                <span class="cs-group-label">Competitive Programs</span>
+                <span class="cs-group-desc">For serious athletes focused on performance</span>
+            </div>
+            <div class="cs-cards">
+                <!-- Membership — Featured -->
+                <a href="/programs/membership" class="cs-card cs-card-featured" data-accent="#144734">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/membership.webp"
+                            alt="Recess Athletics Membership — high frequency advanced training"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⭐</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#144734">membership · featured</span>
+                        <div class="cs-card-title">MEMBERSHIP</div>
+                        <p class="cs-card-tagline">High-frequency. Advanced training.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 6–Adult</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Private Training -->
+                <a href="/programs/private-training" class="cs-card" data-accent="#FFB200">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/Privatetraining.webp"
+                            alt="Recess Athletics private training — 1-on-1 personalized development"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🎯</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#FFB200">private training</span>
+                        <div class="cs-card-title">PRIVATE TRAINING</div>
+                        <p class="cs-card-tagline">1-on-1 development. Personalized work.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">All Ages</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Rep Team -->
+                <a href="/programs/rep" class="cs-card" data-accent="#940203">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/repteam.webp"
+                            alt="Recess Athletics rep team — structured competition and team environment"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏆</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#940203">rep team</span>
+                        <div class="cs-card-title">REP TEAM</div>
+                        <p class="cs-card-tagline">Structured competition. Team environment.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 9–17</span>
+                            <span class="cs-card-tag">⏱ Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- AAU / Prep -->
+                <a href="/programs/aau" class="cs-card" data-accent="#3143AD">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/AAU.webp"
+                            alt="Recess Athletics AAU and Prep Academy — elite travel and exposure"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🌎</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#3143AD">aau / prep</span>
+                        <div class="cs-card-title">AAU / PREP</div>
+                        <p class="cs-card-tagline">Travel. Exposure. Elite pathway.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 14–20</span>
+                            <span class="cs-card-tag">⏱ Spring / Year-Round</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- SEASONAL VIEW                              -->
+        <!-- ══════════════════════════════════════════ -->
+
+        <div class="cs-group cs-hidden" data-group="seasonal">
+            <div class="cs-group-header cs-group-header-full">
+                <span class="cs-group-label">Seasonal Programs</span>
+                <span class="cs-group-desc">Limited-time programs &amp; upcoming sessions</span>
+            </div>
+            <div class="cs-cards">
+                <!-- Camps — Featured -->
+                <a href="/programs/camps" class="cs-card cs-card-featured" data-accent="#940203">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/camps.webp"
+                            alt="Recess Athletics summer camps — 5-day immersion program"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⭐</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#940203">camps · featured</span>
+                        <div class="cs-card-title">CAMPS</div>
+                        <p class="cs-card-tagline">5-day immersion. Immediate action.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 8–17</span>
+                            <span class="cs-card-tag">⏱ Summer</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Jr. NBA -->
+                <a href="/programs/jrnba" class="cs-card" data-accent="#940203">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/JRnba.webp"
+                            alt="Jr. NBA 12-week program — limited spots available"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏀</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#940203">jr. nba</span>
+                        <div class="cs-card-title">JR. NBA</div>
+                        <p class="cs-card-tagline">12-week program. Limited spots.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 6–14</span>
+                            <span class="cs-card-tag">⏱ Fall</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Clinics -->
+                <a href="/programs/clinics" class="cs-card" data-accent="#3143AD">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/Clinics.webp"
+                            alt="Recess Athletics skill-specific clinics — seasonal availability"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🎯</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#3143AD">clinics</span>
+                        <div class="cs-card-title">CLINICS</div>
+                        <p class="cs-card-tagline">Skill-specific. Seasonal availability.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 10–18</span>
+                            <span class="cs-card-tag">⏱ Seasonal</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+                <!-- Workshops -->
+                <a href="/programs/workshops" class="cs-card" data-accent="#144734">
+                    <div class="cs-card-img-wrap">
+                        <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/workshops.webp"
+                            alt="Recess Athletics workshops — themed training sessions"
+                            width="600" height="360" loading="lazy" decoding="async" />
+                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🧠</span></div>
+                    </div>
+                    <div class="cs-card-body">
+                        <span class="cs-card-slug" style="color:#144734">workshops</span>
+                        <div class="cs-card-title">WORKSHOPS</div>
+                        <p class="cs-card-tagline">Themed training. Focused sessions.</p>
+                        <div class="cs-card-meta">
+                            <span class="cs-card-tag">Ages 12–21</span>
+                            <span class="cs-card-tag">⏱ Seasonal</span>
+                        </div>
+                        <div class="cs-card-arrow">→</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
     </div>
 </section>
 
 <script>// ============================================
-//           Programs Filter
+//           Programs Filter — v2
 // ============================================
 
 (function () {
@@ -299,30 +669,41 @@ permalink: "/programs/"
     const gridEl   = document.querySelector("#programs-grid");
     if (!filterEl || !gridEl) return;
 
-    const tabs  = filterEl.querySelectorAll(".cs-tab");
-    const cards = gridEl.querySelectorAll(".cs-card");
+    const tabs   = filterEl.querySelectorAll(".cs-tab");
+    const groups = gridEl.querySelectorAll(".cs-group");
+    const cards  = gridEl.querySelectorAll(".cs-card");
 
-    // Apply accent colour as CSS custom property
+    // Apply accent colour as CSS custom property to every card
     cards.forEach(function (card) {
         const accent = card.getAttribute("data-accent");
         if (accent) card.style.setProperty("--cs-card-accent", accent);
     });
 
     function applyFilter(filter) {
-        // Update tab states
+        // Update tab active states
         tabs.forEach(function (tab) {
             const isActive = tab.getAttribute("data-filter") === filter;
             tab.classList.toggle("cs-active", isActive);
             tab.setAttribute("aria-selected", isActive);
         });
 
-        // Show / hide cards
-        cards.forEach(function (card) {
-            const prog = card.getAttribute("data-program");
-            if (filter === "all" || prog === filter) {
-                card.removeAttribute("hidden");
+        // Show / hide groups by data-group attribute
+        groups.forEach(function (group) {
+            const groupKey = group.getAttribute("data-group");
+            if (filter === "all") {
+                // Show only groups marked data-group="all"
+                if (groupKey === "all") {
+                    group.classList.remove("cs-hidden");
+                } else {
+                    group.classList.add("cs-hidden");
+                }
             } else {
-                card.setAttribute("hidden", "");
+                // Show only the group matching the filter
+                if (groupKey === filter) {
+                    group.classList.remove("cs-hidden");
+                } else {
+                    group.classList.add("cs-hidden");
+                }
             }
         });
     }
@@ -334,9 +715,10 @@ permalink: "/programs/"
         });
     });
 
-    // Initialise
+    // Initialise on all
     applyFilter("all");
-})();</script>
+})();
+</script>
 
 
 

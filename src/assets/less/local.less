@@ -266,6 +266,7 @@ img, svg {
         .cs-title {
             font-size: var(--headerFontSize);
             margin: 0;
+            display: inline;
         }
 
         .cs-script {
@@ -273,7 +274,7 @@ img, svg {
             font-style: italic;
             font-weight: 600;
             color: var(--recessYellow);
-            display: block;
+            display: inline;
         }
 
         /* ── Steps + button row ── */
@@ -611,7 +612,7 @@ img, svg {
             text-transform: lowercase;
             /* Adjusting the script size relative to the smaller title */
             font-size: 0.9em; 
-            display: block; /* Ensures it starts on a new line if <br> is missing */
+            display: inline; /* Ensures it starts on a new line if <br> is missing */
             margin-top: 0; 
             width: max-content;
         }
@@ -677,7 +678,7 @@ img, svg {
             
             .cs-background img {
                 transform: scale(1.1);
-                opacity: 0.2; /* Dims more on hover to highlight text */
+                opacity: 0.4; /* Dims more on hover to highlight text */
             }
 
             .cs-card-arrow {
@@ -749,16 +750,20 @@ img, svg {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            opacity: 0.4; /* Base transparency */
+            opacity: 0.6; /* Base transparency */
             transition: transform 0.6s, opacity 0.3s;
         }
         
-        /* The "Secret Sauce": A dark gradient so text stays readable */
         &::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 100%);
+            background: linear-gradient(
+                to top, 
+                rgba(0,0,0,0.9) 0%, 
+                rgba(0,0,0,0.6) 20%, 
+                rgba(0,0,0,0.2) 100%
+            );
         }
     }
 }
