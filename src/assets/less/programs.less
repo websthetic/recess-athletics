@@ -288,7 +288,7 @@
     }
 
     #programs-grid .cs-card-featured .cs-card-img-wrap {
-        height: 16rem;
+        height: 18rem;
     }
 
     #programs-grid .cs-card-featured .cs-card-title {
@@ -403,26 +403,27 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Featured card spans full width on tablet */
+    /* Featured card — wide horizontal layout, spans 2 of 3 columns */
     #programs-grid .cs-card-featured {
         grid-column: 1 / -1;
         flex-direction: row;
         align-items: stretch;
+        max-height: 26rem;
     }
 
     #programs-grid .cs-card-featured .cs-card-img-wrap {
-        width: 45%;
+        width: 52%;
         height: auto;
         flex-shrink: 0;
     }
 
     #programs-grid .cs-card-featured .cs-card-body {
-        padding: 2rem 2rem 2rem;
+        padding: 2.5rem;
         justify-content: center;
     }
 
     #programs-grid .cs-card-featured .cs-card-title {
-        font-size: 3rem;
+        font-size: 2.75rem;
     }
 
 } /* end 48rem */
@@ -434,17 +435,18 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* Featured card stays full-width on desktop */
+        /* Featured card — sits in grid like a normal card on desktop */
     #programs-grid .cs-card-featured {
         grid-column: 1 / -1;
+        max-height: 28rem;
     }
 
     #programs-grid .cs-card-featured .cs-card-img-wrap {
-        width: 50%;
+        width: 55%;
     }
 
     #programs-grid .cs-card-featured .cs-card-title {
-        font-size: 3.5rem;
+        font-size: 3.25rem;
     }
 
 } /* end 64rem */

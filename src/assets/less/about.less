@@ -27,11 +27,18 @@
 
     #about-hero .cs-topper {
         color: var(--recessYellow);
+        margin-bottom: 1.5rem;
     }
 
     #about-hero .cs-title {
         font-size: clamp(4rem, 10vw, 7.5rem);
         margin-bottom: 0;
+        line-height: 0.9;
+    }
+
+    #about-hero .cs-title-row {
+    display: block;
+    white-space: nowrap;
     }
 
     #about-hero .cs-script {
@@ -39,6 +46,7 @@
         font-style: italic;
         font-weight: 600;
         color: var(--recessYellow);
+        display: inline;
     }
 
     #about-hero .cs-text {
@@ -89,7 +97,7 @@
         width: 100%;
         height: 25rem;
         object-fit: cover;
-        object-position: top;
+        object-position: center;
         display: block;
     }
 
@@ -212,10 +220,10 @@
         overflow: hidden;
     }
 
-    #about-values .cs-value-red   { background-color: var(--recessRed); }
-    #about-values .cs-value-green { background-color: var(--recessGreen); }
-    #about-values .cs-value-dark  { background-color: #111; }
-    #about-values .cs-value-blue  { background-color: var(--recessBlue); }
+    #about-values .cs-value-red,
+    #about-values .cs-value-green,
+    #about-values .cs-value-dark,
+    #about-values .cs-value-blue  { background-color: #111; }
 
     #about-values .cs-value-num {
         position: absolute;
