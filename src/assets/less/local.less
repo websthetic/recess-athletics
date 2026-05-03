@@ -1963,3 +1963,18 @@ img, svg {
   white-space: nowrap;
 }
 }
+
+/* Choose Your Path card icon */
+#choose-your-path .cs-card-icon {
+    display: inline-flex;  /* ← was flex */
+    align-items: center;
+    justify-content: flex-start;  /* ← was center */
+    margin-bottom: 0.75rem;  /* space below icon before the label */
+}
+
+#choose-your-path .cs-card-icon svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    flex-shrink: 0;
+}

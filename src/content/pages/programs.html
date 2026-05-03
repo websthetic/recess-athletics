@@ -13,10 +13,104 @@ permalink: "/programs/"
 {% block body %}
 
 <!-- ============================================ -->
+<!--           SVG Icon Sprite Definitions        -->
+<!-- ============================================ -->
+<!-- Hidden sprite — icons referenced via <use> throughout the page -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+
+    <!-- Star — yellow — Featured / Membership -->
+    <symbol id="icon-star" viewBox="0 0 24 24">
+        <path fill="#FFB200" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </symbol>
+
+    <!-- Basketball — red — Jr. NBA / Programs -->
+    <symbol id="icon-basketball" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="#940203" stroke-width="1.5"/>
+        <path fill="none" stroke="#940203" stroke-width="1.5" d="M12 2a10 10 0 0 1 0 20M12 2a10 10 0 0 0 0 20M2 12h20"/>
+        <path fill="none" stroke="#940203" stroke-width="1.5" d="M4.93 4.93a10 10 0 0 1 14.14 0M4.93 19.07a10 10 0 0 0 14.14 0"/>
+    </symbol>
+
+    <!-- Target — red — Clinics / Private Training -->
+    <symbol id="icon-target" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="#940203" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="6"  fill="none" stroke="#940203" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="2"  fill="#940203"/>
+    </symbol>
+
+    <!-- Trophy — yellow — Rep Team -->
+    <symbol id="icon-trophy" viewBox="0 0 24 24">
+        <path fill="none" stroke="#FFB200" stroke-width="1.5" stroke-linejoin="round"
+            d="M8 21h8M12 17v4M6 3H4a2 2 0 0 0-2 2v1a4 4 0 0 0 4 4h.5M18 3h2a2 2 0 0 1 2 2v1a4 4 0 0 1-4 4h-.5"/>
+        <path fill="none" stroke="#FFB200" stroke-width="1.5"
+            d="M6 3h12v8a6 6 0 0 1-12 0V3z"/>
+    </symbol>
+
+    <!-- Globe / Arrow — yellow — AAU -->
+    <symbol id="icon-globe" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="#FFB200" stroke-width="1.5"/>
+        <path fill="none" stroke="#FFB200" stroke-width="1.5"
+            d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+    </symbol>
+
+    <!-- Lightning bolt — yellow — 3-on-3 -->
+    <symbol id="icon-lightning" viewBox="0 0 24 24">
+        <path fill="#FFB200" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+    </symbol>
+
+    <!-- Court / Building — yellow — House League -->
+    <symbol id="icon-court" viewBox="0 0 24 24">
+        <rect x="2" y="3" width="20" height="18" rx="1" fill="none" stroke="#FFB200" stroke-width="1.5"/>
+        <line x1="12" y1="3" x2="12" y2="21" stroke="#FFB200" stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="3" fill="none" stroke="#FFB200" stroke-width="1.5"/>
+        <path fill="none" stroke="#FFB200" stroke-width="1.5" d="M2 8h4M18 8h4M2 16h4M18 16h4"/>
+    </symbol>
+
+    <!-- Brain / Lightbulb — yellow — Workshops -->
+    <symbol id="icon-brain" viewBox="0 0 24 24">
+        <path fill="none" stroke="#FFB200" stroke-width="1.5" stroke-linejoin="round"
+            d="M9 3a4 4 0 0 0-4 4c0 .34.04.67.1 1A4 4 0 0 0 3 11a4 4 0 0 0 2.5 3.7V16a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-1.3A4 4 0 0 0 21 11a4 4 0 0 0-2.1-3.54c.07-.3.1-.63.1-.96a4 4 0 0 0-4-4 4 4 0 0 0-6 0z"/>
+        <line x1="12" y1="18" x2="12" y2="21" stroke="#FFB200" stroke-width="1.5"/>
+        <line x1="9"  y1="21" x2="15" y2="21" stroke="#FFB200" stroke-width="1.5"/>
+    </symbol>
+
+    <!-- Tent / Flag — yellow — Camps -->
+    <symbol id="icon-tent" viewBox="0 0 24 24">
+        <path fill="none" stroke="#FFB200" stroke-width="1.5" stroke-linejoin="round"
+            d="M3 21l9-18 9 18H3z"/>
+        <path fill="none" stroke="#FFB200" stroke-width="1.5"
+            d="M9 21l3-6 3 6"/>
+    </symbol>
+
+    <!-- Building / School — yellow — After School -->
+    <symbol id="icon-school" viewBox="0 0 24 24">
+        <path fill="none" stroke="#FFB200" stroke-width="1.5" stroke-linejoin="round"
+            d="M3 21V9l9-6 9 6v12H3z"/>
+        <rect x="9" y="13" width="6" height="8" fill="none" stroke="#FFB200" stroke-width="1.5"/>
+        <rect x="4" y="11" width="3" height="3" fill="none" stroke="#FFB200" stroke-width="1.5"/>
+        <rect x="17" y="11" width="3" height="3" fill="none" stroke="#FFB200" stroke-width="1.5"/>
+        <path fill="none" stroke="#FFB200" stroke-width="1.5" d="M12 3v4M10 5h4"/>
+    </symbol>
+
+    <!-- Medal — yellow — Membership (All view) -->
+    <symbol id="icon-medal" viewBox="0 0 24 24">
+        <circle cx="12" cy="14" r="7" fill="none" stroke="#FFB200" stroke-width="1.5"/>
+        <path fill="none" stroke="#FFB200" stroke-width="1.5" stroke-linejoin="round"
+            d="M8.5 3h7l-2 5h-3L8.5 3z"/>
+        <path fill="#FFB200" d="M12 10.5l1.2 2.4 2.7.4-1.95 1.9.46 2.67L12 16.6l-2.41 1.27.46-2.67L8.1 13.3l2.7-.4L12 10.5z"/>
+    </symbol>
+
+    <!-- Clock — yellow — ⏱ timing tag -->
+    <symbol id="icon-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="#FFB200" stroke-width="1.5"/>
+        <path fill="none" stroke="#FFB200" stroke-width="1.5" stroke-linecap="round" d="M12 6v6l4 2"/>
+    </symbol>
+
+</svg>
+
+<!-- ============================================ -->
 <!--             Programs Banner                  -->
 <!-- ============================================ -->
 
-<!-- 📸 PHOTO-PROGRAMS-BANNER | Wide action shot | Recommended: 1920×500px -->
 <section id="programs-banner">
     <img
         class="cs-banner-img"
@@ -30,8 +124,6 @@ permalink: "/programs/"
     <div class="cs-banner-overlay"></div>
     <div class="cs-banner-content">
         <div class="cs-container">
-
-            <!-- Left: heading + body -->
             <div class="cs-banner-left">
                 <span class="cs-topper">All Programs</span>
                 <h1 class="cs-title">
@@ -45,14 +137,11 @@ permalink: "/programs/"
                     starting with the right program.
                 </p>
             </div>
-
-            <!-- Right: CTA -->
             <div class="cs-banner-right">
                 <a href="/book-eval" class="cs-button-solid cs-banner-cta">
                     Book Free Athlete Evaluation →
                 </a>
             </div>
-
         </div>
     </div>
 </section>
@@ -96,7 +185,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/membership.webp"
                             alt="Recess Athletics Membership program — year-round training for all ages"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏅</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-medal"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#144734">membership</span>
@@ -104,7 +197,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Your all-access pass to the playground.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 6–Adult</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -115,7 +211,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/JRnba.webp"
                             alt="Jr. NBA program at Recess Athletics — basketball for ages 6 to 14"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏀</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-basketball"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#940203">jr. nba</span>
@@ -123,7 +223,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Official Jr. NBA programming. Learn the game right.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 6–14</span>
-                            <span class="cs-card-tag">⏱ Fall</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Fall
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -134,7 +237,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/camps.webp"
                             alt="Recess Athletics summer basketball camps for ages 8 to 17"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏕️</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-tent"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#940203">camps</span>
@@ -142,7 +249,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Five days to transform your game.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 8–17</span>
-                            <span class="cs-card-tag">⏱ Summer</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Summer
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -162,7 +272,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/Clinics.webp"
                             alt="Recess Athletics basketball clinics — position-specific skill development"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🎯</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-target"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#3143AD">clinics</span>
@@ -170,7 +284,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Position-specific. Purposeful. Progressive.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 10–18</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -181,7 +298,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/workshops.webp"
                             alt="Recess Athletics basketball workshops — mental skills and game IQ"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🧠</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-brain"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#144734">workshops</span>
@@ -189,7 +310,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">The mental edge separates good from great.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 12–21</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -200,7 +324,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/3on3.webp"
                             alt="Recess Athletics 3-on-3 basketball league for ages 10 to adult"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⚡</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-lightning"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#FFB200">3-on-3</span>
@@ -208,7 +336,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Fast. Physical. Relentless.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 10–Adult</span>
-                            <span class="cs-card-tag">⏱ Spring</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Spring
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -228,7 +359,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/houseleague.webp"
                             alt="Recess Athletics house league basketball for ages 6 to 17"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏟️</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-court"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#144734">house league</span>
@@ -236,7 +371,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Compete. Improve. Belong.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 6–17</span>
-                            <span class="cs-card-tag">⏱ Winter</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Winter
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -245,9 +383,13 @@ permalink: "/programs/"
                 <a href="/programs/rep" class="cs-card" data-accent="#940203">
                     <div class="cs-card-img-wrap">
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/repteam.webp"
-                            alt="Recess Athletics rep basketball team — competitive travel program"
+                            alt="Recess Athletics rep team — structured competition and team environment"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏆</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-trophy"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#940203">rep</span>
@@ -255,7 +397,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Structured competition. Team environment.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 9–17</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -266,7 +411,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/AAU.webp"
                             alt="Recess Athletics AAU basketball — travel and exposure program"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🌎</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-globe"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#3143AD">aau</span>
@@ -274,7 +423,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Travel. Exposure. Elite pathway.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 14–18</span>
-                            <span class="cs-card-tag">⏱ Spring</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Spring
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -285,7 +437,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/prepacademy.webp"
                             alt="Recess Athletics Prep Academy — elite college pathway program"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⭐</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-star"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#FFB200">prep academy</span>
@@ -293,7 +449,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Relentless. Year-round. Elite.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 15–20</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -317,7 +476,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/JRnba.webp"
                             alt="Jr. NBA program at Recess Athletics — basketball for ages 6 to 12"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⭐</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-star"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#940203">jr. nba · featured</span>
@@ -325,7 +488,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Learn the game. Build the foundation.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 6–12</span>
-                            <span class="cs-card-tag">⏱ Fall</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Fall
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -336,7 +502,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/camps.webp"
                             alt="Recess Athletics summer basketball camps — build confidence"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏕️</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-tent"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#940203">camps</span>
@@ -344,7 +514,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Build confidence. Fun and structured.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 8–17</span>
-                            <span class="cs-card-tag">⏱ Summer</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Summer
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -355,7 +528,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/afterschool.webp"
                             alt="Recess Athletics after school multi-sport program for ages 6 to 12"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏫</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-school"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#144734">after school</span>
@@ -363,7 +540,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Multi-sport intro. Movement every day.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 6–12</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -374,7 +554,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/Clinics.webp"
                             alt="Recess Athletics small group clinics — intro skill work for beginners"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🎯</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-target"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#3143AD">clinics</span>
@@ -382,7 +566,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Intro skill work in a small group setting.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 8–12</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -406,7 +593,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/membership.webp"
                             alt="Recess Athletics Membership — core training 2 to 3 times per week"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⭐</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-star"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#144734">membership · featured</span>
@@ -414,7 +605,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Core training. 2–3x per week. Real results.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 6–Adult</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -425,7 +619,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/Clinics.webp"
                             alt="Recess Athletics clinics — position-specific skill development"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🎯</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-target"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#3143AD">clinics</span>
@@ -433,7 +631,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Position-specific. Skill development.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 10–18</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -444,7 +645,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/3on3.webp"
                             alt="Recess Athletics 3-on-3 — game reps and decision making"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⚡</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-lightning"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#FFB200">3-on-3</span>
@@ -452,7 +657,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Game reps. Decision-making under pressure.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 10–Adult</span>
-                            <span class="cs-card-tag">⏱ Spring</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Spring
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -463,7 +671,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/camps.webp"
                             alt="Recess Athletics camps — skill progression and seasonal boost"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏕️</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-tent"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#940203">camps</span>
@@ -471,7 +683,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Skill progression. Seasonal boost.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 8–17</span>
-                            <span class="cs-card-tag">⏱ Summer</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Summer
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -495,7 +710,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/membership.webp"
                             alt="Recess Athletics Membership — high frequency advanced training"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⭐</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-star"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#144734">membership · featured</span>
@@ -503,7 +722,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">High-frequency. Advanced training.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 6–Adult</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -514,7 +736,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/Privatetraining.webp"
                             alt="Recess Athletics private training — 1-on-1 personalized development"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🎯</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-target"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#FFB200">private training</span>
@@ -522,7 +748,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">1-on-1 development. Personalized work.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">All Ages</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -533,7 +762,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/repteam.webp"
                             alt="Recess Athletics rep team — structured competition and team environment"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏆</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-trophy"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#940203">rep team</span>
@@ -541,7 +774,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Structured competition. Team environment.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 9–17</span>
-                            <span class="cs-card-tag">⏱ Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -552,7 +788,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/AAU.webp"
                             alt="Recess Athletics AAU and Prep Academy — elite travel and exposure"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🌎</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-globe"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#3143AD">aau / prep</span>
@@ -560,7 +800,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Travel. Exposure. Elite pathway.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 14–20</span>
-                            <span class="cs-card-tag">⏱ Spring / Year-Round</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Spring / Year-Round
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -584,7 +827,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/camps.webp"
                             alt="Recess Athletics summer camps — 5-day immersion program"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">⭐</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-star"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#940203">camps · featured</span>
@@ -592,7 +839,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">5-day immersion. Immediate action.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 8–17</span>
-                            <span class="cs-card-tag">⏱ Summer</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Summer
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -603,7 +853,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/JRnba.webp"
                             alt="Jr. NBA 12-week program — limited spots available"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🏀</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-basketball"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#940203">jr. nba</span>
@@ -611,7 +865,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">12-week program. Limited spots.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 6–14</span>
-                            <span class="cs-card-tag">⏱ Fall</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Fall
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -622,7 +879,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/Clinics.webp"
                             alt="Recess Athletics skill-specific clinics — seasonal availability"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🎯</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-target"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#3143AD">clinics</span>
@@ -630,7 +891,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Skill-specific. Seasonal availability.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 10–18</span>
-                            <span class="cs-card-tag">⏱ Seasonal</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Seasonal
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -641,7 +905,11 @@ permalink: "/programs/"
                         <img class="cs-card-img" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/recess-athletics/Programs%20page/workshops.webp"
                             alt="Recess Athletics workshops — themed training sessions"
                             width="600" height="360" loading="lazy" decoding="async" />
-                        <div class="cs-card-img-overlay"><span class="cs-card-icon">🧠</span></div>
+                        <div class="cs-card-img-overlay">
+                            <span class="cs-card-icon">
+                                <svg width="24" height="24" aria-hidden="true"><use href="#icon-brain"/></svg>
+                            </span>
+                        </div>
                     </div>
                     <div class="cs-card-body">
                         <span class="cs-card-slug" style="color:#144734">workshops</span>
@@ -649,7 +917,10 @@ permalink: "/programs/"
                         <p class="cs-card-tagline">Themed training. Focused sessions.</p>
                         <div class="cs-card-meta">
                             <span class="cs-card-tag">Ages 12–21</span>
-                            <span class="cs-card-tag">⏱ Seasonal</span>
+                            <span class="cs-card-tag">
+                                <svg width="12" height="12" aria-hidden="true"><use href="#icon-clock"/></svg>
+                                Seasonal
+                            </span>
                         </div>
                         <div class="cs-card-arrow">→</div>
                     </div>
@@ -673,53 +944,36 @@ permalink: "/programs/"
     const groups = gridEl.querySelectorAll(".cs-group");
     const cards  = gridEl.querySelectorAll(".cs-card");
 
-    // Apply accent colour as CSS custom property to every card
     cards.forEach(function (card) {
         const accent = card.getAttribute("data-accent");
         if (accent) card.style.setProperty("--cs-card-accent", accent);
     });
 
     function applyFilter(filter) {
-        // Update tab active states
         tabs.forEach(function (tab) {
             const isActive = tab.getAttribute("data-filter") === filter;
             tab.classList.toggle("cs-active", isActive);
             tab.setAttribute("aria-selected", isActive);
         });
 
-        // Show / hide groups by data-group attribute
         groups.forEach(function (group) {
             const groupKey = group.getAttribute("data-group");
             if (filter === "all") {
-                // Show only groups marked data-group="all"
-                if (groupKey === "all") {
-                    group.classList.remove("cs-hidden");
-                } else {
-                    group.classList.add("cs-hidden");
-                }
+                group.classList.toggle("cs-hidden", groupKey !== "all");
             } else {
-                // Show only the group matching the filter
-                if (groupKey === filter) {
-                    group.classList.remove("cs-hidden");
-                } else {
-                    group.classList.add("cs-hidden");
-                }
+                group.classList.toggle("cs-hidden", groupKey !== filter);
             }
         });
     }
 
-    // Wire up tab clicks
     tabs.forEach(function (tab) {
         tab.addEventListener("click", function () {
             applyFilter(tab.getAttribute("data-filter"));
         });
     });
 
-    // Initialise on all
     applyFilter("all");
 })();
 </script>
-
-
 
 {% endblock %}
